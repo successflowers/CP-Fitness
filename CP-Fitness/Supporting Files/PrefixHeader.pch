@@ -1,0 +1,22 @@
+//
+//  PrefixHeader.pch
+//  CP-Fitness
+//
+//  Created by 张敬 on 2017/10/26.
+//  Copyright © 2017年 Jing Zhang. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#pragma mark - 全局宏
+#import "UtilsMacros.h"
+
+#pragma mark - 基础类
+#import "AppDelegate+AppService.h"
+#import "BaseViewController.h"
+
+
+#pragma mark - 第三方
+
+#endif /* PrefixHeader_pch */

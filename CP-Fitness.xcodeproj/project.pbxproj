@@ -13,6 +13,7 @@
 		6156EB701FA1F95E00661303 /* CP_FitnessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB6F1FA1F95E00661303 /* CP_FitnessTests.m */; };
 		6156EB7B1FA1F95E00661303 /* CP_FitnessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB7A1FA1F95E00661303 /* CP_FitnessUITests.m */; };
 		6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB8A1FA1FA2700661303 /* BaseViewController.m */; };
+		6156EB961FA2001600661303 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB951FA2001600661303 /* AppDelegate+AppService.m */; };
 		68A9C698B9FEEC8B9350B8C4 /* libPods-CP-Fitness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BC7F9F833AE80B09576FBB /* libPods-CP-Fitness.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,10 @@
 		6156EB7C1FA1F95E00661303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6156EB891FA1FA2700661303 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		6156EB8A1FA1FA2700661303 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		6156EB941FA2001600661303 /* AppDelegate+AppService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+AppService.h"; sourceTree = "<group>"; };
+		6156EB951FA2001600661303 /* AppDelegate+AppService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
+		6156EB971FA201AD00661303 /* UtilsMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
+		6156EB981FA2049A00661303 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		B80E4E58E7016967CEE22358 /* Pods-CP-Fitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.release.xcconfig"; sourceTree = "<group>"; };
 		E06580A369004A09E558F909 /* Pods-CP-Fitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +116,7 @@
 				6156EB8D1FA1FD4400661303 /* Manager */,
 				6156EB881FA1F9D000661303 /* Modules */,
 				6156EB921FA1FD8600661303 /* Resource */,
-				6156EB931FA1FD9900661303 /* Supportimg Files */,
+				6156EB931FA1FD9900661303 /* Supporting Files */,
 				6156EB901FA1FD6A00661303 /* ThirdParty */,
 				6156EB8E1FA1FD5000661303 /* Utils */,
 			);
@@ -150,6 +155,8 @@
 			children = (
 				6156EB561FA1F95D00661303 /* AppDelegate.h */,
 				6156EB571FA1F95D00661303 /* AppDelegate.m */,
+				6156EB941FA2001600661303 /* AppDelegate+AppService.h */,
+				6156EB951FA2001600661303 /* AppDelegate+AppService.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -185,6 +192,7 @@
 		6156EB911FA1FD7D00661303 /* Define */ = {
 			isa = PBXGroup;
 			children = (
+				6156EB971FA201AD00661303 /* UtilsMacros.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -196,13 +204,14 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		6156EB931FA1FD9900661303 /* Supportimg Files */ = {
+		6156EB931FA1FD9900661303 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				6156EB5F1FA1F95E00661303 /* Assets.xcassets */,
 				6156EB651FA1F95E00661303 /* main.m */,
+				6156EB981FA2049A00661303 /* PrefixHeader.pch */,
 			);
-			path = "Supportimg Files";
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		D6CD379CAC28BB72E52EDA28 /* Frameworks */ = {
@@ -410,6 +419,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6156EB961FA2001600661303 /* AppDelegate+AppService.m in Sources */,
 				6156EB661FA1F95E00661303 /* main.m in Sources */,
 				6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */,
 				6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */,
@@ -559,6 +569,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57VQLPLW72;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CP-Fitness/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "CP-Fitness/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -575,6 +587,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 57VQLPLW72;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CP-Fitness/Supporting Files/PrefixHeader.pch";
 				INFOPLIST_FILE = "CP-Fitness/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
