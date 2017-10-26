@@ -1,0 +1,533 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB571FA1F95D00661303 /* AppDelegate.m */; };
+		6156EB601FA1F95E00661303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6156EB5F1FA1F95E00661303 /* Assets.xcassets */; };
+		6156EB631FA1F95E00661303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6156EB611FA1F95E00661303 /* LaunchScreen.storyboard */; };
+		6156EB661FA1F95E00661303 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB651FA1F95E00661303 /* main.m */; };
+		6156EB701FA1F95E00661303 /* CP_FitnessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB6F1FA1F95E00661303 /* CP_FitnessTests.m */; };
+		6156EB7B1FA1F95E00661303 /* CP_FitnessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB7A1FA1F95E00661303 /* CP_FitnessUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6156EB6C1FA1F95E00661303 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6156EB4B1FA1F95D00661303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6156EB521FA1F95D00661303;
+			remoteInfo = "CP-Fitness";
+		};
+		6156EB771FA1F95E00661303 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6156EB4B1FA1F95D00661303 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6156EB521FA1F95D00661303;
+			remoteInfo = "CP-Fitness";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		6156EB531FA1F95D00661303 /* CP-Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CP-Fitness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6156EB561FA1F95D00661303 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6156EB571FA1F95D00661303 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6156EB5F1FA1F95E00661303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6156EB621FA1F95E00661303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		6156EB641FA1F95E00661303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6156EB651FA1F95E00661303 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6156EB6B1FA1F95E00661303 /* CP-FitnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CP-FitnessTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6156EB6F1FA1F95E00661303 /* CP_FitnessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CP_FitnessTests.m; sourceTree = "<group>"; };
+		6156EB711FA1F95E00661303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6156EB761FA1F95E00661303 /* CP-FitnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CP-FitnessUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6156EB7A1FA1F95E00661303 /* CP_FitnessUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CP_FitnessUITests.m; sourceTree = "<group>"; };
+		6156EB7C1FA1F95E00661303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6156EB501FA1F95D00661303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6156EB681FA1F95E00661303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6156EB731FA1F95E00661303 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6156EB4A1FA1F95D00661303 = {
+			isa = PBXGroup;
+			children = (
+				6156EB551FA1F95D00661303 /* CP-Fitness */,
+				6156EB6E1FA1F95E00661303 /* CP-FitnessTests */,
+				6156EB791FA1F95E00661303 /* CP-FitnessUITests */,
+				6156EB541FA1F95D00661303 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6156EB541FA1F95D00661303 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6156EB531FA1F95D00661303 /* CP-Fitness.app */,
+				6156EB6B1FA1F95E00661303 /* CP-FitnessTests.xctest */,
+				6156EB761FA1F95E00661303 /* CP-FitnessUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6156EB551FA1F95D00661303 /* CP-Fitness */ = {
+			isa = PBXGroup;
+			children = (
+				6156EB561FA1F95D00661303 /* AppDelegate.h */,
+				6156EB571FA1F95D00661303 /* AppDelegate.m */,
+				6156EB5F1FA1F95E00661303 /* Assets.xcassets */,
+				6156EB611FA1F95E00661303 /* LaunchScreen.storyboard */,
+				6156EB641FA1F95E00661303 /* Info.plist */,
+				6156EB651FA1F95E00661303 /* main.m */,
+			);
+			path = "CP-Fitness";
+			sourceTree = "<group>";
+		};
+		6156EB6E1FA1F95E00661303 /* CP-FitnessTests */ = {
+			isa = PBXGroup;
+			children = (
+				6156EB6F1FA1F95E00661303 /* CP_FitnessTests.m */,
+				6156EB711FA1F95E00661303 /* Info.plist */,
+			);
+			path = "CP-FitnessTests";
+			sourceTree = "<group>";
+		};
+		6156EB791FA1F95E00661303 /* CP-FitnessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6156EB7A1FA1F95E00661303 /* CP_FitnessUITests.m */,
+				6156EB7C1FA1F95E00661303 /* Info.plist */,
+			);
+			path = "CP-FitnessUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6156EB521FA1F95D00661303 /* CP-Fitness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6156EB7F1FA1F95E00661303 /* Build configuration list for PBXNativeTarget "CP-Fitness" */;
+			buildPhases = (
+				6156EB4F1FA1F95D00661303 /* Sources */,
+				6156EB501FA1F95D00661303 /* Frameworks */,
+				6156EB511FA1F95D00661303 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CP-Fitness";
+			productName = "CP-Fitness";
+			productReference = 6156EB531FA1F95D00661303 /* CP-Fitness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6156EB6A1FA1F95E00661303 /* CP-FitnessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6156EB821FA1F95E00661303 /* Build configuration list for PBXNativeTarget "CP-FitnessTests" */;
+			buildPhases = (
+				6156EB671FA1F95E00661303 /* Sources */,
+				6156EB681FA1F95E00661303 /* Frameworks */,
+				6156EB691FA1F95E00661303 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6156EB6D1FA1F95E00661303 /* PBXTargetDependency */,
+			);
+			name = "CP-FitnessTests";
+			productName = "CP-FitnessTests";
+			productReference = 6156EB6B1FA1F95E00661303 /* CP-FitnessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6156EB751FA1F95E00661303 /* CP-FitnessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6156EB851FA1F95E00661303 /* Build configuration list for PBXNativeTarget "CP-FitnessUITests" */;
+			buildPhases = (
+				6156EB721FA1F95E00661303 /* Sources */,
+				6156EB731FA1F95E00661303 /* Frameworks */,
+				6156EB741FA1F95E00661303 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6156EB781FA1F95E00661303 /* PBXTargetDependency */,
+			);
+			name = "CP-FitnessUITests";
+			productName = "CP-FitnessUITests";
+			productReference = 6156EB761FA1F95E00661303 /* CP-FitnessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6156EB4B1FA1F95D00661303 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Jing Zhang";
+				TargetAttributes = {
+					6156EB521FA1F95D00661303 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+					};
+					6156EB6A1FA1F95E00661303 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6156EB521FA1F95D00661303;
+					};
+					6156EB751FA1F95E00661303 = {
+						CreatedOnToolsVersion = 9.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6156EB521FA1F95D00661303;
+					};
+				};
+			};
+			buildConfigurationList = 6156EB4E1FA1F95D00661303 /* Build configuration list for PBXProject "CP-Fitness" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6156EB4A1FA1F95D00661303;
+			productRefGroup = 6156EB541FA1F95D00661303 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6156EB521FA1F95D00661303 /* CP-Fitness */,
+				6156EB6A1FA1F95E00661303 /* CP-FitnessTests */,
+				6156EB751FA1F95E00661303 /* CP-FitnessUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6156EB511FA1F95D00661303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6156EB631FA1F95E00661303 /* LaunchScreen.storyboard in Resources */,
+				6156EB601FA1F95E00661303 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6156EB691FA1F95E00661303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6156EB741FA1F95E00661303 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6156EB4F1FA1F95D00661303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6156EB661FA1F95E00661303 /* main.m in Sources */,
+				6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6156EB671FA1F95E00661303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6156EB701FA1F95E00661303 /* CP_FitnessTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6156EB721FA1F95E00661303 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6156EB7B1FA1F95E00661303 /* CP_FitnessUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6156EB6D1FA1F95E00661303 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6156EB521FA1F95D00661303 /* CP-Fitness */;
+			targetProxy = 6156EB6C1FA1F95E00661303 /* PBXContainerItemProxy */;
+		};
+		6156EB781FA1F95E00661303 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6156EB521FA1F95D00661303 /* CP-Fitness */;
+			targetProxy = 6156EB771FA1F95E00661303 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6156EB611FA1F95E00661303 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6156EB621FA1F95E00661303 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6156EB7D1FA1F95E00661303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		6156EB7E1FA1F95E00661303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6156EB801FA1F95E00661303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CP-Fitness/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "success-flower.CP-Fitness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6156EB811FA1F95E00661303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CP-Fitness/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "success-flower.CP-Fitness";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		6156EB831FA1F95E00661303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CP-FitnessTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "success-flower.CP-FitnessTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CP-Fitness.app/CP-Fitness";
+			};
+			name = Debug;
+		};
+		6156EB841FA1F95E00661303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CP-FitnessTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "success-flower.CP-FitnessTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CP-Fitness.app/CP-Fitness";
+			};
+			name = Release;
+		};
+		6156EB861FA1F95E00661303 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CP-FitnessUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "success-flower.CP-FitnessUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CP-Fitness";
+			};
+			name = Debug;
+		};
+		6156EB871FA1F95E00661303 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "CP-FitnessUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "success-flower.CP-FitnessUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "CP-Fitness";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6156EB4E1FA1F95D00661303 /* Build configuration list for PBXProject "CP-Fitness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6156EB7D1FA1F95E00661303 /* Debug */,
+				6156EB7E1FA1F95E00661303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6156EB7F1FA1F95E00661303 /* Build configuration list for PBXNativeTarget "CP-Fitness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6156EB801FA1F95E00661303 /* Debug */,
+				6156EB811FA1F95E00661303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6156EB821FA1F95E00661303 /* Build configuration list for PBXNativeTarget "CP-FitnessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6156EB831FA1F95E00661303 /* Debug */,
+				6156EB841FA1F95E00661303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6156EB851FA1F95E00661303 /* Build configuration list for PBXNativeTarget "CP-FitnessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6156EB861FA1F95E00661303 /* Debug */,
+				6156EB871FA1F95E00661303 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6156EB4B1FA1F95D00661303 /* Project object */;
+}
