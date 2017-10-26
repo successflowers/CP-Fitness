@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate+AppService.h"
-#import "BaseViewController.h"
+#import "RegisterViewController.h"
 
 @implementation AppDelegate (AppService)
 
@@ -21,10 +21,9 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = KWhiteColor;
     [self.window makeKeyAndVisible];
-    BaseViewController *baseVC = [[BaseViewController alloc] init];
+    RegisterViewController *baseVC = [[RegisterViewController alloc] init];
     self.window.rootViewController = baseVC;
-    baseVC.view.backgroundColor = [UIColor redColor];
-    
+   
 }
 
 

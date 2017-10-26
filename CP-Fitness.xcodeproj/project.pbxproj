@@ -14,6 +14,7 @@
 		6156EB7B1FA1F95E00661303 /* CP_FitnessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB7A1FA1F95E00661303 /* CP_FitnessUITests.m */; };
 		6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB8A1FA1FA2700661303 /* BaseViewController.m */; };
 		6156EB961FA2001600661303 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB951FA2001600661303 /* AppDelegate+AppService.m */; };
+		6156EBA91FA251E200661303 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EBA81FA251E200661303 /* RegisterViewController.m */; };
 		68A9C698B9FEEC8B9350B8C4 /* libPods-CP-Fitness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BC7F9F833AE80B09576FBB /* libPods-CP-Fitness.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,13 @@
 		6156EB951FA2001600661303 /* AppDelegate+AppService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+AppService.m"; sourceTree = "<group>"; };
 		6156EB971FA201AD00661303 /* UtilsMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UtilsMacros.h; sourceTree = "<group>"; };
 		6156EB981FA2049A00661303 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		6156EB991FA2469000661303 /* URLMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLMacros.h; sourceTree = "<group>"; };
+		6156EB9A1FA246BC00661303 /* CommonMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonMacros.h; sourceTree = "<group>"; };
+		6156EB9B1FA246D900661303 /* FontAndColorMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FontAndColorMacros.h; sourceTree = "<group>"; };
+		6156EB9C1FA246F000661303 /* ThirdMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ThirdMacros.h; sourceTree = "<group>"; };
+		6156EBA11FA249A900661303 /* coolplay 接口.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "coolplay 接口.doc"; sourceTree = "<group>"; };
+		6156EBA71FA251E200661303 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		6156EBA81FA251E200661303 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		B80E4E58E7016967CEE22358 /* Pods-CP-Fitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.release.xcconfig"; sourceTree = "<group>"; };
 		E06580A369004A09E558F909 /* Pods-CP-Fitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +120,7 @@
 				6156EB641FA1F95E00661303 /* Info.plist */,
 				6156EB8C1FA1FD0900661303 /* AppDelegate */,
 				6156EB8F1FA1FD5E00661303 /* Base */,
+				6156EBAA1FA2532100661303 /* Category */,
 				6156EB911FA1FD7D00661303 /* Define */,
 				6156EB8D1FA1FD4400661303 /* Manager */,
 				6156EB881FA1F9D000661303 /* Modules */,
@@ -144,8 +153,9 @@
 		6156EB881FA1F9D000661303 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				6156EB891FA1FA2700661303 /* BaseViewController.h */,
-				6156EB8A1FA1FA2700661303 /* BaseViewController.m */,
+				6156EBA51FA2516000661303 /* PersonRegister */,
+				6156EBA41FA2514C00661303 /* Home */,
+				6156EBA31FA250ED00661303 /* LoginRegister */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -178,6 +188,8 @@
 		6156EB8F1FA1FD5E00661303 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				6156EB891FA1FA2700661303 /* BaseViewController.h */,
+				6156EB8A1FA1FA2700661303 /* BaseViewController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -193,6 +205,10 @@
 			isa = PBXGroup;
 			children = (
 				6156EB971FA201AD00661303 /* UtilsMacros.h */,
+				6156EB991FA2469000661303 /* URLMacros.h */,
+				6156EB9A1FA246BC00661303 /* CommonMacros.h */,
+				6156EB9B1FA246D900661303 /* FontAndColorMacros.h */,
+				6156EB9C1FA246F000661303 /* ThirdMacros.h */,
 			);
 			path = Define;
 			sourceTree = "<group>";
@@ -200,6 +216,7 @@
 		6156EB921FA1FD8600661303 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				6156EBA11FA249A900661303 /* coolplay 接口.doc */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -212,6 +229,36 @@
 				6156EB981FA2049A00661303 /* PrefixHeader.pch */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6156EBA31FA250ED00661303 /* LoginRegister */ = {
+			isa = PBXGroup;
+			children = (
+				6156EBA71FA251E200661303 /* RegisterViewController.h */,
+				6156EBA81FA251E200661303 /* RegisterViewController.m */,
+			);
+			path = LoginRegister;
+			sourceTree = "<group>";
+		};
+		6156EBA41FA2514C00661303 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		6156EBA51FA2516000661303 /* PersonRegister */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PersonRegister;
+			sourceTree = "<group>";
+		};
+		6156EBAA1FA2532100661303 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		D6CD379CAC28BB72E52EDA28 /* Frameworks */ = {
@@ -419,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6156EBA91FA251E200661303 /* RegisterViewController.m in Sources */,
 				6156EB961FA2001600661303 /* AppDelegate+AppService.m in Sources */,
 				6156EB661FA1F95E00661303 /* main.m in Sources */,
 				6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */,

@@ -1,0 +1,64 @@
+//
+//  BaseViewController.m
+//  CP-Fitness
+//
+//  Created by 张敬 on 2017/10/26.
+//  Copyright © 2017年 Jing Zhang. All rights reserved.
+//
+
+#import "BaseViewController.h"
+
+@interface BaseViewController ()
+
+@end
+
+@implementation BaseViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+}
+
+#pragma mark - 设置背景
+- (void)setBackgroundWithImage:(NSString *)image
+{
+    UIImageView *imgView = [[UIImageView alloc] initWithImage:IMAGE_NAMED(image)];
+    imgView.frame = self.view.bounds;
+    imgView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
+    [self.view insertSubview:imgView atIndex:0];
+}
+
+#pragma mark - 按钮
+- (UIButton *)setButtonWithNomalImage:(NSString *)nomalImage
+                       highlightImage:(NSString *)highlightImage
+                                title:(NSString *)title
+{
+    UIButton *newButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [newButton setTitle:title forState:UIControlStateNormal];
+    [newButton setTitleColor:KWhiteColor forState:UIControlStateNormal];
+    newButton.titleLabel.font = SYSTEMFONT(16);
+    [newButton setBackgroundImage:IMAGE_NAMED(nomalImage) forState:UIControlStateNormal];
+    [newButton setBackgroundImage:IMAGE_NAMED(highlightImage) forState:UIControlStateHighlighted];
+    return newButton;
+}
+
+- (UIButton *)setWhiteButtonWithTitle:(NSString *)title
+{
+    UIButton *whiteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [whiteButton setTitle:title forState:UIControlStateNormal];
+    [whiteButton setTitleColor:KWhiteColor forState:UIControlStateNormal];
+    whiteButton.titleLabel.font = BOLDSYSTEMFONT(20);
+    [whiteButton.layer setMasksToBounds:YES];
+    [whiteButton.layer setCornerRadius:22.0]; //设置矩形四个圆角半径
+    [whiteButton.layer setBorderWidth:2.0];
+    whiteButton.layer.borderColor = KWhiteColor.CGColor;
+    return whiteButton;
+}
+
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
+
+@end

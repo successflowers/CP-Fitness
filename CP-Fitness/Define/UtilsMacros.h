@@ -19,27 +19,33 @@
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 
 #pragma mark - 获取屏幕宽高
-#define kStatusBarHeight [[UIApplication sharedApplication] statusBarFrame].size.height
+#define kStatusBarHeight    [[UIApplication sharedApplication] statusBarFrame].size.height
 #define kNavBarHeight 44.0
-#define kTabBarHeight ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
-#define kTopHeight (kStatusBarHeight + kNavBarHeight)
+#define kTabBarHeight       ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
+#define kTopHeight          (kStatusBarHeight + kNavBarHeight)
 
 
-#define KScreenWidth ([[UIScreen mainScreen] bounds].size.width)
-#define KScreenHeight [[UIScreen mainScreen] bounds].size.height
-#define kScreen_Bounds [UIScreen mainScreen].bounds
+#define KScreenWidth            ([[UIScreen mainScreen] bounds].size.width)
+#define KScreenHeight           [[UIScreen mainScreen] bounds].size.height
+#define kScreen_Bounds          [UIScreen mainScreen].bounds
 
-#define Iphone6ScaleWidth KScreenWidth/375.0
-#define Iphone6ScaleHeight KScreenHeight/667.0
-#define kIOS7OffHeight        (kIOSVersions>=7.0 ? 64.0 : 0.0)
+#define Iphone6ScaleWidth       KScreenWidth/375.0
+#define Iphone6ScaleHeight      KScreenHeight/667.0
+#define kIOS7OffHeight          (kIOSVersions>=7.0 ? 64.0 : 0.0)
+
+#pragma mark -  按钮的间距
+#define BUTTION_SIDE 15.f
+#define BUTTON_MIDDLE 10.f
+#define BUTTON_WIDTH 44.f
+#define BUTTON_WHITE_HEIGHT KScreenHeight/3.f*2+25.f
 
 
 #pragma mark - 根据ip6的屏幕来拉伸
-#define kRealValue(with) ((with)*(KScreenWidth/375.0f))
+#define kRealValue(with)    ((with)*(KScreenWidth/375.0f))
 
 #pragma mark - 强弱引用
-#define kWeakSelf(type)  __weak typeof(type) weak##type = type;
-#define kStrongSelf(type) __strong typeof(type) type = weak##type;
+#define kWeakSelf(type)     __weak typeof(type) weak##type = type;
+#define kStrongSelf(type)   __strong typeof(type) type = weak##type;
 
 #pragma mark - View 圆角和加边框
 #define ViewBorderRadius(View, Radius, Width, Color)\
@@ -76,23 +82,6 @@
 #define NSSTRING(a,b)               [NSString stringWithFormat:@"%@：%@", a,b]
 #define NSSTRING_LONG(a,b)          [NSString stringWithFormat:@"%@：%ld", a,b]
 #define NSStringFormat(format,...)  [NSString stringWithFormat:format,##__VA_ARGS__]
-
-#pragma mark - 颜色
-#define KClearColor         [UIColor clearColor]
-#define KWhiteColor         [UIColor whiteColor]
-#define KBlackColor         [UIColor blackColor]
-#define KGrayColor          [UIColor grayColor]
-#define KGray2Color         [UIColor lightGrayColor]
-#define KBlueColor          [UIColor blueColor]
-#define KRedColor           [UIColor redColor]
-#define RGB(r,g,b)          RGBA(r,g,b,1.0)
-#define RGBA(r,g,b,a)       [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
-#define kRandomColor        KRGBColor(arc4random_uniform(256)/255.0,arc4random_uniform(256)/255.0,arc4random_uniform(256)/255.0)        //随机色生成
-
-#pragma mark - 字体
-#define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]
-#define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]
-#define FONT(NAME, FONTSIZE)    [UIFont fontWithName:(NAME) size:(FONTSIZE)]
 
 
 #pragma mark - 定义UIImage对象
