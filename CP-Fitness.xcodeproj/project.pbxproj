@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB571FA1F95D00661303 /* AppDelegate.m */; };
 		6156EB601FA1F95E00661303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6156EB5F1FA1F95E00661303 /* Assets.xcassets */; };
-		6156EB631FA1F95E00661303 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6156EB611FA1F95E00661303 /* LaunchScreen.storyboard */; };
 		6156EB661FA1F95E00661303 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB651FA1F95E00661303 /* main.m */; };
 		6156EB701FA1F95E00661303 /* CP_FitnessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB6F1FA1F95E00661303 /* CP_FitnessTests.m */; };
 		6156EB7B1FA1F95E00661303 /* CP_FitnessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB7A1FA1F95E00661303 /* CP_FitnessUITests.m */; };
+		6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB8A1FA1FA2700661303 /* BaseViewController.m */; };
+		68A9C698B9FEEC8B9350B8C4 /* libPods-CP-Fitness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BC7F9F833AE80B09576FBB /* libPods-CP-Fitness.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,11 +34,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40BC7F9F833AE80B09576FBB /* libPods-CP-Fitness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-CP-Fitness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6156EB531FA1F95D00661303 /* CP-Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CP-Fitness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6156EB561FA1F95D00661303 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6156EB571FA1F95D00661303 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6156EB5F1FA1F95E00661303 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		6156EB621FA1F95E00661303 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6156EB641FA1F95E00661303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6156EB651FA1F95E00661303 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6156EB6B1FA1F95E00661303 /* CP-FitnessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CP-FitnessTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +47,10 @@
 		6156EB761FA1F95E00661303 /* CP-FitnessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "CP-FitnessUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6156EB7A1FA1F95E00661303 /* CP_FitnessUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CP_FitnessUITests.m; sourceTree = "<group>"; };
 		6156EB7C1FA1F95E00661303 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6156EB891FA1FA2700661303 /* BaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		6156EB8A1FA1FA2700661303 /* BaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		B80E4E58E7016967CEE22358 /* Pods-CP-Fitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.release.xcconfig"; sourceTree = "<group>"; };
+		E06580A369004A09E558F909 /* Pods-CP-Fitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68A9C698B9FEEC8B9350B8C4 /* libPods-CP-Fitness.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +86,8 @@
 				6156EB6E1FA1F95E00661303 /* CP-FitnessTests */,
 				6156EB791FA1F95E00661303 /* CP-FitnessUITests */,
 				6156EB541FA1F95D00661303 /* Products */,
+				F8021C20C23737D36AF2FAA5 /* Pods */,
+				D6CD379CAC28BB72E52EDA28 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,12 +104,16 @@
 		6156EB551FA1F95D00661303 /* CP-Fitness */ = {
 			isa = PBXGroup;
 			children = (
-				6156EB561FA1F95D00661303 /* AppDelegate.h */,
-				6156EB571FA1F95D00661303 /* AppDelegate.m */,
-				6156EB5F1FA1F95E00661303 /* Assets.xcassets */,
-				6156EB611FA1F95E00661303 /* LaunchScreen.storyboard */,
 				6156EB641FA1F95E00661303 /* Info.plist */,
-				6156EB651FA1F95E00661303 /* main.m */,
+				6156EB8C1FA1FD0900661303 /* AppDelegate */,
+				6156EB8F1FA1FD5E00661303 /* Base */,
+				6156EB911FA1FD7D00661303 /* Define */,
+				6156EB8D1FA1FD4400661303 /* Manager */,
+				6156EB881FA1F9D000661303 /* Modules */,
+				6156EB921FA1FD8600661303 /* Resource */,
+				6156EB931FA1FD9900661303 /* Supportimg Files */,
+				6156EB901FA1FD6A00661303 /* ThirdParty */,
+				6156EB8E1FA1FD5000661303 /* Utils */,
 			);
 			path = "CP-Fitness";
 			sourceTree = "<group>";
@@ -124,6 +136,92 @@
 			path = "CP-FitnessUITests";
 			sourceTree = "<group>";
 		};
+		6156EB881FA1F9D000661303 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				6156EB891FA1FA2700661303 /* BaseViewController.h */,
+				6156EB8A1FA1FA2700661303 /* BaseViewController.m */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		6156EB8C1FA1FD0900661303 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6156EB561FA1F95D00661303 /* AppDelegate.h */,
+				6156EB571FA1F95D00661303 /* AppDelegate.m */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		6156EB8D1FA1FD4400661303 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		6156EB8E1FA1FD5000661303 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6156EB8F1FA1FD5E00661303 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		6156EB901FA1FD6A00661303 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		6156EB911FA1FD7D00661303 /* Define */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Define;
+			sourceTree = "<group>";
+		};
+		6156EB921FA1FD8600661303 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		6156EB931FA1FD9900661303 /* Supportimg Files */ = {
+			isa = PBXGroup;
+			children = (
+				6156EB5F1FA1F95E00661303 /* Assets.xcassets */,
+				6156EB651FA1F95E00661303 /* main.m */,
+			);
+			path = "Supportimg Files";
+			sourceTree = "<group>";
+		};
+		D6CD379CAC28BB72E52EDA28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40BC7F9F833AE80B09576FBB /* libPods-CP-Fitness.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F8021C20C23737D36AF2FAA5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E06580A369004A09E558F909 /* Pods-CP-Fitness.debug.xcconfig */,
+				B80E4E58E7016967CEE22358 /* Pods-CP-Fitness.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -131,9 +229,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6156EB7F1FA1F95E00661303 /* Build configuration list for PBXNativeTarget "CP-Fitness" */;
 			buildPhases = (
+				786950605C6F672461AFDFEF /* [CP] Check Pods Manifest.lock */,
 				6156EB4F1FA1F95D00661303 /* Sources */,
 				6156EB501FA1F95D00661303 /* Frameworks */,
 				6156EB511FA1F95D00661303 /* Resources */,
+				9FEC138192D9F1AC067D5DA0 /* [CP] Embed Pods Frameworks */,
+				A7F08E059D23486179A76329 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,7 +331,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6156EB631FA1F95E00661303 /* LaunchScreen.storyboard in Resources */,
 				6156EB601FA1F95E00661303 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -251,12 +351,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		786950605C6F672461AFDFEF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CP-Fitness-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9FEC138192D9F1AC067D5DA0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7F08E059D23486179A76329 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6156EB4F1FA1F95D00661303 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				6156EB661FA1F95E00661303 /* main.m in Sources */,
+				6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */,
 				6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -291,17 +446,6 @@
 			targetProxy = 6156EB771FA1F95E00661303 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		6156EB611FA1F95E00661303 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6156EB621FA1F95E00661303 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		6156EB7D1FA1F95E00661303 /* Debug */ = {
@@ -410,10 +554,13 @@
 		};
 		6156EB801FA1F95E00661303 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E06580A369004A09E558F909 /* Pods-CP-Fitness.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57VQLPLW72;
 				INFOPLIST_FILE = "CP-Fitness/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "success-flower.CP-Fitness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -423,10 +570,13 @@
 		};
 		6156EB811FA1F95E00661303 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B80E4E58E7016967CEE22358 /* Pods-CP-Fitness.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 57VQLPLW72;
 				INFOPLIST_FILE = "CP-Fitness/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "success-flower.CP-Fitness";
 				PRODUCT_NAME = "$(TARGET_NAME)";
