@@ -19,5 +19,8 @@
                                 title:(NSString *)title;
 - (UIButton *)setWhiteButtonWithTitle:(NSString *)title;
 
+#pragma mark - UILabel
+- (UILabel *)setTitleWithString:(NSString *)title font:(UIFont *)font;
+
 
 @end

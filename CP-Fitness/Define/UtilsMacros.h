@@ -37,8 +37,10 @@
 #define BUTTION_SIDE 15.f
 #define BUTTON_MIDDLE 10.f
 #define BUTTON_WIDTH 44.f
-#define BUTTON_WHITE_HEIGHT KScreenHeight/3.f*2+25.f
+#define BUTTON_WHITE_HEIGHT KScreenHeight/10.f*7
 
+#pragma mark - 标题
+#define TITLE_HEIGHT KScreenHeight/10.f*2.5
 
 #pragma mark - 根据ip6的屏幕来拉伸
 #define kRealValue(with)    ((with)*(KScreenWidth/375.0f))

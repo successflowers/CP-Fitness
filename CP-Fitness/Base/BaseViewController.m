@@ -47,7 +47,7 @@
     UIButton *whiteButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [whiteButton setTitle:title forState:UIControlStateNormal];
     [whiteButton setTitleColor:KWhiteColor forState:UIControlStateNormal];
-    whiteButton.titleLabel.font = BOLDSYSTEMFONT(20);
+    whiteButton.titleLabel.font = SYSTEMFONT(20);
     [whiteButton.layer setMasksToBounds:YES];
     [whiteButton.layer setCornerRadius:22.0]; //设置矩形四个圆角半径
     [whiteButton.layer setBorderWidth:2.0];
@@ -55,6 +55,15 @@
     return whiteButton;
 }
 
+#pragma mark - UILabel
+- (UILabel *)setTitleWithString:(NSString *)title font:(UIFont *)font
+{
+    UILabel *titleLab = [[UILabel alloc] init];
+    titleLab.text = title;
+    titleLab.textColor = KWhiteColor;
+    titleLab.font = font;
+    return titleLab;
+}
 
 - (void)didReceiveMemoryWarning
 {
