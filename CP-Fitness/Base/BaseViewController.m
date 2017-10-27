@@ -55,7 +55,7 @@
     return whiteButton;
 }
 
-#pragma mark - UILabel
+#pragma mark - 标题
 - (UILabel *)setTitleWithString:(NSString *)title font:(UIFont *)font
 {
     UILabel *titleLab = [[UILabel alloc] init];
@@ -64,6 +64,8 @@
     titleLab.font = font;
     return titleLab;
 }
+
+#pragma mark - 分界标签
 
 - (void)didReceiveMemoryWarning
 {

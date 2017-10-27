@@ -19,7 +19,7 @@
                                 title:(NSString *)title;
 - (UIButton *)setWhiteButtonWithTitle:(NSString *)title;
 
-#pragma mark - UILabel
+#pragma mark - 标题
 - (UILabel *)setTitleWithString:(NSString *)title font:(UIFont *)font;
 
 

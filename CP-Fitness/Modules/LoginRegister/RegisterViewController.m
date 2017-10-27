@@ -15,7 +15,6 @@
 @property (nonatomic, retain) UIButton *LoginButton;
 @property (nonatomic, retain) UIButton *SignButton;
 
-
 @end
 
 @implementation RegisterViewController
