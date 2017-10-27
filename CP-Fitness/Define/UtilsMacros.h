@@ -40,7 +40,10 @@
 #define BUTTON_WHITE_HEIGHT KScreenHeight/10.f*7
 
 #pragma mark - 标题
-#define TITLE_HEIGHT KScreenHeight/10.f*2.5
+#define TITLE_HEIGHT KScreenHeight/10.f*2.5 
+#define BOUNDARYLAYER_HEIGHT KScreenHeight/10.f*8.5
+#define BOUNDARYLAYER_SIDE 30.f
+#define FACEBOOK_WIDTH 40.f
 
 #pragma mark - 根据ip6的屏幕来拉伸
 #define kRealValue(with)    ((with)*(KScreenWidth/375.0f))
@@ -88,6 +91,7 @@
 
 #pragma mark - 定义UIImage对象
 #define ImageWithFile(_pointer) [UIImage imageWithContentsOfFile:([[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@"%@@%dx", _pointer, (int)[UIScreen mainScreen].nativeScale] ofType:@"png"])]
+
 #define IMAGE_NAMED(name) [UIImage imageNamed:name]
 
 #pragma mark - 数据验证

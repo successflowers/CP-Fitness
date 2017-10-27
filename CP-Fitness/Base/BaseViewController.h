@@ -22,5 +22,8 @@
 #pragma mark - 标题
 - (UILabel *)setTitleWithString:(NSString *)title font:(UIFont *)font;
 
+#pragma mark - 分界标签
+- (UIView *)setBoundaryLayerWithString:(NSString *)string font:(UIFont *)font;
+
 
 @end

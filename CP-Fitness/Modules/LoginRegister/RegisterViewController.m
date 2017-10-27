@@ -14,6 +14,10 @@
 
 @property (nonatomic, retain) UIButton *LoginButton;
 @property (nonatomic, retain) UIButton *SignButton;
+@property (nonatomic, retain) UIButton *faceBookButton;
+@property (nonatomic, retain) UIButton *googleButton;
+
+@property (nonatomic, retain) UIView *boundaryLayer;
 
 @end
 
@@ -43,6 +47,11 @@
     [self.view addSubview:self.LoginButton];
     [self.view addSubview:self.SignButton];
     
+    [self.view addSubview:self.boundaryLayer];
+    
+    [self.view addSubview:self.faceBookButton];
+    [self.view addSubview:self.googleButton];
+    
     [self setupAutoLayout];
 }
 
@@ -51,6 +60,8 @@
 {
     [self setupTitleLabelAutoLayout];
     [self setupLoginAndSignButtonAutoLayout];
+    [self setupBounderLayerAutoLayout];
+    [self setupFaceBookAndGoogleBttonAutoLayout];
 }
 
 //标题
@@ -82,6 +93,33 @@
     }];
 }
 
+//标签布局
+- (void) setupBounderLayerAutoLayout
+{
+    [self.boundaryLayer mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.left.right.equalTo(self.view);
+        make.top.equalTo(self.view.mas_top).with.offset(BOUNDARYLAYER_HEIGHT);
+        make.height.mas_equalTo(BUTTON_WIDTH);
+    }];
+}
+
+//facebook和google布局
+- (void)setupFaceBookAndGoogleBttonAutoLayout
+{
+    [self.faceBookButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(-BUTTION_SIDE);
+        make.height.width.mas_equalTo(FACEBOOK_WIDTH);
+        make.left.equalTo(self.view.mas_left).with.offset(KScreenWidth/2.f-FACEBOOK_WIDTH-BUTTION_SIDE/2.f);
+    }];
+    
+    [self.googleButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.height.width.equalTo(self.faceBookButton);
+        make.left.equalTo(self.faceBookButton.mas_right).with.offset(BUTTION_SIDE);
+    }];
+}
 #pragma mark - setter and getter
 - (UILabel *)titleLabel
 {
@@ -106,6 +144,30 @@
         _SignButton = [self setWhiteButtonWithTitle:@"Sign up"];
     }
     return _SignButton;
+}
+
+- (UIView *)boundaryLayer
+{
+    if (!_boundaryLayer) {
+        _boundaryLayer = [self setBoundaryLayerWithString:@"or sign in" font:SYSTEMFONT(20)];
+    }
+    return _boundaryLayer;
+}
+
+- (UIButton *)faceBookButton
+{
+    if (!_faceBookButton) {
+      _faceBookButton = [self setButtonWithNomalImage:@"ac_login_facebook.png" highlightImage:nil title:nil];
+    }
+    return _faceBookButton;
+}
+
+- (UIButton *)googleButton
+{
+    if (!_googleButton) {
+       _googleButton = [self setButtonWithNomalImage:@"ac_login_google.png" highlightImage:nil title:nil];
+    }
+    return _googleButton;
 }
 
 - (void)didReceiveMemoryWarning
