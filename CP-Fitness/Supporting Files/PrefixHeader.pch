@@ -17,15 +17,17 @@
 #import "ThirdMacros.h"
 #import "AutoLayerMacros.h"
 
-#pragma mark - 基础类
-#import "AppDelegate+AppService.h"
-#import "BaseViewController.h"
+#pragma mark - 控件
 #import "InputFieldViewControls.h"
 #import "ButtomLoginControls.h"
 #import "ProfileViewControls.h"
+#import "SettingViewControls.h"
+
+#pragma mark - 基础类
+#import "AppDelegate+AppService.h"
+#import "BaseViewController.h"
 
 #pragma mark - 基础类别
-
 
 #pragma mark - 第三方
 #import <Masonry.h>

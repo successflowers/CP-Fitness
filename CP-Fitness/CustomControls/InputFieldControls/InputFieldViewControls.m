@@ -43,7 +43,7 @@
     return self;
 }
 
-#pragma mark - 布局
+#pragma mark - autolayout
 - (void) setupAutoLayout
 {
     [self.headIcon mas_makeConstraints:^(MASConstraintMaker *make) {

@@ -46,6 +46,8 @@
 #define ProfileButtonToTopHeight KScreenHeight/10.f*5 //profile.btn /top 高度
 #define ProfileButtonGap 15.f //profile.btn间距
 
+#define SettingLabToTopHeight KScreenHeight/10.f*4.5
+
 
 
 

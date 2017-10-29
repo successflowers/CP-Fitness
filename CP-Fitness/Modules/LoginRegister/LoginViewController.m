@@ -27,11 +27,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
   
-    [self initUILayout];
+    [self initInterface];
 }
 
-#pragma mark - initUILayout
-- (void)initUILayout
+#pragma mark - initInterface
+- (void)initInterface
 {
     [self setBackgroundWithImage:@"ac_login_bg.png"];
     [self.view addSubview:self.gobackBtn];
@@ -46,7 +46,7 @@
     [self setupAutoLayout];
 }
 
-#pragma mark - 自动布局
+#pragma mark - autolayout
 - (void) setupAutoLayout
 {
     [self.loginLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -94,8 +94,8 @@
     }];
 }
 
-#pragma mark - reponse
-- (void)didClicked:(id)sender
+#pragma mark - event response
+- (void)didLoginBtnClicked:(id)sender
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
@@ -124,7 +124,7 @@
 {
     if (!_loginButton) {
         _loginButton = [self setButtonWithNomalImage:@"ac_statusselect_tvbg.png" highlightImage:@"ac_login_tvbg.png" title:@"Login"];
-        [_loginButton addTarget:self action:@selector(didClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_loginButton addTarget:self action:@selector(didLoginBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _loginButton;
 }

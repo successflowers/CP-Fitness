@@ -34,7 +34,7 @@
     return self;
 }
 
-#pragma mark - 布局
+#pragma mark - autolayout
 - (void)setupAutoLayout
 {
     [self.headImageView mas_makeConstraints:^(MASConstraintMaker *make) {

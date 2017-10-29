@@ -7,6 +7,7 @@
 //
 
 #import "ProfileViewController.h"
+#import "SettingViewController.h"
 
 @interface ProfileViewController ()
 
@@ -21,11 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initUILayout];
+    [self initInterface];
 }
 
-#pragma mark - initUILayout
-- (void)initUILayout
+#pragma mark - initInterface
+- (void)initInterface
 {
     [self setBackgroundWithImage:@"ac_perfectinfo_bg.png"];
     [self.view addSubview:self.gobackBtn];
@@ -36,11 +37,11 @@
     [self.view addSubview:self.chageProfileButton];
     [self.view addSubview:self.settingButton];
     
-    [self setupUILayout];
+    [self setupAutoLayout];
 }
 
-#pragma mark - 布局
-- (void)setupUILayout
+#pragma mark - autoLayout
+- (void)setupAutoLayout
 {
     [self.profileControls mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -65,6 +66,18 @@
     }];
 }
 
+#pragma mark - event response
+- (void)didChageProfileBtnClicked:(id)sender
+{
+    
+}
+
+- (void)didSettingBtnClicked:(id)sender
+{
+    SettingViewController *settingVC = [[SettingViewController alloc] init];
+    [self.navigationController pushViewController:settingVC animated:YES];
+}
+
 #pragma mark - setter and getter
 - (ProfileViewControls *)profileControls
 {
@@ -86,6 +99,7 @@
     if (!_chageProfileButton) {
         
         _chageProfileButton = [self setButtonWithNomalImage:@"ac_profile_tvbg1.png" highlightImage:nil title:@"Chage Profile"];
+        [_chageProfileButton addTarget:self action:@selector(didChageProfileBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _chageProfileButton;
 }
@@ -95,6 +109,7 @@
     if (!_settingButton) {
         
         _settingButton = [self setButtonWithNomalImage:@"ac_profile_tvbg2.png" highlightImage:nil title:@"Setting"];
+        [_settingButton addTarget:self action:@selector(didSettingBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _settingButton;
 }

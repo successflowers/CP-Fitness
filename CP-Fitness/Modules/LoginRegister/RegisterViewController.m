@@ -29,7 +29,7 @@
     [super viewDidLoad];
     
     [self initParam];
-    [self initUILayout];
+    [self initInterface];
 }
 
 #pragma mark - initParam
@@ -38,8 +38,8 @@
    
 }
 
-#pragma mark - initUILayout
-- (void)initUILayout
+#pragma mark - initInterface
+- (void)initInterface
 {
     [self setBackgroundWithImage:@"ac_main_bg.png"];
     
@@ -53,7 +53,7 @@
     [self setupAutoLayout];
 }
 
-#pragma mark - 自动布局
+#pragma mark - autolayout
 - (void)setupAutoLayout
 {
     [self setupTitleLabelAutoLayout];
@@ -99,11 +99,15 @@
     }];
 }
 
-#pragma mark - respon
--(void)didClicked:(id)sender
+#pragma mark - event response
+- (void)didLoginBtnClicked:(id)sender
 {
     LoginViewController *loginVC = [[LoginViewController alloc] init];
     [self.navigationController pushViewController:loginVC animated:YES];
+}
+- (void)didSignBtnClicked:(id)sender
+{
+    
 }
 
 #pragma mark - setter and getter
@@ -120,7 +124,7 @@
 {
     if (!_loginButton) {
         _loginButton = [self setWhiteButtonWithTitle:@"Login"];
-        [_loginButton addTarget:self action:@selector(didClicked:) forControlEvents:UIControlEventTouchUpInside];
+        [_loginButton addTarget:self action:@selector(didLoginBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _loginButton;
 }
@@ -129,6 +133,7 @@
 {
     if (!_signButton) {
         _signButton = [self setWhiteButtonWithTitle:@"Sign up"];
+         [_signButton addTarget:self action:@selector(didSignBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
        
     }
     return _signButton;
