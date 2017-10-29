@@ -7,17 +7,18 @@
 //
 
 #import "RegisterViewController.h"
+#import "LoginViewController.h"
+
 
 @interface RegisterViewController ()
 
 @property (nonatomic, retain) UILabel *titleLabel;
 
-@property (nonatomic, retain) UIButton *LoginButton;
-@property (nonatomic, retain) UIButton *SignButton;
-@property (nonatomic, retain) UIButton *faceBookButton;
-@property (nonatomic, retain) UIButton *googleButton;
+@property (nonatomic, retain) UIButton *loginButton;
+@property (nonatomic, retain) UIButton *signButton;
 
-@property (nonatomic, retain) UIView *boundaryLayer;
+@property (nonatomic, retain) ButtomLoginControls *buttomLoginControls;
+
 
 @end
 
@@ -44,13 +45,10 @@
     
     [self.view addSubview:self.titleLabel];
     
-    [self.view addSubview:self.LoginButton];
-    [self.view addSubview:self.SignButton];
+    [self.view addSubview:self.loginButton];
+    [self.view addSubview:self.signButton];
     
-    [self.view addSubview:self.boundaryLayer];
-    
-    [self.view addSubview:self.faceBookButton];
-    [self.view addSubview:self.googleButton];
+    [self.view addSubview:self.buttomLoginControls];
     
     [self setupAutoLayout];
 }
@@ -60,8 +58,7 @@
 {
     [self setupTitleLabelAutoLayout];
     [self setupLoginAndSignButtonAutoLayout];
-    [self setupBounderLayerAutoLayout];
-    [self setupFaceBookAndGoogleBttonAutoLayout];
+    [self setupButtomLoginControlsAutoLayout];
 }
 
 //标题
@@ -70,56 +67,47 @@
     [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.left.right.equalTo(self.view);
-        make.top.equalTo(self.view.mas_top).with.offset(TITLE_HEIGHT);
-        make.height.mas_equalTo(BUTTON_WIDTH);
+        make.top.equalTo(self.view.mas_top).with.offset(CP_FitnessToTopHeight);
+        make.height.mas_equalTo(labelOrButtonSize);
     }];
 }
 //注册/登陆按钮
 - (void)setupLoginAndSignButtonAutoLayout
 {
-    [self.LoginButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.view.mas_top).with.offset(BUTTON_WHITE_HEIGHT);
-        make.left.equalTo(self.view.mas_left).with.offset(BUTTION_SIDE);
-        make.height.mas_equalTo(BUTTON_WIDTH);
-        make.width.equalTo(self.SignButton);
-        make.right.equalTo(self.SignButton.mas_left).with.offset(-BUTTON_MIDDLE);
+        make.top.equalTo(self.view.mas_top).with.offset(loginButtonToTopHeight);
+        make.left.equalTo(self.view.mas_left).with.offset(kScreenToButtonGap);
+        make.height.mas_equalTo(labelOrButtonSize);
+        make.width.equalTo(self.signButton);
+        make.right.equalTo(self.signButton.mas_left).with.offset(-loginToSignButtonGap);
     }];
     
-    [self.SignButton mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.signButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.height.equalTo(self.LoginButton);
-        make.right.equalTo(self.view.mas_right).with.offset(-BUTTION_SIDE);
+        make.top.height.equalTo(self.loginButton);
+        make.right.equalTo(self.view.mas_right).with.offset(-kScreenToButtonGap);
     }];
 }
 
-//标签布局
-- (void) setupBounderLayerAutoLayout
+- (void) setupButtomLoginControlsAutoLayout
 {
-    [self.boundaryLayer mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.buttomLoginControls mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.left.right.equalTo(self.view);
-        make.top.equalTo(self.view.mas_top).with.offset(BOUNDARYLAYER_HEIGHT);
-        make.height.mas_equalTo(BUTTON_WIDTH);
+        make.bottom.left.right.equalTo(self.view);
+        make.height.mas_equalTo(114);
     }];
 }
 
-//facebook和google布局
-- (void)setupFaceBookAndGoogleBttonAutoLayout
+#pragma mark - respon
+-(void)didClicked:(id)sender
 {
-    [self.faceBookButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.bottom.equalTo(self.view.mas_bottom).with.offset(-BUTTION_SIDE);
-        make.height.width.mas_equalTo(FACEBOOK_WIDTH);
-        make.left.equalTo(self.view.mas_left).with.offset(KScreenWidth/2.f-FACEBOOK_WIDTH-BUTTION_SIDE/2.f);
-    }];
-    
-    [self.googleButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        make.top.height.width.equalTo(self.faceBookButton);
-        make.left.equalTo(self.faceBookButton.mas_right).with.offset(BUTTION_SIDE);
-    }];
+    NSLog(@"~~~~~~~~~~~~~~~~~~~");
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+   
+    [self.navigationController pushViewController:loginVC animated:YES];
 }
+
 #pragma mark - setter and getter
 - (UILabel *)titleLabel
 {
@@ -130,44 +118,37 @@
     return _titleLabel;
 }
 
-- (UIButton *)LoginButton
+- (UIButton *)loginButton
 {
-    if (!_LoginButton) {
-        _LoginButton = [self setWhiteButtonWithTitle:@"Login"];
+    if (!_loginButton) {
+        _loginButton = [self setWhiteButtonWithTitle:@"Login"];
     }
-    return _LoginButton;
+    return _loginButton;
 }
 
-- (UIButton *)SignButton
+- (UIButton *)signButton
 {
-    if (!_SignButton) {
-        _SignButton = [self setWhiteButtonWithTitle:@"Sign up"];
+    if (!_signButton) {
+        _signButton = [self setWhiteButtonWithTitle:@"Sign up"];
+        [_signButton addTarget:self action:@selector(didClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
-    return _SignButton;
+    return _signButton;
 }
 
-- (UIView *)boundaryLayer
+- (ButtomLoginControls *)buttomLoginControls
 {
-    if (!_boundaryLayer) {
-        _boundaryLayer = [self setBoundaryLayerWithString:@"or sign in" font:SYSTEMFONT(20)];
+    if (!_buttomLoginControls) {
+        
+        ButtomLoginModel *model = [[ButtomLoginModel alloc] init];
+        model.text = @"or sign up";
+        model.font = SYSTEMFONT(20);
+        model.faceBookIcon = @"ac_login_facebook.png";
+        model.googleIcon = @"ac_login_google.png";
+        model.screenWidth = KScreenWidth;
+        
+        _buttomLoginControls = [[ButtomLoginControls alloc] initWithModel:model];
     }
-    return _boundaryLayer;
-}
-
-- (UIButton *)faceBookButton
-{
-    if (!_faceBookButton) {
-      _faceBookButton = [self setButtonWithNomalImage:@"ac_login_facebook.png" highlightImage:nil title:nil];
-    }
-    return _faceBookButton;
-}
-
-- (UIButton *)googleButton
-{
-    if (!_googleButton) {
-       _googleButton = [self setButtonWithNomalImage:@"ac_login_google.png" highlightImage:nil title:nil];
-    }
-    return _googleButton;
+    return _buttomLoginControls;
 }
 
 - (void)didReceiveMemoryWarning

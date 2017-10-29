@@ -18,36 +18,6 @@
 #define kUserDefaults       [NSUserDefaults standardUserDefaults]
 #define kNotificationCenter [NSNotificationCenter defaultCenter]
 
-#pragma mark - 获取屏幕宽高
-#define kStatusBarHeight    [[UIApplication sharedApplication] statusBarFrame].size.height
-#define kNavBarHeight 44.0
-#define kTabBarHeight       ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
-#define kTopHeight          (kStatusBarHeight + kNavBarHeight)
-
-
-#define KScreenWidth            ([[UIScreen mainScreen] bounds].size.width)
-#define KScreenHeight           [[UIScreen mainScreen] bounds].size.height
-#define kScreen_Bounds          [UIScreen mainScreen].bounds
-
-#define Iphone6ScaleWidth       KScreenWidth/375.0
-#define Iphone6ScaleHeight      KScreenHeight/667.0
-#define kIOS7OffHeight          (kIOSVersions>=7.0 ? 64.0 : 0.0)
-
-#pragma mark -  按钮的间距
-#define BUTTION_SIDE 15.f
-#define BUTTON_MIDDLE 10.f
-#define BUTTON_WIDTH 44.f
-#define BUTTON_WHITE_HEIGHT KScreenHeight/10.f*7
-
-#pragma mark - 标题
-#define TITLE_HEIGHT KScreenHeight/10.f*2.5 
-#define BOUNDARYLAYER_HEIGHT KScreenHeight/10.f*8.5
-#define BOUNDARYLAYER_SIDE 30.f
-#define FACEBOOK_WIDTH 40.f
-
-#pragma mark - 根据ip6的屏幕来拉伸
-#define kRealValue(with)    ((with)*(KScreenWidth/375.0f))
-
 #pragma mark - 强弱引用
 #define kWeakSelf(type)     __weak typeof(type) weak##type = type;
 #define kStrongSelf(type)   __strong typeof(type) type = weak##type;

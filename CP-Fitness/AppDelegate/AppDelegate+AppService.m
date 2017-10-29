@@ -8,6 +8,7 @@
 
 #import "AppDelegate+AppService.h"
 #import "RegisterViewController.h"
+#import "LoginViewController.h"
 
 @implementation AppDelegate (AppService)
 
@@ -21,11 +22,14 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = KWhiteColor;
     [self.window makeKeyAndVisible];
+   // LoginViewController *baseVC = [[LoginViewController alloc] init];
     RegisterViewController *baseVC = [[RegisterViewController alloc] init];
-    self.window.rootViewController = baseVC;
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:baseVC];
+    [nav setNavigationBarHidden:YES animated:YES];
+    self.window.rootViewController = nav;
    
 }
-
 
 #pragma mark ————— 初始化用户系统 —————
 -(void)initUserManager{

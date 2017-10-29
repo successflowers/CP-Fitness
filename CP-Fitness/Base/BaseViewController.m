@@ -36,9 +36,12 @@
     UIButton *newButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [newButton setTitle:title forState:UIControlStateNormal];
     [newButton setTitleColor:KWhiteColor forState:UIControlStateNormal];
-    newButton.titleLabel.font = SYSTEMFONT(16);
+    newButton.titleLabel.font = SYSTEMFONT(20);
     [newButton setBackgroundImage:IMAGE_NAMED(nomalImage) forState:UIControlStateNormal];
     [newButton setBackgroundImage:IMAGE_NAMED(highlightImage) forState:UIControlStateHighlighted];
+    [newButton.layer setMasksToBounds:YES];
+    [newButton.layer setCornerRadius:22.0]; //设置矩形四个圆角半径
+    
     return newButton;
 }
 
@@ -65,48 +68,6 @@
     return titleLab;
 }
 
-#pragma mark - 分界标签
-- (UIView *)setBoundaryLayerWithString:(NSString *)string font:(UIFont *)font
-{
-    UIView *boundaryLayer = [[UIView alloc] init];
-    boundaryLayer.backgroundColor = KClearColor;
-    
-    UILabel *signLabel  = [[UILabel alloc] init];
-    signLabel.text = string;
-    signLabel.textColor = KWhiteColor;
-    signLabel.font = font;
-    signLabel.textAlignment = NSTextAlignmentCenter;
-    signLabel.frame = CGRectMake(0, 0, KScreenWidth, BUTTON_WIDTH);
-    signLabel.backgroundColor = KClearColor;
-    [boundaryLayer addSubview:signLabel];
-    
-    //计算文字的长度
-    CGSize maxSize = CGSizeMake(MAXFLOAT, BUTTON_WIDTH);
-    CGSize newSize = [self sizeWithText:string font:font maxSize:maxSize];
-    CGFloat stringWidth = newSize.width;
-    
-    CGFloat lineWidth = (KScreenWidth -(stringWidth+2*BUTTON_MIDDLE+BOUNDARYLAYER_SIDE*2))/2.f;
-    
-    CAShapeLayer *line_1 = [CAShapeLayer layer];
-    CAShapeLayer *line_2 = [CAShapeLayer layer];
-    
-    line_1.strokeColor = RGB(159, 149, 158).CGColor;
-    line_2.strokeColor = line_1.strokeColor;
-    
-    UIBezierPath *path_1 = [UIBezierPath bezierPathWithRect:CGRectMake(BOUNDARYLAYER_SIDE, 22.f, lineWidth, 1.f)];
-    UIBezierPath *path_2 = [UIBezierPath bezierPathWithRect:CGRectMake(lineWidth+stringWidth+2*BUTTON_MIDDLE+BOUNDARYLAYER_SIDE,22.f, lineWidth, 1.0f)];
-    line_1.path = path_1.CGPath;
-    line_2.path = path_2.CGPath;
-    [boundaryLayer.layer addSublayer:line_1];
-    [boundaryLayer.layer addSublayer:line_2];
-    
-    return boundaryLayer;
-}
-
-- (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxSize:(CGSize)maxSize{
-    NSDictionary *attrs = @{NSFontAttributeName:font};
-    return [text boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
-}
 
 - (void)didReceiveMemoryWarning
 {

@@ -15,10 +15,13 @@
 #import "CommonMacros.h"
 #import "FontAndColorMacros.h"
 #import "ThirdMacros.h"
+#import "AutoLayerMacros.h"
 
 #pragma mark - 基础类
 #import "AppDelegate+AppService.h"
 #import "BaseViewController.h"
+#import "InputFieldViewControls.h"
+#import "ButtomLoginControls.h"
 
 #pragma mark - 基础类别
 
