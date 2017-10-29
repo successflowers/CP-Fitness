@@ -8,6 +8,7 @@
 
 #import "ProfileViewController.h"
 #import "SettingViewController.h"
+#import "StateViewController.h"
 
 @interface ProfileViewController ()
 
@@ -69,7 +70,8 @@
 #pragma mark - event response
 - (void)didChageProfileBtnClicked:(id)sender
 {
-    
+    StateViewController *settingVC = [[StateViewController alloc] init];
+    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
 - (void)didSettingBtnClicked:(id)sender

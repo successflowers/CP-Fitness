@@ -82,10 +82,12 @@
 - (UIButton *)gobackBtn
 {
     if (!_gobackBtn){
-        
-        _gobackBtn = [self setButtonWithNomalImage:@"main_back.png" highlightImage:nil title:nil];
-        _gobackBtn.frame = CGRectMake(20, 33, 12, 21);
+        _gobackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _gobackBtn.frame = CGRectMake(20, 20, 50, 40);
+        [_gobackBtn setImage:[UIImage imageNamed:@"main_back.png"] forState:UIControlStateNormal];
+        _gobackBtn.imageEdgeInsets = UIEdgeInsetsMake(10,0,9, 38);
         //_gobackBtn.backgroundColor = KBlueColor;
+        
         [_gobackBtn addTarget:self action:@selector(goback:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _gobackBtn;
@@ -95,7 +97,6 @@
 {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
 
 - (void)didReceiveMemoryWarning
 {
