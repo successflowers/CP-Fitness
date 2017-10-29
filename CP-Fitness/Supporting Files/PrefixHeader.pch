@@ -22,6 +22,7 @@
 #import "BaseViewController.h"
 #import "InputFieldViewControls.h"
 #import "ButtomLoginControls.h"
+#import "ProfileViewControls.h"
 
 #pragma mark - 基础类别
 

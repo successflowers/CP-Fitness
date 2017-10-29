@@ -9,6 +9,7 @@
 #import "AppDelegate+AppService.h"
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
+#import "ProfileViewController.h"
 
 @implementation AppDelegate (AppService)
 
@@ -23,7 +24,7 @@
     self.window.backgroundColor = KWhiteColor;
     [self.window makeKeyAndVisible];
    // LoginViewController *baseVC = [[LoginViewController alloc] init];
-    RegisterViewController *baseVC = [[RegisterViewController alloc] init];
+    ProfileViewController *baseVC = [[ProfileViewController alloc] init];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:baseVC];
     [nav setNavigationBarHidden:YES animated:YES];

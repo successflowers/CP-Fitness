@@ -39,8 +39,12 @@
 #define CP_FitnessToTopHeight KScreenHeight/10.f*2.5 // CP Fitness标签／Top高度
 
 #define LoginLabelToTopHeight KScreenHeight/10.f*2 //Login标签／TOP高度
-#define LoginButtonToTopHeight KScreenHeight/10.f*6.5 //Login标签／TOP高度 (Login)
-#define UserNameToTopHeight KScreenHeight/10.f*3.5 //用户输入框／Top高度
+#define LoginButtonToTopHeight KScreenHeight/10.f*5.5 //Login标签／TOP高度 (Login)
+#define UserNameToTopHeight KScreenHeight/10.f*4 //用户输入框／Top高度
+
+#define ProfileToTopHeight KScreenHeight/10.f*2 //profile/Top高度
+#define ProfileButtonToTopHeight KScreenHeight/10.f*5 //profile.btn /top 高度
+#define ProfileButtonGap 15.f //profile.btn间距
 
 
 

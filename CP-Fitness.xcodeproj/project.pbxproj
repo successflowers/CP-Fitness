@@ -12,6 +12,9 @@
 		61495F9C1FA4CD1600425BD8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61495F9B1FA4CD1600425BD8 /* LoginViewController.m */; };
 		614F4CEA1FA59A0600E0F9DC /* ButtomLoginControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4CE91FA59A0600E0F9DC /* ButtomLoginControls.m */; };
 		614F4CED1FA59D8D00E0F9DC /* ButtomLoginModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4CEC1FA59D8D00E0F9DC /* ButtomLoginModel.m */; };
+		614F4CF11FA5EBCE00E0F9DC /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4CF01FA5EBCE00E0F9DC /* ProfileViewController.m */; };
+		614F4CF51FA5EDF400E0F9DC /* ProfileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4CF41FA5EDF400E0F9DC /* ProfileModel.m */; };
+		614F4CF81FA5EE1A00E0F9DC /* ProfileViewControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4CF71FA5EE1A00E0F9DC /* ProfileViewControls.m */; };
 		6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB571FA1F95D00661303 /* AppDelegate.m */; };
 		6156EB601FA1F95E00661303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6156EB5F1FA1F95E00661303 /* Assets.xcassets */; };
 		6156EB661FA1F95E00661303 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB651FA1F95E00661303 /* main.m */; };
@@ -53,6 +56,12 @@
 		614F4CE91FA59A0600E0F9DC /* ButtomLoginControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtomLoginControls.m; sourceTree = "<group>"; };
 		614F4CEB1FA59D8D00E0F9DC /* ButtomLoginModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ButtomLoginModel.h; sourceTree = "<group>"; };
 		614F4CEC1FA59D8D00E0F9DC /* ButtomLoginModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ButtomLoginModel.m; sourceTree = "<group>"; };
+		614F4CEF1FA5EBCE00E0F9DC /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		614F4CF01FA5EBCE00E0F9DC /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		614F4CF31FA5EDF400E0F9DC /* ProfileModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileModel.h; sourceTree = "<group>"; };
+		614F4CF41FA5EDF400E0F9DC /* ProfileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileModel.m; sourceTree = "<group>"; };
+		614F4CF61FA5EE1A00E0F9DC /* ProfileViewControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewControls.h; sourceTree = "<group>"; };
+		614F4CF71FA5EE1A00E0F9DC /* ProfileViewControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewControls.m; sourceTree = "<group>"; };
 		6156EB531FA1F95D00661303 /* CP-Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CP-Fitness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6156EB561FA1F95D00661303 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6156EB571FA1F95D00661303 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -111,6 +120,7 @@
 		61495F911FA4BCA400425BD8 /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
+				614F4CF21FA5EDD200E0F9DC /* ProfileControlls */,
 				614F4CE11FA5987800E0F9DC /* ButtomLoginControls */,
 				61495F921FA4BFA300425BD8 /* InputFieldControls */,
 			);
@@ -137,6 +147,26 @@
 				614F4CEC1FA59D8D00E0F9DC /* ButtomLoginModel.m */,
 			);
 			path = ButtomLoginControls;
+			sourceTree = "<group>";
+		};
+		614F4CEE1FA5EB9400E0F9DC /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				614F4CEF1FA5EBCE00E0F9DC /* ProfileViewController.h */,
+				614F4CF01FA5EBCE00E0F9DC /* ProfileViewController.m */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		614F4CF21FA5EDD200E0F9DC /* ProfileControlls */ = {
+			isa = PBXGroup;
+			children = (
+				614F4CF31FA5EDF400E0F9DC /* ProfileModel.h */,
+				614F4CF41FA5EDF400E0F9DC /* ProfileModel.m */,
+				614F4CF61FA5EE1A00E0F9DC /* ProfileViewControls.h */,
+				614F4CF71FA5EE1A00E0F9DC /* ProfileViewControls.m */,
+			);
+			path = ProfileControlls;
 			sourceTree = "<group>";
 		};
 		6156EB4A1FA1F95D00661303 = {
@@ -201,6 +231,7 @@
 		6156EB881FA1F9D000661303 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				614F4CEE1FA5EB9400E0F9DC /* Profile */,
 				6156EBA51FA2516000661303 /* PersonRegister */,
 				6156EBA41FA2514C00661303 /* Home */,
 				6156EBA31FA250ED00661303 /* LoginRegister */,
@@ -524,9 +555,12 @@
 				6156EB661FA1F95E00661303 /* main.m in Sources */,
 				61495F991FA4C18800425BD8 /* InputFieldViewControls.m in Sources */,
 				6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */,
+				614F4CF51FA5EDF400E0F9DC /* ProfileModel.m in Sources */,
 				6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */,
+				614F4CF11FA5EBCE00E0F9DC /* ProfileViewController.m in Sources */,
 				614F4CEA1FA59A0600E0F9DC /* ButtomLoginControls.m in Sources */,
 				61495F961FA4C07900425BD8 /* InputFieldModel.m in Sources */,
+				614F4CF81FA5EE1A00E0F9DC /* ProfileViewControls.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

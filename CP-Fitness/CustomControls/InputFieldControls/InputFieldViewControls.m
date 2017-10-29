@@ -11,7 +11,7 @@
 #define headIconSize 20.f   //头图标大小
 #define endIconSize 16.f    //尾图标大小
 #define iconToLineGap 10.f   //图标／下滑线间距
-#define iconToTextFieldGap 10.f //图标／输入框间距
+#define iconToTextFieldGap 15.f //图标／输入框间距
 #define kScreenToIconGap 35.f   //屏幕／图标间距
 
 @interface InputFieldViewControls()<UITextFieldDelegate>
@@ -99,6 +99,9 @@
         _textField.returnKeyType = UIReturnKeyDone;
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.placeholder = _model.placeholder;
+        _textField.textColor = underLineColor;
+        _textField.font = SYSTEMFONT(18);
+        [_textField setValue:underLineColor forKeyPath:@"_placeholderLabel.textColor"];
     }
     return _textField;
 }

@@ -35,7 +35,7 @@
 {
     [self setBackgroundWithImage:@"ac_login_bg.png"];
     [self.view addSubview:self.gobackBtn];
-    
+   
     [self.view addSubview:self.loginLabel];
     [self.view addSubview:self.userNameInputControls];
     [self.view addSubview:self.passwordInputControls];
@@ -161,7 +161,7 @@
     if (!_buttomLoginControls) {
         ButtomLoginModel *model = [[ButtomLoginModel alloc] init];
         model.text = @"or sign with";
-        model.font = SYSTEMFONT(18);
+        model.font = SYSTEMFONT(20);
         model.faceBookIcon = @"ac_login_facebook.png";
         model.googleIcon = @"ac_login_google.png";
         model.screenWidth = KScreenWidth;

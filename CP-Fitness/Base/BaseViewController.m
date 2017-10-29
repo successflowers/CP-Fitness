@@ -65,12 +65,27 @@
     return titleLab;
 }
 
+#pragma mark - 导航栏标题
+- (UILabel *)navTitleLabel
+{
+    if (!_navTitleLabel) {
+        
+        _navTitleLabel = [self setTitleWithString:nil font:SYSTEMFONT(25)];
+        _navTitleLabel.textAlignment = NSTextAlignmentCenter;
+        //_navTitleLabel.backgroundColor = KRedColor;
+        _navTitleLabel.frame = CGRectMake(44, 22, KScreenWidth - 88, 44);
+    }
+    return _navTitleLabel;
+}
+
 #pragma mark - goback按钮
 - (UIButton *)gobackBtn
 {
     if (!_gobackBtn){
+        
         _gobackBtn = [self setButtonWithNomalImage:@"main_back.png" highlightImage:nil title:nil];
-        _gobackBtn.frame = CGRectMake(20, 44, 12, 21);
+        _gobackBtn.frame = CGRectMake(20, 33, 12, 21);
+        //_gobackBtn.backgroundColor = KBlueColor;
         [_gobackBtn addTarget:self action:@selector(goback:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _gobackBtn;

@@ -11,6 +11,7 @@
 @interface BaseViewController : UIViewController
 
 @property (nonatomic, retain) UIButton *gobackBtn; //返回按钮
+@property (nonatomic, retain) UILabel *navTitleLabel; //标题
 
 #pragma mark - 设置背景
 - (void)setBackgroundWithImage:(NSString *)image;
