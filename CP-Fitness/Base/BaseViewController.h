@@ -10,6 +10,8 @@
 
 @interface BaseViewController : UIViewController
 
+@property (nonatomic, retain) UIButton *gobackBtn; //返回按钮
+
 #pragma mark - 设置背景
 - (void)setBackgroundWithImage:(NSString *)image;
 

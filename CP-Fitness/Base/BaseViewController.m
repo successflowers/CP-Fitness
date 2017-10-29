@@ -39,9 +39,6 @@
     newButton.titleLabel.font = SYSTEMFONT(20);
     [newButton setBackgroundImage:IMAGE_NAMED(nomalImage) forState:UIControlStateNormal];
     [newButton setBackgroundImage:IMAGE_NAMED(highlightImage) forState:UIControlStateHighlighted];
-    [newButton.layer setMasksToBounds:YES];
-    [newButton.layer setCornerRadius:22.0]; //设置矩形四个圆角半径
-    
     return newButton;
 }
 
@@ -66,6 +63,22 @@
     titleLab.textColor = KWhiteColor;
     titleLab.font = font;
     return titleLab;
+}
+
+#pragma mark - goback按钮
+- (UIButton *)gobackBtn
+{
+    if (!_gobackBtn){
+        _gobackBtn = [self setButtonWithNomalImage:@"main_back.png" highlightImage:nil title:nil];
+        _gobackBtn.frame = CGRectMake(20, 44, 12, 21);
+        [_gobackBtn addTarget:self action:@selector(goback:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _gobackBtn;
+}
+
+- (void)goback:(id)sender
+{
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 

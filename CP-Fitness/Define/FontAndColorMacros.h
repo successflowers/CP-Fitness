@@ -23,7 +23,8 @@
 #define RGBA(r,g,b,a)       [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 #define kRandomColor        KRGBColor(arc4random_uniform(256)/255.0,arc4random_uniform(256)/255.0,arc4random_uniform(256)/255.0)        //随机色生成
 
-#define underLineColor      RGB(159.0, 149.0, 158.0) //下划线颜色
+#define underLineColor      RGB(159, 149, 158) //下划线颜色
+#define remindLabelColor    RGB(80, 192, 244)
 
 #pragma mark - 字体
 #define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]

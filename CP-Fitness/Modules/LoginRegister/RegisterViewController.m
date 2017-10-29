@@ -102,9 +102,7 @@
 #pragma mark - respon
 -(void)didClicked:(id)sender
 {
-    NSLog(@"~~~~~~~~~~~~~~~~~~~");
     LoginViewController *loginVC = [[LoginViewController alloc] init];
-   
     [self.navigationController pushViewController:loginVC animated:YES];
 }
 
@@ -122,6 +120,7 @@
 {
     if (!_loginButton) {
         _loginButton = [self setWhiteButtonWithTitle:@"Login"];
+        [_loginButton addTarget:self action:@selector(didClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _loginButton;
 }
@@ -130,7 +129,7 @@
 {
     if (!_signButton) {
         _signButton = [self setWhiteButtonWithTitle:@"Sign up"];
-        [_signButton addTarget:self action:@selector(didClicked:) forControlEvents:UIControlEventTouchUpInside];
+       
     }
     return _signButton;
 }

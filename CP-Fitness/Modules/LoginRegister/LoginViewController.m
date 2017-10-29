@@ -34,6 +34,7 @@
 - (void)initUILayout
 {
     [self setBackgroundWithImage:@"ac_login_bg.png"];
+    [self.view addSubview:self.gobackBtn];
     
     [self.view addSubview:self.loginLabel];
     [self.view addSubview:self.userNameInputControls];
@@ -112,9 +113,9 @@
 - (UILabel *)remindLabel
 {
     if (!_remindLabel) {
-        _remindLabel = [self setTitleWithString:@"Forget PassWord?" font:SYSTEMFONT(20)];
+        _remindLabel = [self setTitleWithString:@"Forget PassWord?" font:SYSTEMFONT(18)];
         _remindLabel.textAlignment = NSTextAlignmentRight;
-        _remindLabel.textColor = KBlueColor;
+        _remindLabel.textColor = remindLabelColor;
     }
     return _remindLabel;
 }
@@ -136,7 +137,6 @@
         model.headImage = @"ac_login_username.png";
         model.placeholder = @"username";
         model.screenWidth = KScreenWidth;
-
         _userNameInputControls = [[InputFieldViewControls alloc] initWithModel:model];
     }
     return _userNameInputControls;
@@ -145,14 +145,11 @@
 - (InputFieldViewControls *)passwordInputControls
 {
     if (!_passwordInputControls){
-        
         InputFieldModel *model = [[InputFieldModel alloc] init];
-        
         model.endImage = @"yes.png";
         model.headImage = @"ac_login_password.png";
         model.placeholder = @"password";
         model.screenWidth = KScreenWidth;
-        
         _passwordInputControls = [[InputFieldViewControls alloc] initWithModel:model];
     }
     
@@ -162,14 +159,12 @@
 - (ButtomLoginControls *)buttomLoginControls
 {
     if (!_buttomLoginControls) {
-        
         ButtomLoginModel *model = [[ButtomLoginModel alloc] init];
         model.text = @"or sign with";
         model.font = SYSTEMFONT(18);
         model.faceBookIcon = @"ac_login_facebook.png";
         model.googleIcon = @"ac_login_google.png";
         model.screenWidth = KScreenWidth;
-    
         _buttomLoginControls = [[ButtomLoginControls alloc] initWithModel:model];
     }
     return _buttomLoginControls;
