@@ -77,6 +77,7 @@
 - (UIButton *)findPasswordBtn
 {
     if (!_findPasswordBtn) {
+        
         _findPasswordBtn = [self setButtonWithNomalImage:@"ac_statusselect_tvbg.png" highlightImage:@"ac_login_tvbg.png" title:@"Find password"];
     }
     return _findPasswordBtn;

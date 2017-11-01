@@ -32,6 +32,7 @@
 {
     self = [super init];
     if (self) {
+        
         _model = model;
         self.backgroundColor = KClearColor;
         [self addSubview:self.headIcon];
@@ -72,6 +73,7 @@
 - (UIImageView *)headIcon
 {
     if (!_headIcon) {
+        
         _headIcon = [[UIImageView alloc] init];
         _headIcon.image = IMAGE_NAMED(_model.headImage);
     }
@@ -81,6 +83,7 @@
 - (UIImageView *)endIcon
 {
     if (!_endIcon) {
+        
         _endIcon = [[UIImageView alloc] init];
         _endIcon.image = IMAGE_NAMED(_model.endImage);
     }
@@ -90,6 +93,7 @@
 - (UITextField *)textField
 {
     if (!_textField) {
+        
         _textField = [[UITextField alloc] init];
         _textField.borderStyle = UITextBorderStyleNone;
         _textField.secureTextEntry = YES; //密码
@@ -109,6 +113,7 @@
 - (CAShapeLayer *)buttomLineLayer
 {
     if (!_buttomLineLayer) {
+        
         _buttomLineLayer = [CAShapeLayer layer];
         _buttomLineLayer.fillColor = underLineColor.CGColor;
         

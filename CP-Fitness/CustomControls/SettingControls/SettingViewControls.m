@@ -13,7 +13,6 @@
 #define headLabToTextFieldGap 10.f
 #define headLadWidth 80.f
 
-
 @interface SettingViewControls()<UITextFieldDelegate>
 
 @property (nonatomic, retain) UILabel *headLabel;
@@ -68,6 +67,7 @@
 - (UILabel *)headLabel
 {
     if (!_headLabel) {
+        
         _headLabel = [[UILabel alloc] init];
         _headLabel.textColor = KWhiteColor;
         _headLabel.font = SYSTEMFONT(18);

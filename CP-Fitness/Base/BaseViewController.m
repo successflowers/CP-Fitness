@@ -72,7 +72,6 @@
         
         _navTitleLabel = [self setTitleWithString:nil font:SYSTEMFONT(25)];
         _navTitleLabel.textAlignment = NSTextAlignmentCenter;
-        //_navTitleLabel.backgroundColor = KRedColor;
         _navTitleLabel.frame = CGRectMake(44, 22, KScreenWidth - 88, 44);
     }
     return _navTitleLabel;
@@ -86,8 +85,6 @@
         _gobackBtn.frame = CGRectMake(20, 20, 50, 40);
         [_gobackBtn setImage:[UIImage imageNamed:@"main_back.png"] forState:UIControlStateNormal];
         _gobackBtn.imageEdgeInsets = UIEdgeInsetsMake(10,0,9, 38);
-        //_gobackBtn.backgroundColor = KBlueColor;
-        
         [_gobackBtn addTarget:self action:@selector(goback:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _gobackBtn;

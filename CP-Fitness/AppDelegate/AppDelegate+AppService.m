@@ -10,6 +10,7 @@
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
+#import "CalendarViewController.h"
 
 @implementation AppDelegate (AppService)
 
@@ -23,8 +24,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = KWhiteColor;
     [self.window makeKeyAndVisible];
-    //LoginViewController *baseVC = [[LoginViewController alloc] init];
-    ProfileViewController *baseVC = [[ProfileViewController alloc] init];
+    //ProfileViewController *baseVC = [[ProfileViewController alloc] init];
+    CalendarViewController *baseVC = [[CalendarViewController alloc] init];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:baseVC];
     [nav setNavigationBarHidden:YES animated:YES];

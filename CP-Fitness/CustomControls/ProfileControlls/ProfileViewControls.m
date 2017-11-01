@@ -73,6 +73,7 @@
 - (UILabel *)headLabel
 {
     if (!_headLabel) {
+        
         _headLabel = [[UILabel alloc] init];
         _headLabel.textAlignment = NSTextAlignmentCenter;
         _headLabel.textColor = KWhiteColor;

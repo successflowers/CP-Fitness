@@ -35,7 +35,7 @@
 {
     [self setBackgroundWithImage:@"ac_login_bg.png"];
     [self.view addSubview:self.gobackBtn];
-   
+    
     [self.view addSubview:self.loginLabel];
     [self.view addSubview:self.userNameInputControls];
     [self.view addSubview:self.passwordInputControls];
@@ -104,6 +104,7 @@
 - (UILabel *)loginLabel
 {
     if (!_loginLabel) {
+        
         _loginLabel = [self setTitleWithString:@"Login" font:SYSTEMFONT(50)];
         _loginLabel.textAlignment = NSTextAlignmentLeft;
     }
@@ -113,6 +114,7 @@
 - (UILabel *)remindLabel
 {
     if (!_remindLabel) {
+        
         _remindLabel = [self setTitleWithString:@"Forget PassWord?" font:SYSTEMFONT(18)];
         _remindLabel.textAlignment = NSTextAlignmentRight;
         _remindLabel.textColor = remindLabelColor;
@@ -123,6 +125,7 @@
 - (UIButton *)loginButton
 {
     if (!_loginButton) {
+        
         _loginButton = [self setButtonWithNomalImage:@"ac_statusselect_tvbg.png" highlightImage:@"ac_login_tvbg.png" title:@"Login"];
         [_loginButton addTarget:self action:@selector(didLoginBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -132,6 +135,7 @@
 - (InputFieldViewControls *)userNameInputControls
 {
     if (!_userNameInputControls) {
+        
         InputFieldModel *model = [[InputFieldModel alloc] init];
         model.endImage = @"yes.png";
         model.headImage = @"ac_login_username.png";
@@ -145,6 +149,7 @@
 - (InputFieldViewControls *)passwordInputControls
 {
     if (!_passwordInputControls){
+        
         InputFieldModel *model = [[InputFieldModel alloc] init];
         model.endImage = @"yes.png";
         model.headImage = @"ac_login_password.png";
@@ -159,6 +164,7 @@
 - (ButtomLoginControls *)buttomLoginControls
 {
     if (!_buttomLoginControls) {
+        
         ButtomLoginModel *model = [[ButtomLoginModel alloc] init];
         model.text = @"or sign with";
         model.font = SYSTEMFONT(20);

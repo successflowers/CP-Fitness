@@ -51,12 +51,13 @@
         make.top.equalTo(self.view.mas_top).with.offset(UserNameToTopHeight);
         make.left.equalTo(self.view.mas_left).with.offset(kScreenToButtonGap);
         make.right.equalTo(self.view.mas_right).with.offset(-kScreenToButtonGap);
-        make.height.mas_equalTo(70.f);
+        make.height.mas_equalTo(kScreenToButtonGap*2);
         
     }];
     
     [self.traineeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-    make.top.equalTo(self.instructorBtn.mas_bottom).with.offset(ProfileButtonGap);
+        
+        make.top.equalTo(self.instructorBtn.mas_bottom).with.offset(ProfileButtonGap);
         make.left.right.height.equalTo(self.instructorBtn);
         
     }];
@@ -80,6 +81,17 @@
 }
 
 #pragma mark - event response
+- (void)didInstructorBtnCllicked:(id)sender
+{
+    [_instructorBtn setBackgroundImage:IMAGE_NAMED(@"ac_statusselect_checked1.png") forState:UIControlStateNormal];
+   
+}
+
+- (void)didTraineeBtnClicked:(id)sender
+{
+     [_traineeBtn setBackgroundImage:IMAGE_NAMED(@"ac_statusselect_checked2.png") forState:UIControlStateNormal];
+}
+
 - (void)didNextBtnClicked:(id)sender
 {
     FindPassWordViewController *finePasswordVC = [[FindPassWordViewController alloc] init];
@@ -91,7 +103,12 @@
 {
     if (!_instructorBtn) {
         
-        _instructorBtn = [self setButtonWithNomalImage:@"ac_statusselect_unchecked1.png" highlightImage:@"ac_statusselect_checked1.png" title:@"Instructor"];
+        _instructorBtn = [self setButtonWithNomalImage:@"ac_statusselect_unchecked1.png" highlightImage:nil title:@"Instructor"];
+        [_instructorBtn setImage:IMAGE_NAMED(@"ac_statusselect_checked.png") forState:UIControlStateNormal];
+        [_instructorBtn setImageEdgeInsets:UIEdgeInsetsMake(25, KScreenWidth - kScreenToButtonGap*2-40, 25, 20)];
+        [_instructorBtn setTitleEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+        _instructorBtn.titleLabel.backgroundColor = KRedColor;
+        [_instructorBtn addTarget:self action:@selector(didInstructorBtnCllicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _instructorBtn;
 }
@@ -100,7 +117,10 @@
 {
     if (!_traineeBtn) {
         
-         _traineeBtn = [self setButtonWithNomalImage:@"ac_statusselect_unchecked2.png" highlightImage:@"ac_statusselect_checked2.png" title:@"Trainee"];
+         _traineeBtn = [self setButtonWithNomalImage:@"ac_statusselect_unchecked2.png" highlightImage:nil title:@"Trainee"];
+         [_traineeBtn setImage:IMAGE_NAMED(@"ac_statusselect_checked.png") forState:UIControlStateNormal];
+        [_traineeBtn setImageEdgeInsets:UIEdgeInsetsMake(25, KScreenWidth - kScreenToButtonGap*2-40, 25, 20)];
+        [_traineeBtn addTarget:self action:@selector(didTraineeBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _traineeBtn;
 }

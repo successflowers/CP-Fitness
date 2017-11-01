@@ -25,6 +25,7 @@
 
 #define underLineColor      RGB(159, 149, 158) //下划线颜色
 #define remindLabelColor    RGB(80, 192, 244)
+#define calendarMonthColor  RGB(89, 203, 253)
 
 #pragma mark - 字体
 #define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]

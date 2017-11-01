@@ -10,4 +10,8 @@
 
 @interface CalendarViewControls : UIView
 
+@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSDate *today;
+@property (nonatomic, copy) void(^calendarBlock)(NSInteger day, NSInteger month, NSInteger year);
+
 @end

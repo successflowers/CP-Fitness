@@ -16,7 +16,6 @@
 		614F4CF51FA5EDF400E0F9DC /* ProfileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4CF41FA5EDF400E0F9DC /* ProfileModel.m */; };
 		614F4CF81FA5EE1A00E0F9DC /* ProfileViewControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4CF71FA5EE1A00E0F9DC /* ProfileViewControls.m */; };
 		614F4CFB1FA5FA0000E0F9DC /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4CFA1FA5FA0000E0F9DC /* SettingViewController.m */; };
-		614F4CFF1FA6030100E0F9DC /* SettingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4CFE1FA6030100E0F9DC /* SettingModel.m */; };
 		614F4D021FA6042000E0F9DC /* SettingViewControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4D011FA6042000E0F9DC /* SettingViewControls.m */; };
 		614F4D051FA6118600E0F9DC /* StateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4D041FA6118600E0F9DC /* StateViewController.m */; };
 		614F4D081FA618D800E0F9DC /* FindPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4D071FA618D800E0F9DC /* FindPassWordViewController.m */; };
@@ -30,6 +29,8 @@
 		6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB8A1FA1FA2700661303 /* BaseViewController.m */; };
 		6156EB961FA2001600661303 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB951FA2001600661303 /* AppDelegate+AppService.m */; };
 		6156EBA91FA251E200661303 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EBA81FA251E200661303 /* RegisterViewController.m */; };
+		6157503F1FA751F100834247 /* CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6157503E1FA751F100834247 /* CalendarCell.m */; };
+		615750421FA770E000834247 /* NSData+ZJNSData.m in Sources */ = {isa = PBXBuildFile; fileRef = 615750411FA770E000834247 /* NSData+ZJNSData.m */; };
 		68A9C698B9FEEC8B9350B8C4 /* libPods-CP-Fitness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BC7F9F833AE80B09576FBB /* libPods-CP-Fitness.a */; };
 /* End PBXBuildFile section */
 
@@ -71,8 +72,6 @@
 		614F4CF71FA5EE1A00E0F9DC /* ProfileViewControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewControls.m; sourceTree = "<group>"; };
 		614F4CF91FA5FA0000E0F9DC /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		614F4CFA1FA5FA0000E0F9DC /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
-		614F4CFD1FA6030100E0F9DC /* SettingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingModel.h; sourceTree = "<group>"; };
-		614F4CFE1FA6030100E0F9DC /* SettingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingModel.m; sourceTree = "<group>"; };
 		614F4D001FA6042000E0F9DC /* SettingViewControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewControls.h; sourceTree = "<group>"; };
 		614F4D011FA6042000E0F9DC /* SettingViewControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewControls.m; sourceTree = "<group>"; };
 		614F4D031FA6118600E0F9DC /* StateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StateViewController.h; sourceTree = "<group>"; };
@@ -108,6 +107,10 @@
 		6156EBA11FA249A900661303 /* coolplay 接口.doc */ = {isa = PBXFileReference; lastKnownFileType = file; path = "coolplay 接口.doc"; sourceTree = "<group>"; };
 		6156EBA71FA251E200661303 /* RegisterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		6156EBA81FA251E200661303 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		6157503D1FA751F100834247 /* CalendarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarCell.h; sourceTree = "<group>"; };
+		6157503E1FA751F100834247 /* CalendarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarCell.m; sourceTree = "<group>"; };
+		615750401FA770E000834247 /* NSData+ZJNSData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+ZJNSData.h"; sourceTree = "<group>"; };
+		615750411FA770E000834247 /* NSData+ZJNSData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZJNSData.m"; sourceTree = "<group>"; };
 		B80E4E58E7016967CEE22358 /* Pods-CP-Fitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.release.xcconfig"; sourceTree = "<group>"; };
 		E06580A369004A09E558F909 /* Pods-CP-Fitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -199,8 +202,6 @@
 		614F4CFC1FA6027C00E0F9DC /* SettingControls */ = {
 			isa = PBXGroup;
 			children = (
-				614F4CFD1FA6030100E0F9DC /* SettingModel.h */,
-				614F4CFE1FA6030100E0F9DC /* SettingModel.m */,
 				614F4D001FA6042000E0F9DC /* SettingViewControls.h */,
 				614F4D011FA6042000E0F9DC /* SettingViewControls.m */,
 			);
@@ -210,8 +211,12 @@
 		614F4D0C1FA6202C00E0F9DC /* CalendarControls */ = {
 			isa = PBXGroup;
 			children = (
+				6157503D1FA751F100834247 /* CalendarCell.h */,
+				6157503E1FA751F100834247 /* CalendarCell.m */,
 				614F4D0D1FA6206600E0F9DC /* CalendarViewControls.h */,
 				614F4D0E1FA6206600E0F9DC /* CalendarViewControls.m */,
+				615750401FA770E000834247 /* NSData+ZJNSData.h */,
+				615750411FA770E000834247 /* NSData+ZJNSData.m */,
 			);
 			path = CalendarControls;
 			sourceTree = "<group>";
@@ -604,7 +609,6 @@
 				614F4CED1FA59D8D00E0F9DC /* ButtomLoginModel.m in Sources */,
 				614F4D051FA6118600E0F9DC /* StateViewController.m in Sources */,
 				614F4CFB1FA5FA0000E0F9DC /* SettingViewController.m in Sources */,
-				614F4CFF1FA6030100E0F9DC /* SettingModel.m in Sources */,
 				614F4D0F1FA6206600E0F9DC /* CalendarViewControls.m in Sources */,
 				6156EB961FA2001600661303 /* AppDelegate+AppService.m in Sources */,
 				6156EB661FA1F95E00661303 /* main.m in Sources */,
@@ -615,10 +619,12 @@
 				614F4CF11FA5EBCE00E0F9DC /* ProfileViewController.m in Sources */,
 				614F4CEA1FA59A0600E0F9DC /* ButtomLoginControls.m in Sources */,
 				614F4D021FA6042000E0F9DC /* SettingViewControls.m in Sources */,
+				615750421FA770E000834247 /* NSData+ZJNSData.m in Sources */,
 				61495F961FA4C07900425BD8 /* InputFieldModel.m in Sources */,
 				614F4D0B1FA61E0A00E0F9DC /* CalendarViewController.m in Sources */,
 				614F4D081FA618D800E0F9DC /* FindPassWordViewController.m in Sources */,
 				614F4CF81FA5EE1A00E0F9DC /* ProfileViewControls.m in Sources */,
+				6157503F1FA751F100834247 /* CalendarCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -44,10 +44,8 @@
     [self setBackgroundWithImage:@"ac_main_bg.png"];
     
     [self.view addSubview:self.titleLabel];
-    
     [self.view addSubview:self.loginButton];
     [self.view addSubview:self.signButton];
-    
     [self.view addSubview:self.buttomLoginControls];
     
     [self setupAutoLayout];
@@ -114,6 +112,7 @@
 - (UILabel *)titleLabel
 {
     if (!_titleLabel) {
+        
         _titleLabel = [self setTitleWithString:@"CP Fitness" font:BOLDSYSTEMFONT(35)];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
@@ -123,6 +122,7 @@
 - (UIButton *)loginButton
 {
     if (!_loginButton) {
+        
         _loginButton = [self setWhiteButtonWithTitle:@"Login"];
         [_loginButton addTarget:self action:@selector(didLoginBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
@@ -132,6 +132,7 @@
 - (UIButton *)signButton
 {
     if (!_signButton) {
+        
         _signButton = [self setWhiteButtonWithTitle:@"Sign up"];
          [_signButton addTarget:self action:@selector(didSignBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
        
