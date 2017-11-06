@@ -27,6 +27,16 @@
 #define remindLabelColor    RGB(80, 192, 244)
 #define calendarMonthColor  RGB(89, 203, 253)
 
+#define pieRedColor RGB(249, 89, 128)
+#define pieBlueColor RGB(111, 121, 252)
+#define pieYellowColor RGB(249, 220, 104)
+#define pieGrayColor RGB(210, 210, 210)
+#define pieGreenColor RGB(177, 232, 135)
+
+#define pieBackColor RGB(61, 51, 62)
+#define pieWordColor RGB(220, 82, 110)
+#define pieShadeColor RGB(50, 43, 51)
+
 #pragma mark - 字体
 #define BOLDSYSTEMFONT(FONTSIZE)[UIFont boldSystemFontOfSize:FONTSIZE]
 #define SYSTEMFONT(FONTSIZE)    [UIFont systemFontOfSize:FONTSIZE]

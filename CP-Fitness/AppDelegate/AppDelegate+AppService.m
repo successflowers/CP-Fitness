@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
 #import "CalendarViewController.h"
+#import "TrainingDetailViewController.h"
 
 @implementation AppDelegate (AppService)
 
@@ -25,7 +26,7 @@
     self.window.backgroundColor = KWhiteColor;
     [self.window makeKeyAndVisible];
     //ProfileViewController *baseVC = [[ProfileViewController alloc] init];
-    CalendarViewController *baseVC = [[CalendarViewController alloc] init];
+    TrainingDetailViewController *baseVC = [[TrainingDetailViewController alloc] init];
     
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:baseVC];
     [nav setNavigationBarHidden:YES animated:YES];
@@ -63,7 +64,7 @@
 }
 
 
--(UIViewController *)getCurrentVC{
+- (UIViewController *)getCurrentVC{
     
     UIViewController *result = nil;
     
@@ -112,6 +113,5 @@
         }
     return superVC;
 }
-
 
 @end

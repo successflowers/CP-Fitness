@@ -48,6 +48,8 @@
 
 #define SettingLabToTopHeight KScreenHeight/10.f*4.5
 
+#define line_width 1.f
+
 
 
 
