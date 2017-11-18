@@ -11,6 +11,10 @@
 		610926A41FADAE430092A67B /* TrainingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610926A31FADAE430092A67B /* TrainingDetailViewController.m */; };
 		610926A71FAE29120092A67B /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 610926A61FAE29110092A67B /* PieView.m */; };
 		6144F3E81FBFF86900973D55 /* ZJNetWorking+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3E71FBFF86800973D55 /* ZJNetWorking+User.m */; };
+		6144F3EB1FC012BF00973D55 /* ZJNetWorking+Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3EA1FC012BE00973D55 /* ZJNetWorking+Teacher.m */; };
+		6144F3EE1FC012E000973D55 /* ZJNetWorking+Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3ED1FC012E000973D55 /* ZJNetWorking+Student.m */; };
+		6144F3F11FC012F200973D55 /* ZJNetWorking+Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3F01FC012F200973D55 /* ZJNetWorking+Friend.m */; };
+		6144F3F41FC0135E00973D55 /* ZJNetWorking+Other.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3F31FC0135E00973D55 /* ZJNetWorking+Other.m */; };
 		61495F961FA4C07900425BD8 /* InputFieldModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 61495F951FA4C07900425BD8 /* InputFieldModel.m */; };
 		61495F991FA4C18800425BD8 /* InputFieldViewControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 61495F981FA4C18800425BD8 /* InputFieldViewControls.m */; };
 		61495F9C1FA4CD1600425BD8 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61495F9B1FA4CD1600425BD8 /* LoginViewController.m */; };
@@ -72,6 +76,14 @@
 		610926A61FAE29110092A67B /* PieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
 		6144F3E61FBFF86800973D55 /* ZJNetWorking+User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJNetWorking+User.h"; sourceTree = "<group>"; };
 		6144F3E71FBFF86800973D55 /* ZJNetWorking+User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZJNetWorking+User.m"; sourceTree = "<group>"; };
+		6144F3E91FC012BE00973D55 /* ZJNetWorking+Teacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJNetWorking+Teacher.h"; sourceTree = "<group>"; };
+		6144F3EA1FC012BE00973D55 /* ZJNetWorking+Teacher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZJNetWorking+Teacher.m"; sourceTree = "<group>"; };
+		6144F3EC1FC012E000973D55 /* ZJNetWorking+Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJNetWorking+Student.h"; sourceTree = "<group>"; };
+		6144F3ED1FC012E000973D55 /* ZJNetWorking+Student.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZJNetWorking+Student.m"; sourceTree = "<group>"; };
+		6144F3EF1FC012F200973D55 /* ZJNetWorking+Friend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJNetWorking+Friend.h"; sourceTree = "<group>"; };
+		6144F3F01FC012F200973D55 /* ZJNetWorking+Friend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZJNetWorking+Friend.m"; sourceTree = "<group>"; };
+		6144F3F21FC0135E00973D55 /* ZJNetWorking+Other.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJNetWorking+Other.h"; sourceTree = "<group>"; };
+		6144F3F31FC0135E00973D55 /* ZJNetWorking+Other.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZJNetWorking+Other.m"; sourceTree = "<group>"; };
 		61495F901FA4B5D700425BD8 /* AutoLayerMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AutoLayerMacros.h; sourceTree = "<group>"; };
 		61495F941FA4C07900425BD8 /* InputFieldModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InputFieldModel.h; sourceTree = "<group>"; };
 		61495F951FA4C07900425BD8 /* InputFieldModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InputFieldModel.m; sourceTree = "<group>"; };
@@ -473,6 +485,14 @@
 				6166AD2D1FBF360E0093E732 /* ZJNetWorking.m */,
 				6144F3E61FBFF86800973D55 /* ZJNetWorking+User.h */,
 				6144F3E71FBFF86800973D55 /* ZJNetWorking+User.m */,
+				6144F3E91FC012BE00973D55 /* ZJNetWorking+Teacher.h */,
+				6144F3EA1FC012BE00973D55 /* ZJNetWorking+Teacher.m */,
+				6144F3EC1FC012E000973D55 /* ZJNetWorking+Student.h */,
+				6144F3ED1FC012E000973D55 /* ZJNetWorking+Student.m */,
+				6144F3EF1FC012F200973D55 /* ZJNetWorking+Friend.h */,
+				6144F3F01FC012F200973D55 /* ZJNetWorking+Friend.m */,
+				6144F3F21FC0135E00973D55 /* ZJNetWorking+Other.h */,
+				6144F3F31FC0135E00973D55 /* ZJNetWorking+Other.m */,
 			);
 			path = NetWorking;
 			sourceTree = "<group>";
@@ -692,6 +712,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				610926A41FADAE430092A67B /* TrainingDetailViewController.m in Sources */,
+				6144F3EB1FC012BF00973D55 /* ZJNetWorking+Teacher.m in Sources */,
 				6152105F1FB0C45F001F56F6 /* BarChartViewControls.m in Sources */,
 				61495F9C1FA4CD1600425BD8 /* LoginViewController.m in Sources */,
 				6156EBA91FA251E200661303 /* RegisterViewController.m in Sources */,
@@ -706,11 +727,14 @@
 				61495F991FA4C18800425BD8 /* InputFieldViewControls.m in Sources */,
 				6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */,
 				614F4CF51FA5EDF400E0F9DC /* ProfileModel.m in Sources */,
+				6144F3F41FC0135E00973D55 /* ZJNetWorking+Other.m in Sources */,
 				6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */,
+				6144F3EE1FC012E000973D55 /* ZJNetWorking+Student.m in Sources */,
 				614F4CF11FA5EBCE00E0F9DC /* ProfileViewController.m in Sources */,
 				614F4CEA1FA59A0600E0F9DC /* ButtomLoginControls.m in Sources */,
 				614F4D021FA6042000E0F9DC /* SettingViewControls.m in Sources */,
 				6166AD1E1FBF1ABA0093E732 /* UserModel.m in Sources */,
+				6144F3F11FC012F200973D55 /* ZJNetWorking+Friend.m in Sources */,
 				6166AD1A1FBEAE280093E732 /* ZJNetWorkingHelper.m in Sources */,
 				615750421FA770E000834247 /* NSData+ZJNSData.m in Sources */,
 				6166AD2B1FBF285B0093E732 /* NSString+Signature.m in Sources */,

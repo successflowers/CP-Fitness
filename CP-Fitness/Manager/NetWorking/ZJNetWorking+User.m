@@ -10,40 +10,18 @@
 
 @implementation ZJNetWorking (User)
 
-#pragma mark ------- 用户名／邮箱注册 ------
+#pragma mark ------- 用户名／邮箱注册 -------
 - (void)userRegistWithUserModel:(UserModel *)userModel callBack:(BusinessOperationCallback)callBack
 {
     NSString *urlStr = NSStringFormat(URL_Server, URL_User_NameOrEmailBox_Register);
+    
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.username forKey:@"username"];
     [parameters setValue:userModel.password forKey:@"password"];
     [parameters setValue:userModel.email forKey:@"email"];
-    [ZJNetWorkingHelper postJsonWithUrl:urlStr parameter:parameters
-                                success:^(NSDictionary *responseObject){
-                                    
-                                    _flag = NO;_result = nil;_eMsg = nil;
-                                        if (responseObject)
-                                            {
-                                                long errnoNumber = [[responseObject objectForKey:@"errno"] longValue];
-                                                if (errnoNumber == 0){
-                                                    _flag = YES;
-                                                    _result = responseObject;
-                                                    DDLog(@"regist success");}
-                                            }else{
-                                                _eMsg = @"数据异常";
-                                                DDLog(@"%@",[responseObject objectForKey:@"errmsg"]);
-                                            }
-                                    callBack(_flag,_result,_eMsg);
-                                    }
-                                   fail:^(NSError *error){
-                                        if (error){
-                                            _eMsg = [NSString stringWithFormat:@"%@",error];
-                                            DDLog(@"%@",error);
-                                        }
-                                       callBack(_flag,_result,_eMsg);
-                                       }
-     ];
+    
+    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 用户名／邮箱登陆 -------
@@ -54,32 +32,70 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.username forKey:@"username"];
     [parameters setValue:userModel.password forKey:@"password"];
-    [parameters setValue:@"iphone" forKey:@"source"];
-    [ZJNetWorkingHelper postJsonWithUrl:urlStr parameter:parameters
-                                success:^(NSDictionary *responseObject){
-                                    
-                                    _flag = NO;_result = nil;_eMsg = nil;
-                                    if (responseObject)
-                                    {
-                                        long errnoNumber = [[responseObject objectForKey:@"errno"] longValue];
-                                        if (errnoNumber == 0){
-                                            _flag = YES;
-                                            _result = responseObject;
-                                            DDLog(@"regist success");}
-                                    }else{
-                                        _eMsg = @"数据异常";
-                                        DDLog(@"%@",[responseObject objectForKey:@"errmsg"]);
-                                    }
-                                    callBack(_flag,_result,_eMsg);
-                                }
-                                   fail:^(NSError *error){
-                                       if (error){
-                                           _eMsg = [NSString stringWithFormat:@"%@",error];
-                                           DDLog(@"%@",error);
-                                       }
-                                       callBack(_flag,_result,_eMsg);
-                                   }
-     ];
+    [parameters setValue:@"2" forKey:@"source"]; //source 1=android,2=iphone
+    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+}
+
+#pragma mark ------- 检测用户名／邮箱 -------
+- (void)userCheckUserNameOrEmailBoxWithUserModel:(UserModel *)userModel callBack:(BusinessOperationCallback)callBack
+{
+    NSString *urlStr = NSStringFormat(URL_Server, URL_User_NameOrEmailBox_Check);
+    NSMutableDictionary *parameters = @{}.mutableCopy;
+    [parameters setValue:APP_Channel forKey:@"channel"];
+    if (userModel.username) {
+         [parameters setValue:userModel.username forKey:@"username"];
+    }else{
+        [parameters setValue:userModel.password forKey:@"password"];
+    }
+    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+}
+
+#pragma mark ------- 发送邮箱验证码 -------
+- (void)userSendKeyToEmailBoxWithUserModel:(UserModel *)userModel callBack:(BusinessOperationCallback)callBack
+{
+    NSString *urlStr = NSStringFormat(URL_Server, URL_User_EmailBox_Keypass_Send);
+    NSMutableDictionary *parameters = @{}.mutableCopy;
+    [parameters setValue:APP_Channel forKey:@"channel"];
+    [parameters setValue:userModel.email forKey:@"email"];
+    [parameters setValue:@"1" forKey:@"templet"];
+  
+   [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+}
+
+#pragma mark ------- 修改密码（根据邮箱和验证码）-------
+- (void)userModifyPassWordWithUserModel:(UserModel *)userModel callBack:(BusinessOperationCallback)callBack
+{
+    NSString *urlStr = NSStringFormat(URL_Server, URL_User_NameOrEmailBox_Keypass_Modify);
+    NSMutableDictionary *parameters = @{}.mutableCopy;
+    [parameters setValue:APP_Channel forKey:@"channel"];
+    [parameters setValue:userModel.email forKey:@"email"];
+    [parameters setValue:userModel.code forKey:@"code"];
+    [parameters setValue:userModel.password forKey:@"password"];
+   
+    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+}
+#pragma mark ------- 修改用户信息，可单项修改 -------
+- (void)userModifyUserImformationUserModel:(UserModel *)userModel callBack:(BusinessOperationCallback)callBack
+{
+    NSString *urlStr = NSStringFormat(URL_Server, URL_User_Information_Modify);
+    NSMutableDictionary *parameters = @{}.mutableCopy;
+    [parameters setValue:APP_Channel forKey:@"channel"];
+    [parameters setValue:userModel.email forKey:@"email"];
+    [parameters setValue:userModel.code forKey:@"code"];
+    [parameters setValue:userModel.password forKey:@"password"];
+    
+    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+}
+
+#pragma mark ------- 获取用户信息 -------
+- (void)userGetUserImformationUserModel:(UserModel *)userModel callBack:(BusinessOperationCallback)callBack
+{
+    NSString *urlStr = NSStringFormat(URL_Server, URL_User_Information_Get);
+    NSMutableDictionary *parameters = @{}.mutableCopy;
+    [parameters setValue:APP_Channel forKey:@"channel"];
+    [parameters setValue:userModel.characterId forKey:@"characterId"];
+    
+    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 @end

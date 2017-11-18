@@ -26,10 +26,13 @@
 #pragma mark - 基础类
 #import "AppDelegate+AppService.h"
 #import "BaseViewController.h"
-#import "UserModel.h"
 #import "ZJNetWorking.h"
 #import "ZJNetWorkingHelper.h"
 #import "ZJNetWorking+User.h"
+#import "ZJNetWorking+Teacher.h"
+#import "ZJNetWorking+Student.h"
+#import "ZJNetWorking+Friend.h"
+#import "ZJNetWorking+Other.h"
 
 #pragma mark - 基础类别
 #import "NSData+ZJNSData.h"

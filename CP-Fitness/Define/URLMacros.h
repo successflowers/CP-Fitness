@@ -10,17 +10,17 @@
 #ifndef URLMacros_h
 #define URLMacros_h
 
-#pragma mark ---- Secret -----
+#pragma mark ------- Secret -------
 #define App_Key @"100004"
 #define APP_Secret @"83af706573907c3800ffa0a53b6afd2f"
 #define APP_Authorization @"coolplay-auth-v1"
 #define APP_Channel @"coolplayhrcoach001"
 
-#pragma mark ---- Server -----
+#pragma mark ------- Server --------
 #define URL_Server  @"http://srv.coolplay.tv:8086" //服务器地址
 
 
-#pragma mark ---- User_LoginOrRegister -----
+#pragma mark ------- User_LoginOrRegister -------
 #define URL_User_WeiXin_Login @"/hr/login/weixin" //微信登陆
 #define URL_User_Information_Modify @"/hr/user/update" //修改用户信息
 #define URL_User_Information_Get @"/hr/user/info" //获取用户信息
@@ -31,13 +31,11 @@
 #define URL_User_EmailBox_Keypass_Send @"/mail/sendcode" //发送邮箱验证码
 
 
-#pragma mark ---- Business_Student -----
+#pragma mark ------- Business_Student -------
 #define URL_Student_TeacherMumber_List @"/hr/course/coaches" //获取教练列表
 #define URL_Student_TeacherNumber_Blinded_List @"/hr/course/mycoach" //获取学员临时绑定的教练
 #define URL_Student_Teacher_Blinding @"/hr/course/bindcoach" //学员临时绑定教练
 #define URL_Student_Teacher_Blinded_Delete @"/hr/course/unbindcoach" //学员解除与教练的绑定
-
-
 #define URL_Student_HeartRate_Regist @"/hr/user/regdevice" //注册心率带
 #define URL_Student_HeartRate_Number_Get @"/hr/box/hubs" //通过盒子mac获取绑定的HUB蓝牙路由器信息
 #define URL_Student_MeasureNumber_Update @"/hr/user/updatemeasure" //更新用户测量数值
@@ -57,7 +55,7 @@
 #define URL_Student_GroupCourse_List @"/hr/groupcourse/schedule" //根据日期获取团课排期列表
 
 
-#pragma mark ---- Business_Teacher -----
+#pragma mark ------- Business_Teacher -------
 #define URL_Teacher_SportData_All_Send @"/hr/box/uploaddata" //上传运动数据(全部)
 #define URL_Teacher_Event_List @"/hr/box/event" //获取事件
 #define URL_Teacher_Course_List @"/hr/course/box" //获取健身馆可使用的盒子列表
@@ -72,7 +70,7 @@
 #define Url_Teacher_HeartRate_Blinded_Delete @"/hr/course/unbinddevice" //解绑心率带
 
 
-#pragma mark ---- Friend -----
+#pragma mark ------- Friend -------
 #define URL_Friend_Recommend @"/hr/friend/recommend" //推荐添加的好友
 #define URL_Friend_Add @"/hr/friend/add" //添加好友
 #define URL_Friend_Delete @"/hr/friend/delete" //删除好友
@@ -94,7 +92,7 @@
 #define URL_Friend_Setting_Get @"/hr/user/setting/values" //获取好友权限开关项设置
 
 
-#pragma mark ---- Other -----
+#pragma mark ------- Other -------
 #define URL_App_Version_Update @"/hr/box/update" //获取盒子app升级信息，启动时调用
 #define URL_Ad_List @"/v2/advertising/retrieve" //广告
 #define URL_Image_Send @"/file/upload/bs64" //上传图片

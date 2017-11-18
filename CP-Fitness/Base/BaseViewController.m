@@ -19,6 +19,15 @@
     [super viewDidLoad];
 }
 
+#pragma mark - UserModel
+- (UserModel *)userModel
+{
+    if (!_userModel) {
+        _userModel = [[UserModel alloc] init];
+    }
+    return _userModel;
+}
+
 #pragma mark - 设置背景
 - (void)setBackgroundWithImage:(NSString *)image
 {

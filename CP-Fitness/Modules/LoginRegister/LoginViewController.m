@@ -19,7 +19,6 @@
 @property (nonatomic, retain) UIButton *loginButton;
 
 @property (nonatomic, retain) ButtomLoginControls *buttomLoginControls;
-@property (nonatomic, retain) UserModel *userModel;
 
 @end
 
@@ -113,14 +112,6 @@
 }
 
 #pragma mark - setter and getter
-- (UserModel *)userModel
-{
-    if (!_userModel) {
-        _userModel = [[UserModel alloc] init];
-    }
-    return _userModel;
-}
-
 - (UILabel *)loginLabel
 {
     if (!_loginLabel) {

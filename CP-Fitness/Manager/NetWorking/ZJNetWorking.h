@@ -18,12 +18,9 @@
 typedef void (^BusinessOperationCallback)(BOOL isSucessed,id outParam,NSString *eMsg);
 
 @interface ZJNetWorking : NSObject
-{
-    BOOL _flag;
-    id _result;
-    NSString *_eMsg;
-}
+
 + (instancetype)sharedInstance;
+- (void)getResponseDateWithUrl:(NSString *)urlStr parameter:(NSDictionary*) parameters callBack:(BusinessOperationCallback)callBack;
 
 
 @end
