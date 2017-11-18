@@ -31,8 +31,6 @@
 {
     self = [super init];
     if (self) {
-        
-        
         self.percentArray = array;
         
         [self initParam];
@@ -116,7 +114,6 @@ andandPieChartColor:(UIColor *)andPieChartColor{
 }
 
 #pragma mark - setter and getter
-
 - (CAShapeLayer *)redLayer
 {
     if (!_redLayer) {

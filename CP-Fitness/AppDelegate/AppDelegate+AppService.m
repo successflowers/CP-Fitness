@@ -17,7 +17,7 @@
 
 #pragma mark ————— 初始化服务 —————
 -(void)initService{
-   
+    
 }
 
 #pragma mark ————— 初始化window —————
@@ -25,18 +25,27 @@
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = KWhiteColor;
     [self.window makeKeyAndVisible];
-    //ProfileViewController *baseVC = [[ProfileViewController alloc] init];
-    TrainingDetailViewController *baseVC = [[TrainingDetailViewController alloc] init];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:baseVC];
-    [nav setNavigationBarHidden:YES animated:YES];
-    self.window.rootViewController = nav;
-   
+    [self initUserManager];
+
 }
 
 #pragma mark ————— 初始化用户系统 —————
 -(void)initUserManager{
    
+    UIViewController *viewController = nil;
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    if (![userDefaults objectForKey:@"useName"])
+    {
+        viewController = [[RegisterViewController alloc] init];
+    }
+    else
+    {
+        
+    }
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    [nav setNavigationBarHidden:YES animated:YES];
+    self.window.rootViewController = nav;
 }
 
 

@@ -48,15 +48,19 @@
 //-------------------打印日志-------------------------
 #pragma mark - DEBUG  模式下打印日志,当前行
 #ifdef DEBUG
-#define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+#define DDLog(fmt, ...) NSLog((@"\n************~~~~~~~~~~~~~~~~~~~************\n %s \n [Line %d] \n" fmt @"\n************~~~~~~~~~~~~~~~~~~~************\n"), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
-#define DLog(...)
+#define DDLog(...)
 #endif
 
 #pragma mark - 拼接字符串
-#define NSSTRING(a,b)               [NSString stringWithFormat:@"%@：%@", a,b]
-#define NSSTRING_LONG(a,b)          [NSString stringWithFormat:@"%@：%ld", a,b]
-#define NSStringFormat(format,...)  [NSString stringWithFormat:format,##__VA_ARGS__]
+#define NSSTRING(a,b) [NSString stringWithFormat:@"%@：%@",a,b]
+#define NSSTRING_LONG(a,b) [NSString stringWithFormat:@"%@：%ld", a,b]
+#define NSStringFormat(a,b)  [NSString stringWithFormat:@"%@%@",a,b]
+
+#pragma mark - 打印日志
+
+#define DDLOG() NSLog(@"%s:%d obj=%@", __func__, __LINE__, self);
 
 
 #pragma mark - 定义UIImage对象

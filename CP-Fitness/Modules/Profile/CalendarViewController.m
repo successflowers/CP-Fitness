@@ -102,7 +102,7 @@
         _calendarControls.date = _calendarControls.today;
         _calendarControls.calendarBlock = ^(NSInteger day, NSInteger month, NSInteger year){
             
-        NSLog(@"%f-%f-%f",(long)year,(long)month,(long)day);
+        NSLog(@"%@-%@-%@",@(year),@(month),@(day));
         };
     }
     return _calendarControls;

@@ -19,6 +19,7 @@
 @property (nonatomic, retain) UIButton *loginButton;
 
 @property (nonatomic, retain) ButtomLoginControls *buttomLoginControls;
+@property (nonatomic, retain) UserModel *userModel;
 
 @end
 
@@ -97,10 +98,29 @@
 #pragma mark - event response
 - (void)didLoginBtnClicked:(id)sender
 {
+    self.userModel.username = @"success123";
+    self.userModel.password = @"123456";
+    
+    [[ZJNetWorking sharedInstance] userLoginWithUserModel:self.userModel callBack:^(BOOL isSucessed, id outParam, NSString *eMsg) {
+        if (isSucessed) {
+            DDLog(@"good luck!");
+        }else
+        {
+            DDLog(@"bad luck");
+        }
+    }];
     [self.navigationController popViewControllerAnimated:YES];
 }
 
 #pragma mark - setter and getter
+- (UserModel *)userModel
+{
+    if (!_userModel) {
+        _userModel = [[UserModel alloc] init];
+    }
+    return _userModel;
+}
+
 - (UILabel *)loginLabel
 {
     if (!_loginLabel) {
@@ -178,7 +198,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
 }
 
 @end

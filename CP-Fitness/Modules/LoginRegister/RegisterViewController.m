@@ -9,7 +9,6 @@
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
 
-
 @interface RegisterViewController ()
 
 @property (nonatomic, retain) UILabel *titleLabel;
@@ -19,6 +18,7 @@
 
 @property (nonatomic, retain) ButtomLoginControls *buttomLoginControls;
 
+@property (nonatomic, retain) UserModel *userModel;
 
 @end
 
@@ -105,10 +105,29 @@
 }
 - (void)didSignBtnClicked:(id)sender
 {
+    self.userModel.username = @"success123";
+    self.userModel.email = @"1579589763@qq.com";
+    self.userModel.password = @"123456";
     
+    [[ZJNetWorking sharedInstance] userRegistWithUserModel:self.userModel callBack:^(BOOL isSucessed, id outParam, NSString *eMsg) {
+        
+        if (isSucessed) {
+            DDLog(@"good luck!");
+        }else
+        {
+            DDLog(@"bad luck");
+        }
+    }];
 }
 
 #pragma mark - setter and getter
+- (UserModel *)userModel
+{
+    if (!_userModel) {
+        _userModel = [[UserModel alloc] init];
+    }
+    return _userModel;
+}
 - (UILabel *)titleLabel
 {
     if (!_titleLabel) {

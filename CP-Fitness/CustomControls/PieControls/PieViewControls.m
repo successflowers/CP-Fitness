@@ -86,7 +86,7 @@
 {
     for (int i = 0; i<self.percentArray.count; i++) {
         
-        CGRect rect = CGRectMake(20,pieCicleHeight *9+30*i, 45, 16);
+        CGRect rect = CGRectMake(30,pieCicleHeight *9+30*i, 45, 16);
         
         CAShapeLayer *layer = [CAShapeLayer layer];
         UIColor *color = self.colorArray[i];
@@ -100,14 +100,14 @@
         label_1.frame = CGRectMake(rect.origin.x+65, rect.origin.y, 150, 16);
         label_1.text = self.textArray_1[i];
         label_1.textColor = KWhiteColor;
-        label_1.font = SYSTEMFONT(16);
+        label_1.font = SYSTEMFONT(15);
         [self addSubview:label_1];
         
         UILabel *label_2 = [[UILabel alloc] init];
         label_2.frame = CGRectMake(rect.origin.x+200, rect.origin.y, 150, 16);
         label_2.text = self.textArray_2[i];
         label_2.textColor = pieWordColor;
-        label_2.font = SYSTEMFONT(16);
+        label_2.font = SYSTEMFONT(15);
         [self addSubview:label_2];
     }
 }
