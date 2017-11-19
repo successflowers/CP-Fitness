@@ -36,13 +36,13 @@
    
     UIViewController *viewController = nil;
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if (![userDefaults objectForKey:@"useName"])
+    if ([userDefaults objectForKey:@"useName"])
     {
-        viewController = [[HomeViewController alloc] init];
+        viewController = [[RegisterViewController alloc] init];
     }
     else
     {
-        
+        viewController = [[HomeViewController alloc] init];
     }
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
     [nav setNavigationBarHidden:YES animated:YES];

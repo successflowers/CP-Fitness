@@ -8,6 +8,10 @@
 
 #import "FindPassWordViewController.h"
 
+#define emailFeildToTopGap 200.f
+#define findPasswordBtnToemailFeildGop 100.f
+#define findPasswordBtnSideToScreenGap 70.f
+
 @interface FindPassWordViewController ()
 
 @property (nonatomic, retain) InputFieldViewControls *emailControls;
@@ -43,16 +47,16 @@
 {
     [self.emailControls mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.top.equalTo(self.view.mas_top).with.offset(UserNameToTopHeight);
+        make.top.equalTo(self.view.mas_top).with.offset(emailFeildToTopGap);
         make.left.right.equalTo(self.view);
         make.height.mas_equalTo(labelOrButtonSize);
     }];
     
     [self.findPasswordBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.view.mas_top).with.offset(loginButtonToTopHeight);
-        make.left.equalTo(self.view.mas_left).with.offset(loginButtonTopScreenSideGap);
-        make.right.equalTo(self.view.mas_right).with.offset(-loginButtonTopScreenSideGap);
+        make.top.equalTo(self.emailControls.mas_bottom).with.offset(findPasswordBtnToemailFeildGop);
+        make.left.equalTo(self.view.mas_left).with.offset(findPasswordBtnSideToScreenGap);
+        make.right.equalTo(self.view.mas_right).with.offset(-findPasswordBtnSideToScreenGap);
         make.height.mas_equalTo(labelOrButtonSize);
     }];
 }

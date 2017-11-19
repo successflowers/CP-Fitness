@@ -8,6 +8,7 @@
 
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
+#import "SignUpViewController.h"
 
 @interface RegisterViewController ()
 
@@ -102,6 +103,10 @@
 }
 - (void)didSignBtnClicked:(id)sender
 {
+    SignUpViewController *signUpVC = [[SignUpViewController alloc] init];
+    [self.navigationController pushViewController:signUpVC animated:YES];
+    
+    /*
     self.userModel.username = @"success123";
     self.userModel.email = @"1579589763@qq.com";
     self.userModel.password = @"123456";
@@ -114,7 +119,8 @@
         {
             DDLog(@"bad luck");
         }
-    }];
+     }];
+     */
 }
 
 #pragma mark - setter and getter
@@ -123,7 +129,7 @@
 {
     if (!_titleLabel) {
         
-        _titleLabel = [self setTitleWithString:@"CP Fitness" font:BOLDSYSTEMFONT(35)];
+        _titleLabel = [self setTitleWithString:@"CP Fitness" font:BOLDSYSTEMFONT(40)];
         _titleLabel.textAlignment = NSTextAlignmentCenter;
     }
     return _titleLabel;

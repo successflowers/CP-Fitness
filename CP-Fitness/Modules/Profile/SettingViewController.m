@@ -7,6 +7,8 @@
 //
 
 #import "SettingViewController.h"
+#define titleLabelToTopGap 200.f
+#define webSiteFeildToTitleGap 150.f
 
 @interface SettingViewController ()
 
@@ -44,14 +46,14 @@
 {
     [self.cpFitnessLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.view.mas_top).offset(CP_FitnessToTopHeight);
+        make.top.equalTo(self.view.mas_top).offset(titleLabelToTopGap);
         make.left.right.equalTo(self.view);
         make.height.mas_equalTo(labelOrButtonSize);
     }];
     
     [self.webSiteControls mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.view.mas_top).offset(SettingLabToTopHeight);
+        make.top.equalTo(self.cpFitnessLabel.mas_bottom).offset(webSiteFeildToTitleGap);
         make.left.right.equalTo(self.view);
         make.height.mas_equalTo(50.f);
         

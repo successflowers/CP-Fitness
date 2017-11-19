@@ -8,7 +8,8 @@
 
 #import "CalendarViewController.h"
 #import "CalendarViewControls.h"
-
+#import "TrainingDetailViewController.h"
+#define WS(weakSelf)  __weak __typeof(&*self)weakSelf = self;
 @interface CalendarViewController ()
 
 @property (nonatomic, retain) UIImageView *logoIcon;
@@ -100,9 +101,13 @@
         _calendarControls = [[CalendarViewControls alloc] init];
         _calendarControls.today = [NSDate date];
         _calendarControls.date = _calendarControls.today;
+        
         _calendarControls.calendarBlock = ^(NSInteger day, NSInteger month, NSInteger year){
             
         NSLog(@"%@-%@-%@",@(year),@(month),@(day));
+           
+          TrainingDetailViewController *trainDetailVC = [[TrainingDetailViewController alloc] init];
+            [self.navigationController pushViewController:trainDetailVC animated:YES];
         };
     }
     return _calendarControls;

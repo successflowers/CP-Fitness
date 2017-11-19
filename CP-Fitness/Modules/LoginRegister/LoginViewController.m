@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "FindPassWordViewController.h"
 
 @interface LoginViewController ()
 
@@ -16,7 +17,9 @@
 @property (nonatomic, retain) InputFieldViewControls *passwordInputControls;
 
 @property (nonatomic, retain) UILabel *remindLabel;
+@property (nonatomic, retain) UIButton *remindButton;
 @property (nonatomic, retain) UIButton *loginButton;
+
 
 @property (nonatomic, retain) ButtomLoginControls *buttomLoginControls;
 
@@ -40,6 +43,7 @@
     [self.view addSubview:self.userNameInputControls];
     [self.view addSubview:self.passwordInputControls];
     [self.view addSubview:self.remindLabel];
+    [self.view addSubview:self.remindButton];
     [self.view addSubview:self.loginButton];
     [self.view addSubview:self.buttomLoginControls];
     
@@ -79,6 +83,11 @@
         make.height.mas_equalTo(labelOrButtonSize);
     }];
     
+    [self.remindButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        make.top.left.right.height.equalTo(self.remindLabel);
+    }];
+    
     [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.equalTo(self.view.mas_top).with.offset(loginButtonToTopHeight);
@@ -111,6 +120,12 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (void)didRemindBtnClicked:(id)sender
+{
+    FindPassWordViewController *findPasswordVC = [[FindPassWordViewController alloc] init];
+    [self.navigationController pushViewController:findPasswordVC animated:YES];
+}
+
 #pragma mark - setter and getter
 - (UILabel *)loginLabel
 {
@@ -132,6 +147,17 @@
     }
     return _remindLabel;
 }
+
+- (UIButton *)remindButton
+{
+    if (!_remindButton) {
+        
+        _remindButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_remindButton addTarget:self action:@selector(didRemindBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _remindButton;
+}
+
 
 - (UIButton *)loginButton
 {

@@ -45,7 +45,8 @@
     UIButton *newButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [newButton setTitle:title forState:UIControlStateNormal];
     [newButton setTitleColor:KWhiteColor forState:UIControlStateNormal];
-    newButton.titleLabel.font = SYSTEMFONT(20);
+    newButton.titleLabel.font = SYSTEMFONT(22);
+    newButton.titleLabel.textAlignment = NSTextAlignmentCenter;
     [newButton setBackgroundImage:IMAGE_NAMED(nomalImage) forState:UIControlStateNormal];
     [newButton setBackgroundImage:IMAGE_NAMED(highlightImage) forState:UIControlStateHighlighted];
     return newButton;
@@ -56,9 +57,9 @@
     UIButton *whiteButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [whiteButton setTitle:title forState:UIControlStateNormal];
     [whiteButton setTitleColor:KWhiteColor forState:UIControlStateNormal];
-    whiteButton.titleLabel.font = SYSTEMFONT(20);
+    whiteButton.titleLabel.font = SYSTEMFONT(22);
     [whiteButton.layer setMasksToBounds:YES];
-    [whiteButton.layer setCornerRadius:22.0]; //设置矩形四个圆角半径
+    [whiteButton.layer setCornerRadius:27.0]; //设置矩形四个圆角半径
     [whiteButton.layer setBorderWidth:2.0];
     whiteButton.layer.borderColor = KWhiteColor.CGColor;
     return whiteButton;

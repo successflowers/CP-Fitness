@@ -11,6 +11,12 @@
 		610926A41FADAE430092A67B /* TrainingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610926A31FADAE430092A67B /* TrainingDetailViewController.m */; };
 		610926A71FAE29120092A67B /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 610926A61FAE29110092A67B /* PieView.m */; };
 		6112BA981FC07BC400CA099C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BA971FC07BC400CA099C /* HomeViewController.m */; };
+		611F32C41FC184C0001F3820 /* TainingDetailHeaderControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 611F32C31FC184C0001F3820 /* TainingDetailHeaderControls.m */; };
+		611F32C71FC18653001F3820 /* TainingDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 611F32C61FC18653001F3820 /* TainingDetailModel.m */; };
+		611F32CB1FC1A441001F3820 /* RecentTainingDataControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 611F32CA1FC1A441001F3820 /* RecentTainingDataControls.m */; };
+		611F32CE1FC1A46A001F3820 /* RecentTainingDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 611F32CD1FC1A46A001F3820 /* RecentTainingDataModel.m */; };
+		614444201FC134940010C76C /* SignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144441F1FC134940010C76C /* SignUpViewController.m */; };
+		614444231FC156FF0010C76C /* TakingClassViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614444221FC156FF0010C76C /* TakingClassViewController.m */; };
 		6144F3E81FBFF86900973D55 /* ZJNetWorking+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3E71FBFF86800973D55 /* ZJNetWorking+User.m */; };
 		6144F3EB1FC012BF00973D55 /* ZJNetWorking+Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3EA1FC012BE00973D55 /* ZJNetWorking+Teacher.m */; };
 		6144F3EE1FC012E000973D55 /* ZJNetWorking+Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3ED1FC012E000973D55 /* ZJNetWorking+Student.m */; };
@@ -77,6 +83,18 @@
 		610926A61FAE29110092A67B /* PieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
 		6112BA961FC07BC400CA099C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		6112BA971FC07BC400CA099C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		611F32C21FC184C0001F3820 /* TainingDetailHeaderControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TainingDetailHeaderControls.h; sourceTree = "<group>"; };
+		611F32C31FC184C0001F3820 /* TainingDetailHeaderControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TainingDetailHeaderControls.m; sourceTree = "<group>"; };
+		611F32C51FC18653001F3820 /* TainingDetailModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TainingDetailModel.h; sourceTree = "<group>"; };
+		611F32C61FC18653001F3820 /* TainingDetailModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TainingDetailModel.m; sourceTree = "<group>"; };
+		611F32C91FC1A441001F3820 /* RecentTainingDataControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentTainingDataControls.h; sourceTree = "<group>"; };
+		611F32CA1FC1A441001F3820 /* RecentTainingDataControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentTainingDataControls.m; sourceTree = "<group>"; };
+		611F32CC1FC1A46A001F3820 /* RecentTainingDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecentTainingDataModel.h; sourceTree = "<group>"; };
+		611F32CD1FC1A46A001F3820 /* RecentTainingDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecentTainingDataModel.m; sourceTree = "<group>"; };
+		6144441E1FC134940010C76C /* SignUpViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignUpViewController.h; sourceTree = "<group>"; };
+		6144441F1FC134940010C76C /* SignUpViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignUpViewController.m; sourceTree = "<group>"; };
+		614444211FC156FF0010C76C /* TakingClassViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TakingClassViewController.h; sourceTree = "<group>"; };
+		614444221FC156FF0010C76C /* TakingClassViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TakingClassViewController.m; sourceTree = "<group>"; };
 		6144F3E61FBFF86800973D55 /* ZJNetWorking+User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJNetWorking+User.h"; sourceTree = "<group>"; };
 		6144F3E71FBFF86800973D55 /* ZJNetWorking+User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZJNetWorking+User.m"; sourceTree = "<group>"; };
 		6144F3E91FC012BE00973D55 /* ZJNetWorking+Teacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJNetWorking+Teacher.h"; sourceTree = "<group>"; };
@@ -200,9 +218,33 @@
 			path = PieControls;
 			sourceTree = "<group>";
 		};
+		611F32C11FC1845F001F3820 /* TainingDetailHeaderControls */ = {
+			isa = PBXGroup;
+			children = (
+				611F32C21FC184C0001F3820 /* TainingDetailHeaderControls.h */,
+				611F32C31FC184C0001F3820 /* TainingDetailHeaderControls.m */,
+				611F32C51FC18653001F3820 /* TainingDetailModel.h */,
+				611F32C61FC18653001F3820 /* TainingDetailModel.m */,
+			);
+			path = TainingDetailHeaderControls;
+			sourceTree = "<group>";
+		};
+		611F32C81FC1A404001F3820 /* RecentTainingDataControls */ = {
+			isa = PBXGroup;
+			children = (
+				611F32C91FC1A441001F3820 /* RecentTainingDataControls.h */,
+				611F32CA1FC1A441001F3820 /* RecentTainingDataControls.m */,
+				611F32CC1FC1A46A001F3820 /* RecentTainingDataModel.h */,
+				611F32CD1FC1A46A001F3820 /* RecentTainingDataModel.m */,
+			);
+			path = RecentTainingDataControls;
+			sourceTree = "<group>";
+		};
 		61495F911FA4BCA400425BD8 /* CustomControls */ = {
 			isa = PBXGroup;
 			children = (
+				611F32C81FC1A404001F3820 /* RecentTainingDataControls */,
+				611F32C11FC1845F001F3820 /* TainingDetailHeaderControls */,
 				6152105C1FB0C419001F56F6 /* BarChartControls */,
 				6109269E1FADACC50092A67B /* PieControls */,
 				614F4D0C1FA6202C00E0F9DC /* CalendarControls */,
@@ -446,6 +488,8 @@
 				6156EBA81FA251E200661303 /* RegisterViewController.m */,
 				614F4D031FA6118600E0F9DC /* StateViewController.h */,
 				614F4D041FA6118600E0F9DC /* StateViewController.m */,
+				6144441E1FC134940010C76C /* SignUpViewController.h */,
+				6144441F1FC134940010C76C /* SignUpViewController.m */,
 			);
 			path = LoginRegister;
 			sourceTree = "<group>";
@@ -455,6 +499,8 @@
 			children = (
 				6112BA961FC07BC400CA099C /* HomeViewController.h */,
 				6112BA971FC07BC400CA099C /* HomeViewController.m */,
+				614444211FC156FF0010C76C /* TakingClassViewController.h */,
+				614444221FC156FF0010C76C /* TakingClassViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -720,7 +766,9 @@
 				6144F3EB1FC012BF00973D55 /* ZJNetWorking+Teacher.m in Sources */,
 				6152105F1FB0C45F001F56F6 /* BarChartViewControls.m in Sources */,
 				61495F9C1FA4CD1600425BD8 /* LoginViewController.m in Sources */,
+				614444201FC134940010C76C /* SignUpViewController.m in Sources */,
 				6156EBA91FA251E200661303 /* RegisterViewController.m in Sources */,
+				614444231FC156FF0010C76C /* TakingClassViewController.m in Sources */,
 				6144F3E81FBFF86900973D55 /* ZJNetWorking+User.m in Sources */,
 				614F4CED1FA59D8D00E0F9DC /* ButtomLoginModel.m in Sources */,
 				6166AD2E1FBF360E0093E732 /* ZJNetWorking.m in Sources */,
@@ -732,6 +780,8 @@
 				61495F991FA4C18800425BD8 /* InputFieldViewControls.m in Sources */,
 				6156EB8B1FA1FA2700661303 /* BaseViewController.m in Sources */,
 				614F4CF51FA5EDF400E0F9DC /* ProfileModel.m in Sources */,
+				611F32C41FC184C0001F3820 /* TainingDetailHeaderControls.m in Sources */,
+				611F32CE1FC1A46A001F3820 /* RecentTainingDataModel.m in Sources */,
 				6144F3F41FC0135E00973D55 /* ZJNetWorking+Other.m in Sources */,
 				6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */,
 				6144F3EE1FC012E000973D55 /* ZJNetWorking+Student.m in Sources */,
@@ -742,9 +792,11 @@
 				6144F3F11FC012F200973D55 /* ZJNetWorking+Friend.m in Sources */,
 				6166AD1A1FBEAE280093E732 /* ZJNetWorkingHelper.m in Sources */,
 				615750421FA770E000834247 /* NSData+ZJNSData.m in Sources */,
+				611F32CB1FC1A441001F3820 /* RecentTainingDataControls.m in Sources */,
 				6166AD2B1FBF285B0093E732 /* NSString+Signature.m in Sources */,
 				61495F961FA4C07900425BD8 /* InputFieldModel.m in Sources */,
 				614F4D0B1FA61E0A00E0F9DC /* CalendarViewController.m in Sources */,
+				611F32C71FC18653001F3820 /* TainingDetailModel.m in Sources */,
 				614F4D081FA618D800E0F9DC /* FindPassWordViewController.m in Sources */,
 				6166AD281FBF267E0093E732 /* NSString+TimeConvert.m in Sources */,
 				6112BA981FC07BC400CA099C /* HomeViewController.m in Sources */,

@@ -9,6 +9,8 @@
 #import "HomeViewController.h"
 #import "CalendarViewController.h"
 #import "ProfileViewController.h"
+#import "TakingClassViewController.h"
+#import "TrainingDetailViewController.h"
 
 #define TopGap 100.0f
 #define rowsNumber 3
@@ -100,11 +102,11 @@ static NSString *cellId = @"cellId";
         
             break;
         case 1:
-            DDLog(@"2222");
+            viewController = [[TakingClassViewController alloc] init];
             
             break;
         case 2:
-              viewController = [[ProfileViewController alloc] init];
+            viewController = [[ProfileViewController alloc] init];
     
             break;
             

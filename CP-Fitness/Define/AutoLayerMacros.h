@@ -28,7 +28,7 @@
 
 #pragma mark - 自定义布局尺寸
 #define underLineHeight 1.5f    //下划线高度
-#define labelOrButtonSize 44.f  //标签／按钮大小
+#define labelOrButtonSize 55.f  //标签／按钮大小
 
 #define loginToSignButtonGap 10.f   //登陆／注册按钮间距
 #define kScreenToButtonGap 35.f     //屏幕／按钮间距
