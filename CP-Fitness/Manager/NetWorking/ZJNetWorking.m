@@ -7,6 +7,13 @@
 //
 
 #import "ZJNetWorking.h"
+@interface ZJNetWorking()
+{
+    BOOL _flag;
+    id _result;
+    NSString *_eMsg;
+}
+@end
 
 @implementation ZJNetWorking
 
@@ -18,6 +25,36 @@
         sharedInstance = [[self alloc] init];
     });
     return sharedInstance;
+}
+
+#pragma mark ----- public methods ------
+- (void)getResponseDateWithUrl:(NSString *)urlStr parameter:(NSDictionary*) parameters callBack:(BusinessOperationCallback)callBack
+{
+    [ZJNetWorkingHelper postJsonWithUrl:urlStr parameter:parameters
+                                success:^(NSDictionary *responseObject){
+                                    
+                                    _flag = NO;_result = nil;_eMsg = nil;
+                                    if (responseObject)
+                                    {
+                                        long errnoNumber = [[responseObject objectForKey:@"errno"] longValue];
+                                        if (errnoNumber == 0){
+                                            _flag = YES;
+                                            _result = responseObject;
+                                            DDLog(@"regist success");}
+                                    }else{
+                                        _eMsg = @"数据异常";
+                                        DDLog(@"%@",[responseObject objectForKey:@"errmsg"]);
+                                    }
+                                    callBack(_flag,_result,_eMsg);
+                                }
+                                   fail:^(NSError *error){
+                                       if (error){
+                                           _eMsg = [NSString stringWithFormat:@"%@",error];
+                                           DDLog(@"%@",error);
+                                       }
+                                       callBack(_flag,_result,_eMsg);
+                                   }
+     ];
 }
 
 @end

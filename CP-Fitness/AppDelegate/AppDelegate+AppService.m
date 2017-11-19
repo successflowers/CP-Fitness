@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate+AppService.h"
+#import "HomeViewController.h"
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
 #import "ProfileViewController.h"
@@ -37,7 +38,7 @@
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     if (![userDefaults objectForKey:@"useName"])
     {
-        viewController = [[RegisterViewController alloc] init];
+        viewController = [[HomeViewController alloc] init];
     }
     else
     {

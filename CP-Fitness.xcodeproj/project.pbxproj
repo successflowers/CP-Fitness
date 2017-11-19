@@ -10,6 +10,7 @@
 		610926A11FADAD060092A67B /* PieViewControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 610926A01FADAD060092A67B /* PieViewControls.m */; };
 		610926A41FADAE430092A67B /* TrainingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610926A31FADAE430092A67B /* TrainingDetailViewController.m */; };
 		610926A71FAE29120092A67B /* PieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 610926A61FAE29110092A67B /* PieView.m */; };
+		6112BA981FC07BC400CA099C /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6112BA971FC07BC400CA099C /* HomeViewController.m */; };
 		6144F3E81FBFF86900973D55 /* ZJNetWorking+User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3E71FBFF86800973D55 /* ZJNetWorking+User.m */; };
 		6144F3EB1FC012BF00973D55 /* ZJNetWorking+Teacher.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3EA1FC012BE00973D55 /* ZJNetWorking+Teacher.m */; };
 		6144F3EE1FC012E000973D55 /* ZJNetWorking+Student.m in Sources */ = {isa = PBXBuildFile; fileRef = 6144F3ED1FC012E000973D55 /* ZJNetWorking+Student.m */; };
@@ -74,6 +75,8 @@
 		610926A31FADAE430092A67B /* TrainingDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrainingDetailViewController.m; sourceTree = "<group>"; };
 		610926A51FAE29100092A67B /* PieView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PieView.h; sourceTree = "<group>"; };
 		610926A61FAE29110092A67B /* PieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PieView.m; sourceTree = "<group>"; };
+		6112BA961FC07BC400CA099C /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		6112BA971FC07BC400CA099C /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		6144F3E61FBFF86800973D55 /* ZJNetWorking+User.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJNetWorking+User.h"; sourceTree = "<group>"; };
 		6144F3E71FBFF86800973D55 /* ZJNetWorking+User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ZJNetWorking+User.m"; sourceTree = "<group>"; };
 		6144F3E91FC012BE00973D55 /* ZJNetWorking+Teacher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ZJNetWorking+Teacher.h"; sourceTree = "<group>"; };
@@ -450,6 +453,8 @@
 		6156EBA41FA2514C00661303 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				6112BA961FC07BC400CA099C /* HomeViewController.h */,
+				6112BA971FC07BC400CA099C /* HomeViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -742,6 +747,7 @@
 				614F4D0B1FA61E0A00E0F9DC /* CalendarViewController.m in Sources */,
 				614F4D081FA618D800E0F9DC /* FindPassWordViewController.m in Sources */,
 				6166AD281FBF267E0093E732 /* NSString+TimeConvert.m in Sources */,
+				6112BA981FC07BC400CA099C /* HomeViewController.m in Sources */,
 				610926A11FADAD060092A67B /* PieViewControls.m in Sources */,
 				610926A71FAE29120092A67B /* PieView.m in Sources */,
 				614F4CF81FA5EE1A00E0F9DC /* ProfileViewControls.m in Sources */,
