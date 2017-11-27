@@ -154,6 +154,7 @@
     if (!_sendButton) {
         
         _sendButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _sendButton.zj_acceptEventInterval = 1;
         [_sendButton setImage:IMAGE_NAMED(@"send.png") forState:UIControlStateNormal];
         [_sendButton addTarget:self action:@selector(didSendBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }

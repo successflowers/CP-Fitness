@@ -145,6 +145,7 @@
     if (!_faceBookButton) {
         
         _faceBookButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _faceBookButton.zj_acceptEventInterval = 1;
         [_faceBookButton setImage:IMAGE_NAMED(_model.faceBookIcon) forState:UIControlStateNormal];
     }
     return _faceBookButton;
@@ -155,6 +156,7 @@
     if (!_googleButton) {
         
         _googleButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _googleButton.zj_acceptEventInterval = 1;
         [_googleButton setImage:IMAGE_NAMED(_model.googleIcon) forState:UIControlStateNormal];
     }
     return _googleButton;

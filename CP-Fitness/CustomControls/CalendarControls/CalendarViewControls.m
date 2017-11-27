@@ -99,6 +99,7 @@ static CGFloat BtnSize = 44.f;
             else if (day > [NSData  day:_date])
             {
                 cell.dayLabel.textColor = underLineColor;
+                
             }
         }
         else if ([_today compare:_date] == NSOrderedAscending)
@@ -231,6 +232,7 @@ static CGFloat BtnSize = 44.f;
     if (!_previousButton) {
         
         _previousButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _previousButton.zj_acceptEventInterval = 1;
         [_previousButton setImageEdgeInsets:UIEdgeInsetsMake(13, 32, 10, 0)];
         [_previousButton setImage:IMAGE_NAMED(@"main_back.png") forState:UIControlStateNormal];
         [_previousButton addTarget:self action:@selector(didClickedPreviousBtn:) forControlEvents:UIControlEventTouchUpInside];
@@ -243,6 +245,7 @@ static CGFloat BtnSize = 44.f;
     if (!_nextButton) {
         
         _nextButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _nextButton.zj_acceptEventInterval = 1;
         [_nextButton setImage:IMAGE_NAMED(@"go.png") forState:UIControlStateNormal];
         [_nextButton setImageEdgeInsets:UIEdgeInsetsMake(13, 0, 10, 32)];
         [_nextButton addTarget:self action:@selector(didClickedNextBtn:) forControlEvents:UIControlEventTouchUpInside];

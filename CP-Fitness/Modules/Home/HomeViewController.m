@@ -57,25 +57,25 @@ static NSString *cellId = @"cellId";
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
-    cell.backgroundColor = KClearColor;
+    cell.backgroundColor = _mTableView.backgroundColor;
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    UIImageView *cellImageView = [[UIImageView alloc] init];
-    cellImageView.frame = CGRectMake(0, 0, KScreenWidth, cellHeight);
-    [cell insertSubview:cellImageView atIndex:0];
-    
+
+    CALayer *layer = [CALayer layer];
+    layer.frame = CGRectMake(0, 0, KScreenWidth, cellHeight);
+    [cell.layer addSublayer:layer];
     switch (indexPath.row) {
         case 0:
-            cellImageView.image = IMAGE_NAMED(@"ac_home_calendar.png");
+            layer.contents = (id)IMAGE_NAMED(@"ac_home_calendar.png").CGImage;
             break;
-            
+
         case 1:
-            cellImageView.image = IMAGE_NAMED(@"ac_home_taking.png");
+            layer.contents = (id)IMAGE_NAMED(@"ac_home_taking.png").CGImage;
             break;
-            
+
         case 2:
-            cellImageView.image = IMAGE_NAMED(@"ac_home_profile.png");
+            layer.contents = (id)IMAGE_NAMED(@"ac_home_profile.png").CGImage;
             break;
-            
+
         default:
             break;
     }
@@ -160,9 +160,9 @@ static NSString *cellId = @"cellId";
         _mTableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
         _mTableView.delegate = self;
         _mTableView.dataSource = self;
-        _mTableView.backgroundColor = KClearColor;
+        _mTableView.backgroundColor = self.view.backgroundColor;
         _mTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        _mTableView.scrollEnabled = NO;
+        _mTableView.scrollEnabled = YES;
         [_mTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellId];
     }
     return _mTableView;

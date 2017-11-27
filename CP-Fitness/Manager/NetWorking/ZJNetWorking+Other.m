@@ -20,7 +20,7 @@
     [parameters setValue:userModel.mac forKey:@"mac"];
     [parameters setValue:userModel.versionCode forKey:@"versionCode"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 上传运动数据 -------
@@ -32,7 +32,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.indexid forKey:@"indexid"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 广告 -------
@@ -44,7 +44,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.indexid forKey:@"indexid"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 @end

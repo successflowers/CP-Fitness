@@ -21,7 +21,7 @@
     [parameters setValue:userModel.password forKey:@"password"];
     [parameters setValue:userModel.email forKey:@"email"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 用户名／邮箱登陆 -------
@@ -33,7 +33,7 @@
     [parameters setValue:userModel.username forKey:@"username"];
     [parameters setValue:userModel.password forKey:@"password"];
     [parameters setValue:@"2" forKey:@"source"]; //source 1=android,2=iphone
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 检测用户名／邮箱 -------
@@ -47,7 +47,7 @@
     }else{
         [parameters setValue:userModel.password forKey:@"password"];
     }
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 发送邮箱验证码 -------
@@ -59,7 +59,7 @@
     [parameters setValue:userModel.email forKey:@"email"];
     [parameters setValue:@"1" forKey:@"templet"];
   
-   [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+   [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 修改密码（根据邮箱和验证码）-------
@@ -72,7 +72,7 @@
     [parameters setValue:userModel.code forKey:@"code"];
     [parameters setValue:userModel.password forKey:@"password"];
    
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 #pragma mark ------- 修改用户信息，可单项修改 -------
 - (void)userModifyUserImformationUserModel:(UserModel *)userModel callBack:(BusinessOperationCallback)callBack
@@ -84,7 +84,7 @@
     [parameters setValue:userModel.code forKey:@"code"];
     [parameters setValue:userModel.password forKey:@"password"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取用户信息 -------
@@ -95,7 +95,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.characterId forKey:@"characterId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 @end

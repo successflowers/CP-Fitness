@@ -7,6 +7,7 @@
 //
 
 #import "ZJNetWorking.h"
+
 @interface ZJNetWorking()
 {
     BOOL _flag;
@@ -28,7 +29,7 @@
 }
 
 #pragma mark ----- public methods ------
-- (void)getResponseDateWithUrl:(NSString *)urlStr parameter:(NSDictionary*) parameters callBack:(BusinessOperationCallback)callBack
+- (void)getResponseDataWithUrl:(NSString *)urlStr parameter:(NSDictionary*) parameters callBack:(BusinessOperationCallback)callBack
 {
     [ZJNetWorkingHelper postJsonWithUrl:urlStr parameter:parameters
                                 success:^(NSDictionary *responseObject){

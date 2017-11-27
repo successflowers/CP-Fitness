@@ -66,7 +66,7 @@ static NSString *cellId = @"cellId";
     customView.backgroundColor = KClearColor;
     
     UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectMake(15.0, 0.0, KScreenWidth, 44.0)];
-    headerLabel.backgroundColor = [UIColor clearColor];
+    headerLabel.backgroundColor = KClearColor;
     headerLabel.textColor = KWhiteColor;
     headerLabel.font = SYSTEMFONT(20);
     [customView addSubview:headerLabel];

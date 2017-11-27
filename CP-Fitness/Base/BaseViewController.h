@@ -17,6 +17,7 @@
 
 #pragma mark - 设置背景
 - (void)setBackgroundWithImage:(NSString *)image;
+//- (void)setBackgroundWithImage:(NSString *)image forView:(UIView *)view;
 
 #pragma mark - 按钮
 - (UIButton *)setButtonWithNomalImage:(NSString *)nomalImage

@@ -18,7 +18,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.mac forKey:@"mac"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取健身馆可使用的盒子列表 -------
@@ -30,7 +30,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取健身馆未绑定的会员列表 -------
@@ -42,7 +42,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 根据课程获取绑定的学员 -------
@@ -55,7 +55,7 @@
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     [parameters setValue:userModel.courseId forKey:@"courseId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 
@@ -69,7 +69,7 @@
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     [parameters setValue:userModel.characterId forKey:@"characterId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 新建课程 -------
@@ -80,7 +80,7 @@
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取正在进行的课程 -------
@@ -92,7 +92,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 停止正在进行的课程 -------
@@ -104,7 +104,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.courseId forKey:@"courseId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取健身馆未绑定的心率带列表 -------
@@ -116,7 +116,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 绑定心率带 -------
@@ -130,7 +130,7 @@
     [parameters setValue:userModel.characterId forKey:@"characterId"];
     [parameters setValue:userModel.deviceSn forKey:@"deviceSn"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 解绑心率带 -------
@@ -143,7 +143,7 @@
     [parameters setValue:userModel.courseId forKey:@"courseId"];
     [parameters setValue:userModel.characterId forKey:@"characterId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 @end

@@ -18,7 +18,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 学员临时绑定教练 -------
@@ -31,7 +31,7 @@
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     [parameters setValue:userModel.coachId forKey:@"coachId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取学员临时绑定的教练 -------
@@ -43,7 +43,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 学员解除与教练的绑定 -------
@@ -55,7 +55,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 注册心率带（查询训练数据）-------
@@ -68,7 +68,7 @@
     [parameters setValue:userModel.clubCode forKey:@"clubCode"];
     [parameters setValue:userModel.deviceCode forKey:@"deviceCode"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 更新用户测量数值 -------
@@ -79,7 +79,7 @@
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取用户测量数据 -------
@@ -90,7 +90,7 @@
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 创建目标 -------
@@ -106,7 +106,7 @@
     [parameters setValue:userModel.endTime forKey:@"endTime"];
     [parameters setValue:userModel.date forKey:@"date"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 用户目标列表 -------
@@ -119,7 +119,7 @@
     [parameters setValue:userModel.start forKey:@"start"];
     [parameters setValue:userModel.length forKey:@"length"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 创建挑战 -------
@@ -134,7 +134,7 @@
     [parameters setValue:userModel.type forKey:@"type"];
     [parameters setValue:userModel.startTime forKey:@"startTime"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 我的挑战列表 -------
@@ -147,7 +147,7 @@
     [parameters setValue:userModel.start forKey:@"start"];
     [parameters setValue:userModel.length forKey:@"length"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取挑战的用户数据排行 -------
@@ -158,7 +158,7 @@
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 退出挑战 -------
@@ -169,7 +169,7 @@
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取用户的统计数据 -------
@@ -180,7 +180,7 @@
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 通过盒子mac获取绑定的HUB蓝牙路由器信息 -------
@@ -192,7 +192,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.mac forKey:@"mac"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取全部用户、运动时间、健身馆等信息 -------
@@ -204,7 +204,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.mac forKey:@"mac"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取用户未参与的挑战 -------
@@ -215,7 +215,7 @@
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 加入挑战 -------
@@ -228,7 +228,7 @@
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     [parameters setValue:userModel.challengeId forKey:@"challengeId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 我加入的竞技挑战 -------
@@ -241,7 +241,7 @@
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     [parameters setValue:userModel.status forKey:@"status"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 退出挑战 -------
@@ -254,7 +254,7 @@
     [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     [parameters setValue:userModel.challengeId forKey:@"challengeId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 根据日期获取团课排期列表 -------
@@ -268,7 +268,7 @@
     [parameters setValue:userModel.startTime forKey:@"startTime"];
     [parameters setValue:userModel.endTime forKey:@"endTime"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 @end

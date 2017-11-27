@@ -20,7 +20,7 @@ typedef void (^BusinessOperationCallback)(BOOL isSucessed,id outParam,NSString *
 @interface ZJNetWorking : NSObject
 
 + (instancetype)sharedInstance;
-- (void)getResponseDateWithUrl:(NSString *)urlStr parameter:(NSDictionary*) parameters callBack:(BusinessOperationCallback)callBack;
+- (void)getResponseDataWithUrl:(NSString *)urlStr parameter:(NSDictionary*) parameters callBack:(BusinessOperationCallback)callBack;
 
 
 @end

@@ -20,7 +20,7 @@
     [parameters setValue:userModel.nickname forKey:@"nickname"];
     [parameters setValue:userModel.request forKey:@"request"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 添加好友 -------
@@ -32,7 +32,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.friendId forKey:@"friendId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 删除好友 -------
@@ -44,7 +44,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.friendId forKey:@"friendId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 处理好友申请 -------
@@ -57,7 +57,7 @@
     [parameters setValue:userModel.friendId forKey:@"friendId"];
     [parameters setValue:userModel.accept forKey:@"accept"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取好友列表 -------
@@ -68,7 +68,7 @@
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
    
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 创建好友组 -------
@@ -81,7 +81,7 @@
     [parameters setValue:userModel.name forKey:@"name"];
     [parameters setValue:userModel.friends forKey:@"friends"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 我的好友组 -------
@@ -92,7 +92,7 @@
     NSMutableDictionary *parameters = @{}.mutableCopy;
     [parameters setValue:APP_Channel forKey:@"channel"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 好友组用户 -------
@@ -104,7 +104,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.gid forKey:@"gid"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 添加好友进组 -------
@@ -117,7 +117,7 @@
     [parameters setValue:userModel.gid forKey:@"gid"];
     [parameters setValue:userModel.friends forKey:@"friends"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 把组里的好友移出去 -------
@@ -130,7 +130,7 @@
     [parameters setValue:userModel.gid forKey:@"gid"];
     [parameters setValue:userModel.friends forKey:@"friends"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 可获取所有或某个好友动态 -------
@@ -143,7 +143,7 @@
     [parameters setValue:userModel.start forKey:@"start"];
     [parameters setValue:userModel.length forKey:@"length"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 查看运动详细情况 -------
@@ -155,7 +155,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.sportId forKey:@"sportId"];
 
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 给某条动态点赞 -------
@@ -167,7 +167,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.sportId forKey:@"sportId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取动态点赞用户列表 -------
@@ -179,7 +179,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.sportId forKey:@"sportId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 给某条动态评论 -------
@@ -192,7 +192,7 @@
     [parameters setValue:userModel.sportId forKey:@"sportId"];
     [parameters setValue:userModel.comment forKey:@"comment"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取动态评论列表 -------
@@ -206,7 +206,7 @@
     [parameters setValue:userModel.start forKey:@"start"];
     [parameters setValue:userModel.length forKey:@"length"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取某用户的运动日历 -------
@@ -219,7 +219,7 @@
     [parameters setValue:userModel.characterId forKey:@"characterId"];
     [parameters setValue:userModel.date forKey:@"date"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 对好友权限开关项设置，可单项修改 -------
@@ -231,7 +231,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.friendId forKey:@"friendId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 #pragma mark ------- 获取好友权限开关项设置 -------
@@ -243,7 +243,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.friendId forKey:@"friendId"];
     
-    [self getResponseDateWithUrl:urlStr parameter:parameters callBack:callBack];
+    [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }
 
 @end

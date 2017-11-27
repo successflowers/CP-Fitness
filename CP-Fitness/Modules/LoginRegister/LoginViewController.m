@@ -153,6 +153,7 @@
     if (!_remindButton) {
         
         _remindButton = [UIButton buttonWithType:UIButtonTypeCustom];
+        _remindButton.zj_acceptEventInterval = 1;
         [_remindButton addTarget:self action:@selector(didRemindBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _remindButton;

@@ -36,6 +36,7 @@
 		614F4D081FA618D800E0F9DC /* FindPassWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4D071FA618D800E0F9DC /* FindPassWordViewController.m */; };
 		614F4D0B1FA61E0A00E0F9DC /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4D0A1FA61E0A00E0F9DC /* CalendarViewController.m */; };
 		614F4D0F1FA6206600E0F9DC /* CalendarViewControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 614F4D0E1FA6206600E0F9DC /* CalendarViewControls.m */; };
+		615023D81FCBD0F500E0F5BC /* UIButton+ZJ_FixMultiClick.m in Sources */ = {isa = PBXBuildFile; fileRef = 615023D71FCBD0F400E0F5BC /* UIButton+ZJ_FixMultiClick.m */; };
 		6152105F1FB0C45F001F56F6 /* BarChartViewControls.m in Sources */ = {isa = PBXBuildFile; fileRef = 6152105E1FB0C45F001F56F6 /* BarChartViewControls.m */; };
 		6156EB581FA1F95D00661303 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB571FA1F95D00661303 /* AppDelegate.m */; };
 		6156EB601FA1F95E00661303 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6156EB5F1FA1F95E00661303 /* Assets.xcassets */; };
@@ -134,6 +135,8 @@
 		614F4D0A1FA61E0A00E0F9DC /* CalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		614F4D0D1FA6206600E0F9DC /* CalendarViewControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarViewControls.h; sourceTree = "<group>"; };
 		614F4D0E1FA6206600E0F9DC /* CalendarViewControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarViewControls.m; sourceTree = "<group>"; };
+		615023D61FCBD0F400E0F5BC /* UIButton+ZJ_FixMultiClick.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIButton+ZJ_FixMultiClick.h"; sourceTree = "<group>"; };
+		615023D71FCBD0F400E0F5BC /* UIButton+ZJ_FixMultiClick.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIButton+ZJ_FixMultiClick.m"; sourceTree = "<group>"; };
 		6152105D1FB0C45F001F56F6 /* BarChartViewControls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BarChartViewControls.h; sourceTree = "<group>"; };
 		6152105E1FB0C45F001F56F6 /* BarChartViewControls.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarChartViewControls.m; sourceTree = "<group>"; };
 		6156EB531FA1F95D00661303 /* CP-Fitness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CP-Fitness.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -523,6 +526,8 @@
 				6166AD271FBF267E0093E732 /* NSString+TimeConvert.m */,
 				6166AD291FBF285B0093E732 /* NSString+Signature.h */,
 				6166AD2A1FBF285B0093E732 /* NSString+Signature.m */,
+				615023D61FCBD0F400E0F5BC /* UIButton+ZJ_FixMultiClick.h */,
+				615023D71FCBD0F400E0F5BC /* UIButton+ZJ_FixMultiClick.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -800,6 +805,7 @@
 				614F4D081FA618D800E0F9DC /* FindPassWordViewController.m in Sources */,
 				6166AD281FBF267E0093E732 /* NSString+TimeConvert.m in Sources */,
 				6112BA981FC07BC400CA099C /* HomeViewController.m in Sources */,
+				615023D81FCBD0F500E0F5BC /* UIButton+ZJ_FixMultiClick.m in Sources */,
 				610926A11FADAD060092A67B /* PieViewControls.m in Sources */,
 				610926A71FAE29120092A67B /* PieView.m in Sources */,
 				614F4CF81FA5EE1A00E0F9DC /* ProfileViewControls.m in Sources */,

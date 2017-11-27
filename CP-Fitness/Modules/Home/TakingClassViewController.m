@@ -204,8 +204,6 @@ static NSString *cellId = @"cellId";
         _instructorButton.contentHorizontalAlignment = UIControlContentHorizontalAlignmentLeft;
         _instructorButton.imageEdgeInsets = UIEdgeInsetsMake(20, KScreenWidth - 2*20 -20, 20,10);
         _instructorButton.titleEdgeInsets = UIEdgeInsetsMake(0,-30,0,0);
-//        NSLog(@"image:%@", NSStringFromCGRect(_instructorButton.imageView.frame));
-//        NSLog(@"title:%@", NSStringFromCGRect(_instructorButton.titleLabel.frame));
         [_instructorButton addTarget:self action:@selector(didInstructorbtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _instructorButton;

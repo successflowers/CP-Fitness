@@ -36,6 +36,7 @@
 
 #pragma mark - 基础类别
 #import "NSData+ZJNSData.h"
+#import "UIButton+ZJ_FixMultiClick.h"
 
 #pragma mark - 第三方
 #import <Masonry.h>

@@ -43,6 +43,7 @@
                                 title:(NSString *)title
 {
     UIButton *newButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    newButton.zj_acceptEventInterval = 1;
     [newButton setTitle:title forState:UIControlStateNormal];
     [newButton setTitleColor:KWhiteColor forState:UIControlStateNormal];
     newButton.titleLabel.font = SYSTEMFONT(22);
@@ -55,6 +56,7 @@
 - (UIButton *)setWhiteButtonWithTitle:(NSString *)title
 {
     UIButton *whiteButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    whiteButton.zj_acceptEventInterval = 1;
     [whiteButton setTitle:title forState:UIControlStateNormal];
     [whiteButton setTitleColor:KWhiteColor forState:UIControlStateNormal];
     whiteButton.titleLabel.font = SYSTEMFONT(22);
@@ -92,9 +94,10 @@
 {
     if (!_gobackBtn){
         _gobackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _gobackBtn.frame = CGRectMake(20, 20, 50, 40);
-        [_gobackBtn setImage:[UIImage imageNamed:@"main_back.png"] forState:UIControlStateNormal];
-        _gobackBtn.imageEdgeInsets = UIEdgeInsetsMake(10,0,9, 38);
+        _gobackBtn.frame = CGRectMake(5, 20, 50, 40);
+        _gobackBtn.zj_acceptEventInterval = 1;
+        [_gobackBtn setImage:IMAGE_NAMED(@"main_back.png") forState:UIControlStateNormal];
+        _gobackBtn.imageEdgeInsets = UIEdgeInsetsMake(10,15,9, 23);
         [_gobackBtn addTarget:self action:@selector(goback:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _gobackBtn;

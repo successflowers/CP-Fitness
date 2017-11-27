@@ -162,9 +162,50 @@
     NSAttributedString *iconStr = [NSAttributedString attributedStringWithAttachment:attachment];
     [attributedString insertAttributedString:iconStr atIndex:0];
     label.attributedText = attributedString;
-    
     return label;
 }
+
+- (CATextLayer *)setTextLayerWithString:(NSString *)string font:(UIFont *)font textColor:(UIColor *)textColor
+{
+    CATextLayer *textLayer = [CATextLayer layer];
+    CFStringRef fontCFString = (__bridge CFStringRef)font.fontName;
+    CGFontRef fontRef = CGFontCreateWithFontName(fontCFString);
+    textLayer.font = fontRef;
+    textLayer.fontSize = font.pointSize;
+    CGFontRelease(fontRef);
+    textLayer.wrapped = YES;//默认为No.  当Yes时，字符串自动适应layer的bounds大小
+    textLayer.alignmentMode = kCAAlignmentCenter;//字体的对齐方式
+    textLayer.foregroundColor = textColor.CGColor;
+    textLayer.string = string;
+    
+    return textLayer;
+}
+
+- (UIImageView *)CreateImageViewWithFrame:(CGRect)rect
+                            andBackground:(CGColorRef)color
+                                andRadius:(CGFloat)radius{
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    UIGraphicsBeginImageContext(imageView.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();   // 设置上下文
+    CGContextSetLineWidth(context, 1);                  // 边框大小
+    CGContextSetStrokeColorWithColor(context, color);   // 边框颜色
+    CGContextSetFillColorWithColor(context, color);     // 填充颜色
+    
+    CGFloat x = rect.origin.x;
+    CGFloat y = rect.origin.y;
+    CGFloat width = rect.size.width;
+    CGFloat height = rect.size.height;
+    CGContextMoveToPoint(context, x+width, y+radius/2);
+    CGContextAddArcToPoint(context, x+width, y+height, x+width-radius/2, y+height, radius);
+    CGContextAddArcToPoint(context, x, y+height, x, y+height-radius/2, radius);
+    CGContextAddArcToPoint(context, x, y, x+radius/2, y, radius);
+    CGContextAddArcToPoint(context, x+width, y, x+width, y+radius/2, radius);
+    CGContextDrawPath(context, kCGPathFillStroke);
+    imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    return imageView;
+}
+
 
 #pragma mark - event response
 #pragma mark - setter and getter
@@ -185,8 +226,8 @@
         _titleLabel.textAlignment = NSTextAlignmentLeft;
         _titleLabel.font = SYSTEMFONT(18);
         _titleLabel.text = @"Recent Training Data";
+        _timeLabel.backgroundColor = KRedColor;
         _titleLabel.textColor = KWhiteColor;
-        
     }
     return _titleLabel;
 }
@@ -243,33 +284,16 @@
         _colorBarIcon = [[UIImageView alloc] init];
         _colorBarIcon.image = IMAGE_NAMED(@"fpc5l.png");
         
-        UIView *circle = [[UIView alloc] init];
-        circle.frame = CGRectMake(KScreenWidth/2-circleWidth/2,0 , circleWidth, circleWidth);
-        circle.backgroundColor = KWhiteColor;
+        UIImageView *circle = [self CreateImageViewWithFrame:CGRectMake(0,0 , circleWidth, circleWidth) andBackground:KWhiteColor.CGColor andRadius:circleWidth/2];
+        circle.centerX = KScreenWidth/2+circleWidth;
+      
+        CATextLayer *tainingLayer = [self setTextLayerWithString:@"150" font:BOLDSYSTEMFONT(40) textColor:RGB(243, 58, 105)];
+        tainingLayer.frame = CGRectMake(0, circleWidth/2 - 30, circleWidth, 38);
+        [circle.layer addSublayer:tainingLayer];
         
-        UIBezierPath *maskPath = [UIBezierPath bezierPathWithRoundedRect:circle.bounds byRoundingCorners:UIRectCornerAllCorners cornerRadii:CGSizeMake(circleWidth, circleWidth)];
-        CAShapeLayer *maskLayer = [[CAShapeLayer alloc] init];
-        maskLayer.frame = circle.bounds;
-        maskLayer.path = maskPath.CGPath;
-        circle.layer.mask = maskLayer;
-        
-        UILabel *tainingDataLabel = [[UILabel alloc] init];
-        tainingDataLabel.frame = CGRectMake(0, 0, circleWidth, circleWidth);
-        tainingDataLabel.backgroundColor = KClearColor;
-        tainingDataLabel.textColor = RGB(243, 58, 105);
-        tainingDataLabel.text = @"150";
-        tainingDataLabel.textAlignment = NSTextAlignmentCenter;
-        tainingDataLabel.font = BOLDSYSTEMFONT(40);
-        [circle addSubview:tainingDataLabel];
-        
-        UILabel *bpmLabel = [[UILabel alloc] init];
-        bpmLabel.frame = CGRectMake(0, circleWidth/2, circleWidth, circleWidth/2);
-        bpmLabel.backgroundColor = KClearColor;
-        bpmLabel.textColor = RGB(244, 82, 124);
-        bpmLabel.text = @"bpm";
-        bpmLabel.textAlignment = NSTextAlignmentCenter;
-        bpmLabel.font = SYSTEMFONT(16);
-        [circle addSubview:bpmLabel];
+        CATextLayer *bpmLayer = [self setTextLayerWithString:@"bpm" font:SYSTEMFONT(16) textColor:RGB(244, 82, 124)];
+        bpmLayer.frame = CGRectMake(0, circleWidth/4*3 - 15, circleWidth, 30);
+        [circle.layer addSublayer:bpmLayer];
         
         [_colorBarIcon addSubview:circle];
     }
@@ -280,7 +304,6 @@
 {
     if (!_maxHeartRateIcon) {
         _maxHeartRateIcon= [[UIImageView alloc] init];
-        //_maxHeartRateIcon.frame = CGRectMake(circleWidth/3*2, 100, 50, 50);
         _maxHeartRateIcon.image = IMAGE_NAMED(@"fpc5h.png");
         UILabel *maxHeartRateLabel = [[UILabel alloc] init];
         maxHeartRateLabel.frame = CGRectMake(0, 0, 50, 40);
