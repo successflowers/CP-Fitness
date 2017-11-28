@@ -33,13 +33,13 @@
 {
     AFHTTPSessionManager *manager = [ZJNetWorkingHelper sharedSessionManager];
     
-    NSString *token = @"242861cd6cf6474ca3d6df1ad9a81361953c4124f7a519c4";
-    /*
-    UserModel *userModel = [[UserModel alloc] init];
+    //NSString *token = @"242861cd6cf6474ca3d6df1ad9a81361953c4124f7a519c4";
+    NSString *token = @"";
+    UserModel *userModel = [UserModel readUserDefaults];
     if (userModel) {
         token = userModel.token;
     }
-     */
+   
     NSString *signatureStr = [[NSString signatureWithAppKey:App_Key secret:APP_Secret parameter:parameters token:token] lowercaseString];
    
     NSString *timestamp = [NSString obtainCurrentDateUTCTimeString];

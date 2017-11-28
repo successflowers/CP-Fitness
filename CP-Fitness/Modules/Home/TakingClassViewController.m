@@ -7,7 +7,7 @@
 //
 
 #import "TakingClassViewController.h"
-#define logoLableToTopGap 100.0f
+#define logoLableToTopGap  100
 #define profileControlsToLogoLabelGap 40.f
 #define instructorBtnToProfileControlsGap 50.f
 #define redlineLayerWidth 20.0f
@@ -29,7 +29,6 @@ static NSString *cellId = @"cellId";
 @implementation TakingClassViewController
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self initInterface];
 }
 
@@ -80,7 +79,7 @@ static NSString *cellId = @"cellId";
         
         make.top.equalTo(self.instructorButton.mas_bottom).mas_offset(-10);
         make.left.right.equalTo(self.instructorButton);
-        make.bottom.equalTo(self.view.mas_bottom).offset(-20.0f);
+        make.bottom.equalTo(self.view.mas_bottom).offset(-10.0f);
     }];
 }
 
@@ -163,8 +162,9 @@ static NSString *cellId = @"cellId";
 #pragma mark - setter and getter
 - (UILabel *)logoLabel
 {
+    int font = kIOS5 ? 20 :23;
     if (!_logoLabel) {
-        _logoLabel = [self setTitleWithString:@"Current Instructor" font:SYSTEMFONT(23)];
+        _logoLabel = [self setTitleWithString:@"Current Instructor" font:SYSTEMFONT(font)];
     }
     return _logoLabel;
 }
@@ -175,7 +175,9 @@ static NSString *cellId = @"cellId";
         _redLineLayer = [CAShapeLayer layer];
         _redLineLayer.fillColor = RGB(246, 154, 155).CGColor;
         
-        UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, logoLableToTopGap + labelOrButtonSize/2, redlineLayerWidth, 2)];
+        int gap = kIOS5 ? 75:100;
+        int height = labelOrButtonSize/2;
+        UIBezierPath *path = [UIBezierPath bezierPathWithRect:CGRectMake(0, height + gap, redlineLayerWidth, 2)];
         _redLineLayer.path = path.CGPath;
     }
     return _redLineLayer;

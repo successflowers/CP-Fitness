@@ -14,6 +14,7 @@
 #define kNavBarHeight       44.0
 #define kTabBarHeight       ([[UIApplication sharedApplication] statusBarFrame].size.height>20?83:49)
 #define kTopHeight          (kStatusBarHeight + kNavBarHeight)
+#define kIOS5               (KScreenHeight>568 ?NO :YES)
 
 #define KScreenWidth            ([[UIScreen mainScreen] bounds].size.width)
 #define KScreenHeight           [[UIScreen mainScreen] bounds].size.height
@@ -28,15 +29,15 @@
 
 #pragma mark - 自定义布局尺寸
 #define underLineHeight 1.5f    //下划线高度
-#define labelOrButtonSize 55.f  //标签／按钮大小
+#define labelOrButtonSize  kIOS5? 50.f :55.f   //标签／按钮大小
 
 #define loginToSignButtonGap 10.f   //登陆／注册按钮间距
-#define kScreenToButtonGap 35.f     //屏幕／按钮间距
+#define kScreenToButtonGap   kIOS5? 22 :35    //屏幕／按钮间距
 
 #define loginButtonTopScreenSideGap KScreenWidth/4.f  //注册按钮／屏幕边间距 （Login）
 
-#define loginButtonToTopHeight KScreenHeight/10.f*7 //登陆or注册按钮／Top高度 (CP Fitness)
-#define CP_FitnessToTopHeight KScreenHeight/10.f*2.5 // CP Fitness标签／Top高度
+#define loginButtonToTopHeight kIOS5? KScreenHeight/10.f*6.5  :KScreenHeight/10.f*7  //登陆or注册按钮／Top高度 (CP Fitness)
+#define CP_FitnessToTopHeight kIOS5? KScreenHeight/10.f*2.2 :KScreenHeight/10.f*2.5  // CP Fitness标签／Top高度
 
 #define LoginLabelToTopHeight KScreenHeight/10.f*2 //Login标签／TOP高度
 #define LoginButtonToTopHeight KScreenHeight/10.f*5.5 //Login标签／TOP高度 (Login)
@@ -49,8 +50,6 @@
 #define SettingLabToTopHeight KScreenHeight/10.f*4.5
 
 #define line_width 1.f
-
-
 
 
 #endif /* AutoLayerMacros_h */

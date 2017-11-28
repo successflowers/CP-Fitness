@@ -111,44 +111,35 @@
     switch (isThisYear) {
         case -1:
         {
-            NSLog(@"last Year");
             dayCompareResult = ZJDayCompareResult_LastDay;
         }
             break;
             
         case 0:
         {
-            NSLog(@"this Year");
+           
             if (isThisMonth == 0) {
-                NSLog(@"this month");
-                
                 if (isThisDay == 0) {
-                    NSLog(@"this day");
                     dayCompareResult = ZJDayCompareResult_ThisDay;
                 }else if (isThisDay >0)
                 {
-                    NSLog(@"next day");
                     dayCompareResult = ZJDayCompareResult_NextDay;
                 }else
                 {
-                    NSLog(@"last day");
                     dayCompareResult = ZJDayCompareResult_LastDay;
                 }
                 
             }else if (isThisMonth >0)
             {
-                NSLog(@"next month");
                 dayCompareResult = ZJDayCompareResult_NextDay;
             }else
             {
-                NSLog(@"last month");
                 dayCompareResult = ZJDayCompareResult_LastDay;
             }
         }
             break;
         case 1:
         {
-            NSLog(@"next Year");
             dayCompareResult = ZJDayCompareResult_NextDay;
         }
             break;
@@ -194,37 +185,29 @@
     
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
     [df setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
-    // NSLog(@"compareDate = %@",[df stringFromDate:compareDate]);
-    //NSLog(@"month = %@ , compareMonth = %@  isThisMonth = %@",@(month),@(compareMonth),@(isThisMonth));
     
     switch (isThisYear) {
         case -1:
         {
-            //NSLog(@"last Year");
             monthCompareResult = ZJMonthCompareResult_LastMonth;
         }
             break;
             
         case 0:
         {
-           // NSLog(@"this Year");
             if (isThisMonth == 0) {
-                //NSLog(@"this month");
                 monthCompareResult = ZJMonthCompareResult_ThisMonth;
             }else if (isThisMonth >0)
             {
-                //NSLog(@"next month");
                 monthCompareResult = ZJMonthCompareResult_NextMonth;
             }else
             {
-               // NSLog(@"last month");
                 monthCompareResult = ZJMonthCompareResult_LastMonth;
             }
         }
             break;
         case 1:
         {
-           // NSLog(@"next Year");
             monthCompareResult = ZJMonthCompareResult_NextMonth;
         }
             break;

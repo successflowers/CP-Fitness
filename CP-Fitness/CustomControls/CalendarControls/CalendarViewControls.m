@@ -69,7 +69,7 @@ static CGFloat BtnSize = 44.f;
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DDLog(@"calendar dateArray = %@",self.dateArray);
+   // DDLog(@"calendar dateArray = %@",self.dateArray);
     CalendarCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identiferID forIndexPath:indexPath];
     cell.backgroundColor = KClearColor;
     cell.backgroundView = [[UIImageView alloc] initWithImage:nil];

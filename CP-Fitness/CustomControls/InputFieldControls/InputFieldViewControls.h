@@ -9,7 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "InputFieldModel.h"
 
+typedef void (^TextFiledCallback)(BOOL isSucessed,NSString *textFiledStr);
+
 @interface InputFieldViewControls : UIView
+
+@property (nonatomic, copy) TextFiledCallback callback;
 
 - (instancetype) initWithModel:(InputFieldModel *)model;
 

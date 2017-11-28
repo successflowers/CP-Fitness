@@ -48,12 +48,13 @@
 #pragma mark - autolayout
 - (void)setupAutoLayout
 {
+    int gap = kScreenToButtonGap;
     [self.instructorBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.equalTo(self.view.mas_top).with.offset(UserNameToTopHeight);
-        make.left.equalTo(self.view.mas_left).with.offset(kScreenToButtonGap);
-        make.right.equalTo(self.view.mas_right).with.offset(-kScreenToButtonGap);
-        make.height.mas_equalTo(kScreenToButtonGap*2);
+        make.left.equalTo(self.view.mas_left).with.offset(gap);
+        make.right.equalTo(self.view.mas_right).with.offset(-gap);
+        make.height.mas_equalTo(labelOrButtonSize);
     }];
     
     [self.traineeBtn mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -81,11 +82,12 @@
 #pragma mark - event response
 - (void)didInstructorBtnCllicked:(id)sender
 {
+    int gap = kScreenToButtonGap;
     if (_isChoosedNum != 1) {
         _isChoosedNum = 1;
         [_instructorBtn setImage:IMAGE_NAMED(@"ac_statusselect_checked.png") forState:UIControlStateNormal];
         [_traineeBtn setImage:IMAGE_NAMED(@"") forState:UIControlStateNormal];
-        _instructorBtn.imageEdgeInsets = UIEdgeInsetsMake(25, KScreenWidth - kScreenToButtonGap*2-40, 25, 20);
+        _instructorBtn.imageEdgeInsets = UIEdgeInsetsMake(25, KScreenWidth - gap*2-40, 25, 20);
         _instructorBtn.titleEdgeInsets = UIEdgeInsetsMake(0,-100,0,0);
         _traineeBtn.titleEdgeInsets = UIEdgeInsetsMake(0,0,0,0);
 
@@ -97,11 +99,12 @@
 
 - (void)didTraineeBtnClicked:(id)sender
 {
+    int gap = kScreenToButtonGap;
     if (_isChoosedNum != 2) {
         _isChoosedNum = 2;
         [_instructorBtn setImage:IMAGE_NAMED(@"") forState:UIControlStateNormal];
         [_traineeBtn setImage:IMAGE_NAMED(@"ac_statusselect_checked.png") forState:UIControlStateNormal];
-        _traineeBtn.imageEdgeInsets = UIEdgeInsetsMake(25, KScreenWidth - kScreenToButtonGap*2-40, 25, 20);
+        _traineeBtn.imageEdgeInsets = UIEdgeInsetsMake(25, KScreenWidth - gap*2-40, 25, 20);
         _traineeBtn.titleEdgeInsets = UIEdgeInsetsMake(0,-100,0,0);
         _instructorBtn.titleEdgeInsets = UIEdgeInsetsMake(0,0,0,0);
         [_instructorBtn setBackgroundImage:IMAGE_NAMED(@"ac_statusselect_unchecked1.png") forState:UIControlStateNormal];

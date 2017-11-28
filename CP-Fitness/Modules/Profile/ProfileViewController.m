@@ -54,9 +54,10 @@
     
     [self.chageProfileButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
+        int gap = kScreenToButtonGap;
         make.top.equalTo(self.view.mas_top).offset(ProfileButtonToTopHeight);
-        make.left.equalTo(self.view.mas_left).offset(kScreenToButtonGap);
-        make.right.equalTo(self.view.mas_right).offset(-kScreenToButtonGap);
+        make.left.equalTo(self.view.mas_left).offset(gap);
+        make.right.equalTo(self.view.mas_right).offset(-gap);
         make.height.mas_equalTo(labelOrButtonSize);
     }];
     

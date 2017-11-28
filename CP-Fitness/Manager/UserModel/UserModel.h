@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface UserModel : NSObject
+@interface UserModel : NSObject <NSCoding>
 @property (nonatomic, copy) NSString *channel; //渠道号
 @property (nonatomic, copy) NSString *username; //用户
 @property (nonatomic, copy) NSString *password; //密码
@@ -108,16 +108,27 @@
 @property (nonatomic, copy) NSString *joinNum;//joinNum
 @property (nonatomic, copy) NSString *challengeId;//challengeId
 @property (nonatomic, copy) NSString *status;//status
+@property (nonatomic, copy) NSString *createTime;//创建时间
+@property (nonatomic, copy) NSString *isTraining; //是否训练有素人群，0，1
+@property (nonatomic, copy) NSString *isHbp; //是否有高血压，0，1
+@property (nonatomic, copy) NSString *mobile; //是否训练有素人群，0，1
+@property (nonatomic, copy) NSString *phone; //是否有高血压，0，1
 
-@property (nonatomic, retain) NSArray *friends; //好友用户id
+@property (nonatomic, strong) NSArray *friends; //好友用户id
+@property (nonatomic, strong) NSArray *myGym; //体育馆
+@property (nonatomic, strong) NSDictionary *character;
 
 //@property (nonatomic, assign) NSInteger height; //身高CM
 //@property (nonatomic, assign) NSInteger accept; //1=同意
-@property (nonatomic, assign) NSInteger isHbp; //是否有高血压，0，1
-@property (nonatomic, assign) NSInteger isTraining; //是否训练有素人群，0，1
+
+
 @property (nonatomic, assign) NSInteger gymUserType; //用户类型，0=会员，1=教练
 //@property (nonatomic, assign) NSInteger teachYears; //教龄
 
+-(instancetype) initWithDict:(NSDictionary *) dict;
++(instancetype) userWithDict:(NSDictionary *)dict;
 
++ (UserModel *)readUserDefaults;
++ (void)writeUserDefaultswithUserModel:(UserModel *)userModel;
 
 @end

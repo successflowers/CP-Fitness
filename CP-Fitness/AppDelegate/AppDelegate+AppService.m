@@ -32,11 +32,12 @@
 }
 
 #pragma mark ————— 初始化用户系统 —————
--(void)initUserManager{
-   
+- (void)initUserManager{
     UIViewController *viewController = nil;
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    if ([userDefaults objectForKey:@"useName"])
+    //读UserModel
+    UserModel *userModel = [UserModel readUserDefaults];
+    DDLog(@"token = %@",userModel.token);
+    if (!userModel)
     {
         viewController = [[RegisterViewController alloc] init];
     }
@@ -48,7 +49,6 @@
     [nav setNavigationBarHidden:YES animated:YES];
     self.window.rootViewController = nav;
 }
-
 
 #pragma mark ————— 网络状态变化 —————
 - (void)netWorkStateChange:(NSNotification *)notification

@@ -8,6 +8,8 @@
 
 #import "LoginViewController.h"
 #import "FindPassWordViewController.h"
+#import "HomeViewController.h"
+
 
 @interface LoginViewController ()
 
@@ -106,18 +108,28 @@
 #pragma mark - event response
 - (void)didLoginBtnClicked:(id)sender
 {
-    self.userModel.username = @"success123";
-    self.userModel.password = @"123456";
-    
+    NSLog(@"self.userModel.username = %@ self.userModel.password =%@ ",self.userModel.username ,self.userModel.password);
+    __weak LoginViewController *weakSelf = self;
     [[ZJNetWorking sharedInstance] userLoginWithUserModel:self.userModel callBack:^(BOOL isSucessed, id outParam, NSString *eMsg) {
         if (isSucessed) {
-            DDLog(@"good luck!");
-        }else
+            DDLog(@"good luck! %@",outParam);
+            self.userModel.token = outParam[@"token"];
+            DDLog(@"self.userModel.token =  %@", self.userModel.token);
+            //存usermodel
+            self.userModel.token = outParam[@"token"];
+            self.userModel.myGym = outParam[@"myGym"];
+            self.userModel.character = outParam[@"character"];
+            
+            [UserModel writeUserDefaultswithUserModel:self.userModel];
+            
+            HomeViewController *homeVC = [[HomeViewController alloc] init];
+            [weakSelf.navigationController pushViewController:homeVC animated:YES];
+        }
+        else
         {
             DDLog(@"bad luck");
         }
     }];
-    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didRemindBtnClicked:(id)sender
@@ -172,6 +184,11 @@
 
 - (InputFieldViewControls *)userNameInputControls
 {
+    __weak LoginViewController *weakSelf = self;
+    /*
+     self.userModel.username = @"success123";
+     self.userModel.password = @"123456";
+     */
     if (!_userNameInputControls) {
         
         InputFieldModel *model = [[InputFieldModel alloc] init];
@@ -180,12 +197,17 @@
         model.placeholder = @"username";
         model.screenWidth = KScreenWidth;
         _userNameInputControls = [[InputFieldViewControls alloc] initWithModel:model];
+        _userNameInputControls.callback = ^(BOOL isSucessed, NSString *textFiledStr) {
+            
+            weakSelf.userModel.username = textFiledStr;
+        };
     }
     return _userNameInputControls;
 }
 
 - (InputFieldViewControls *)passwordInputControls
 {
+    __weak LoginViewController *weakSelf = self;
     if (!_passwordInputControls){
         
         InputFieldModel *model = [[InputFieldModel alloc] init];
@@ -194,6 +216,10 @@
         model.placeholder = @"password";
         model.screenWidth = KScreenWidth;
         _passwordInputControls = [[InputFieldViewControls alloc] initWithModel:model];
+        _passwordInputControls.callback = ^(BOOL isSucessed, NSString *textFiledStr) {
+            
+            weakSelf.userModel.password = textFiledStr;
+        };
     }
     
     return _passwordInputControls;

@@ -7,10 +7,11 @@
 //
 
 #import "SignUpViewController.h"
+#import "HomeViewController.h"
 
-#define titleLabelToTopLineGap 120.f
-#define userFeildToTitleLabelGop 80.f
-#define createAccountBtnToCheckLabelGap 100.f
+#define titleLabelToTopLineGap  kIOS5? 110.f :120.f
+#define userFeildToTitleLabelGop kIOS5? 50.f :80.f
+#define createAccountBtnToCheckLabelGap kIOS5 ?70.f :100.f
 
 @interface SignUpViewController ()
 
@@ -29,7 +30,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self initInterface];
 }
 
@@ -100,18 +100,24 @@
 #pragma mark - event response
 - (void)didCreateAccountBtnClicked:(id)sender
 {
-    self.userModel.username = @"success123";
-    self.userModel.password = @"123456";
-    
-    [[ZJNetWorking sharedInstance] userLoginWithUserModel:self.userModel callBack:^(BOOL isSucessed, id outParam, NSString *eMsg) {
+    __weak SignUpViewController *weakSelf = self;
+    [[ZJNetWorking sharedInstance] userRegistWithUserModel:self.userModel callBack:^(BOOL isSucessed, id outParam, NSString *eMsg) {
+        
         if (isSucessed) {
-            DDLog(@"good luck!");
+            DDLog(@"good luck! %@",outParam);
+            self.userModel.token = outParam[@"token"];
+            self.userModel.myGym = outParam[@"myGym"];
+            self.userModel.character = outParam[@"character"];
+            [UserModel writeUserDefaultswithUserModel:self.userModel];
+            
+            HomeViewController *homeVC = [[HomeViewController alloc] init];
+            [weakSelf.navigationController pushViewController:homeVC animated:YES];
         }else
         {
             DDLog(@"bad luck");
         }
     }];
-    [self.navigationController popViewControllerAnimated:YES];
+   
 }
 
 #pragma mark - setter and getter
@@ -150,6 +156,7 @@
 
 - (InputFieldViewControls *)userNameInputControls
 {
+    __weak SignUpViewController *weakSelf = self;
     if (!_userNameInputControls) {
         
         InputFieldModel *model = [[InputFieldModel alloc] init];
@@ -158,12 +165,18 @@
         model.placeholder = @"username";
         model.screenWidth = KScreenWidth;
         _userNameInputControls = [[InputFieldViewControls alloc] initWithModel:model];
+        
+        
+        _userNameInputControls.callback = ^(BOOL isSucessed, NSString *textFiledStr) {
+             weakSelf.userModel.username = textFiledStr;
+        };
     }
     return _userNameInputControls;
 }
 
 - (InputFieldViewControls *)emailInputControls
 {
+    __weak SignUpViewController *weakSelf = self;
     if (!_emailInputControls){
         
         InputFieldModel *model = [[InputFieldModel alloc] init];
@@ -172,6 +185,9 @@
         model.placeholder = @"email";
         model.screenWidth = KScreenWidth;
         _emailInputControls = [[InputFieldViewControls alloc] initWithModel:model];
+        _emailInputControls.callback = ^(BOOL isSucessed, NSString *textFiledStr){
+            weakSelf.userModel.email = textFiledStr;
+        };
     }
     
     return _emailInputControls;
@@ -179,6 +195,7 @@
 
 - (InputFieldViewControls *)passwordInputControls
 {
+    __weak SignUpViewController *weakSelf = self;
     if (!_passwordInputControls){
         
         InputFieldModel *model = [[InputFieldModel alloc] init];
@@ -187,8 +204,10 @@
         model.placeholder = @"password";
         model.screenWidth = KScreenWidth;
         _passwordInputControls = [[InputFieldViewControls alloc] initWithModel:model];
+        _passwordInputControls.callback = ^(BOOL isSucessed, NSString *textFiledStr) {
+            weakSelf.userModel.password = textFiledStr;
+        };
     }
-    
     return _passwordInputControls;
 }
 

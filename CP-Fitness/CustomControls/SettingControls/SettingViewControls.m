@@ -55,7 +55,18 @@
         make.right.equalTo(self.mas_right).offset(-lineLayerToScreenGap);
     }];
 }
-
+#pragma mark  - textField.delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (self.callback) {
+        self.callback(YES, _textField.text);
+    }
+}
 #pragma mark - event response
 #pragma mark - setter and getter
 

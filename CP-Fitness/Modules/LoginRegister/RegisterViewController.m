@@ -70,10 +70,11 @@
 //注册/登陆按钮
 - (void)setupLoginAndSignButtonAutoLayout
 {
+    int gap = kScreenToButtonGap;
     [self.loginButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.equalTo(self.view.mas_top).with.offset(loginButtonToTopHeight);
-        make.left.equalTo(self.view.mas_left).with.offset(kScreenToButtonGap);
+        make.left.equalTo(self.view.mas_left).with.offset(gap);
         make.height.mas_equalTo(labelOrButtonSize);
         make.width.equalTo(self.signButton);
         make.right.equalTo(self.signButton.mas_left).with.offset(-loginToSignButtonGap);
@@ -82,7 +83,7 @@
     [self.signButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
         make.top.height.equalTo(self.loginButton);
-        make.right.equalTo(self.view.mas_right).with.offset(-kScreenToButtonGap);
+        make.right.equalTo(self.view.mas_right).with.offset(- gap);
     }];
 }
 
@@ -105,22 +106,6 @@
 {
     SignUpViewController *signUpVC = [[SignUpViewController alloc] init];
     [self.navigationController pushViewController:signUpVC animated:YES];
-    
-    /*
-    self.userModel.username = @"success123";
-    self.userModel.email = @"1579589763@qq.com";
-    self.userModel.password = @"123456";
-    
-    [[ZJNetWorking sharedInstance] userRegistWithUserModel:self.userModel callBack:^(BOOL isSucessed, id outParam, NSString *eMsg) {
-        
-        if (isSucessed) {
-            DDLog(@"good luck!");
-        }else
-        {
-            DDLog(@"bad luck");
-        }
-     }];
-     */
 }
 
 #pragma mark - setter and getter

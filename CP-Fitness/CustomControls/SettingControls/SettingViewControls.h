@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^TextFiledCallback)(BOOL isSucessed,NSString *textFiledStr);
 @interface SettingViewControls : UIView
 
 @property (nonatomic, copy) NSString *headString;
+@property (nonatomic, copy) TextFiledCallback callback;
 
 @end

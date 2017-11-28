@@ -7,8 +7,8 @@
 //
 
 #import "SettingViewController.h"
-#define titleLabelToTopGap 200.f
-#define webSiteFeildToTitleGap 150.f
+#define titleLabelToTopGap  kIOS5 ?150 :200
+#define webSiteFeildToTitleGap  kIOS5 ?60 :150
 
 @interface SettingViewController ()
 
@@ -22,7 +22,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self initInterface];
 }
 

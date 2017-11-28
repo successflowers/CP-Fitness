@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "sys/utsname.h"
 
 @interface BaseViewController ()
 
@@ -55,13 +56,14 @@
 
 - (UIButton *)setWhiteButtonWithTitle:(NSString *)title
 {
+    int circleWidth = kScreenToButtonGap/2;
     UIButton *whiteButton = [UIButton buttonWithType:UIButtonTypeCustom];
     whiteButton.zj_acceptEventInterval = 1;
     [whiteButton setTitle:title forState:UIControlStateNormal];
     [whiteButton setTitleColor:KWhiteColor forState:UIControlStateNormal];
     whiteButton.titleLabel.font = SYSTEMFONT(22);
     [whiteButton.layer setMasksToBounds:YES];
-    [whiteButton.layer setCornerRadius:27.0]; //设置矩形四个圆角半径
+    [whiteButton.layer setCornerRadius:circleWidth]; //设置矩形四个圆角半径
     [whiteButton.layer setBorderWidth:2.0];
     whiteButton.layer.borderColor = KWhiteColor.CGColor;
     return whiteButton;
@@ -80,11 +82,13 @@
 #pragma mark - 导航栏标题
 - (UILabel *)navTitleLabel
 {
+    int isGap = kIOS5 ?18 :22;
+    int font = kIOS5 ?21 :25;
     if (!_navTitleLabel) {
         
-        _navTitleLabel = [self setTitleWithString:nil font:SYSTEMFONT(25)];
+        _navTitleLabel = [self setTitleWithString:nil font:SYSTEMFONT(font)];
         _navTitleLabel.textAlignment = NSTextAlignmentCenter;
-        _navTitleLabel.frame = CGRectMake(44, 22, KScreenWidth - 88, 44);
+        _navTitleLabel.frame = CGRectMake(44, isGap, KScreenWidth - 88, 44);
     }
     return _navTitleLabel;
 }
@@ -92,9 +96,10 @@
 #pragma mark - goback按钮
 - (UIButton *)gobackBtn
 {
+    int isGap = kIOS5? 15: 20;
     if (!_gobackBtn){
         _gobackBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-        _gobackBtn.frame = CGRectMake(5, 20, 50, 40);
+        _gobackBtn.frame = CGRectMake(5, isGap, 50, 40);
         _gobackBtn.zj_acceptEventInterval = 1;
         [_gobackBtn setImage:IMAGE_NAMED(@"main_back.png") forState:UIControlStateNormal];
         _gobackBtn.imageEdgeInsets = UIEdgeInsetsMake(10,15,9, 23);

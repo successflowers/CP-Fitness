@@ -14,6 +14,7 @@
 
 @property (nonatomic, retain) UIImageView *logoIcon;
 @property (nonatomic, retain) UILabel *logoLabel;
+@property (nonatomic, copy) NSString *nickName;
 
 @property (nonatomic, retain) CalendarViewControls *calendarControls;
 
@@ -24,8 +25,25 @@
     [super viewDidLoad];
     
     DDLog(@"dataArray = %@",self.dateArray);
-    
+    [self initParam];
     [self initInterface];
+}
+
+#pragma mark - initparam
+- (void)initParam
+{
+    self.userModel = [UserModel readUserDefaults];
+    NSDictionary * character = self.userModel.character;
+    NSString *name = nil;
+    if ([character[@"nickname"] isEqualToString:@""]) {
+        name = @"XX";
+    }else
+    {
+        name = character[@"nickname"];
+    }
+    
+    self.nickName = [NSString stringWithFormat:@"%@'s Sports Caledsar",name];
+  
 }
 
 #pragma mark - initInterface
@@ -86,7 +104,7 @@
 {
     if (!_logoLabel) {
         
-        _logoLabel = [self setTitleWithString:@"XX's Sports Caledsar" font:SYSTEMFONT(23)];
+        _logoLabel = [self setTitleWithString:self.nickName font:SYSTEMFONT(23)];
         UIImageView *logoImage = [[UIImageView alloc] init];
         logoImage.image = IMAGE_NAMED(@"ac_calendar_tvbg.png");
         logoImage.frame = CGRectMake(0, 0, KScreenWidth - 100, 50);

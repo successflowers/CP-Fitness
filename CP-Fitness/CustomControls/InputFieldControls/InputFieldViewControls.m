@@ -14,14 +14,13 @@
 #define iconToTextFieldGap 15.f //图标／输入框间距
 #define kScreenToIconGap 35.f   //屏幕／图标间距
 
+
 @interface InputFieldViewControls()<UITextFieldDelegate>
 
 @property (nonatomic, retain) UIImageView *headIcon;
+@property (nonatomic, retain) CAShapeLayer *buttomLineLayer;
 @property (nonatomic, retain) UITextField *textField;
 @property (nonatomic, retain) UIImageView *endIcon;
-
-@property (nonatomic, retain) CAShapeLayer *buttomLineLayer;
-
 @property (nonatomic, retain) InputFieldModel *model;
 
 @end
@@ -42,6 +41,18 @@
         [self setupAutoLayout];
     }
     return self;
+}
+#pragma mark  - textField.delegate
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    if (self.callback) {
+        self.callback(YES, _textField.text);
+    }
 }
 
 #pragma mark - autolayout
@@ -85,6 +96,7 @@
     if (!_endIcon) {
         
         _endIcon = [[UIImageView alloc] init];
+        _endIcon.hidden = YES;
         _endIcon.image = IMAGE_NAMED(_model.endImage);
     }
     return _endIcon;
@@ -96,7 +108,7 @@
         
         _textField = [[UITextField alloc] init];
         _textField.borderStyle = UITextBorderStyleNone;
-        _textField.secureTextEntry = YES; //密码
+        _textField.secureTextEntry = NO; //密码
         _textField.delegate = self;
         _textField.autocorrectionType = UITextAutocorrectionTypeNo;
         _textField.autocapitalizationType = UITextAutocapitalizationTypeNone;
@@ -104,6 +116,7 @@
         _textField.clearButtonMode = UITextFieldViewModeWhileEditing;
         _textField.placeholder = _model.placeholder;
         _textField.textColor = underLineColor;
+        _textField.delegate = self;
         _textField.font = SYSTEMFONT(18);
         [_textField setValue:underLineColor forKeyPath:@"_placeholderLabel.textColor"];
     }
