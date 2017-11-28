@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSDate *date;
 @property (nonatomic, strong) NSDate *today;
-@property (nonatomic, copy) void(^calendarBlock)(NSInteger day, NSInteger month, NSInteger year);
+@property (nonatomic, strong) NSArray *dateArray;
+@property (nonatomic, copy) void(^calendarBlock)(NSInteger day, NSInteger month, NSInteger year, BOOL isHasSportData);
 
 @end

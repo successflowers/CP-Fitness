@@ -218,6 +218,7 @@
     [parameters setValue:APP_Channel forKey:@"channel"];
     [parameters setValue:userModel.characterId forKey:@"characterId"];
     [parameters setValue:userModel.date forKey:@"date"];
+    [parameters setValue:userModel.gymCode forKey:@"gymCode"];
     
     [self getResponseDataWithUrl:urlStr parameter:parameters callBack:callBack];
 }

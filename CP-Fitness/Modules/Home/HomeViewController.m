@@ -97,9 +97,10 @@ static NSString *cellId = @"cellId";
     
     UIViewController *viewController = nil;
     switch (indexPath.row) {
-        case 0:
-            viewController = [[CalendarViewController alloc] init];
-        
+        case 0:{
+            [self getNetworkData];
+           // viewController = [[CalendarViewController alloc] init];
+        }
             break;
         case 1:
             viewController = [[TakingClassViewController alloc] init];
@@ -128,6 +129,30 @@ static NSString *cellId = @"cellId";
     }];
 }
 
+#pragma mark - network
+- (void)getNetworkData
+{
+     self.userModel.characterId = @"389222";
+     self.userModel.date = @"2017-11";
+     self.userModel.gymCode = @"1012";
+
+     [[ZJNetWorking sharedInstance] friendSportCalendarWithUserModel:self.userModel callBack:^(BOOL isSucessed, id outParam, NSString *eMsg) {
+
+     if (isSucessed) {
+     DDLog(@"good luck!");
+         
+         NSArray *array = @[@3,@4,@5,@6,@21];
+         
+         CalendarViewController *calendarVC = [[CalendarViewController alloc] init];
+         calendarVC.dateArray = array;
+         [self.navigationController pushViewController:calendarVC animated:YES];
+         
+     }else
+     {
+     DDLog(@"bad luck");
+     }
+     }];
+}
 #pragma mark - event response
 #pragma mark - setter and getter
 - (UILabel *)titleLabel

@@ -23,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    DDLog(@"dataArray = %@",self.dateArray);
+    
     [self initInterface];
 }
 
@@ -46,7 +48,7 @@
 {
     [self.logoIcon mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(self.view.mas_top).offset(120);
+        make.top.equalTo(self.view.mas_top).offset(100);
         make.centerX.equalTo(self.view);
         make.width.mas_equalTo(100);
         make.height.mas_equalTo(60);
@@ -54,16 +56,17 @@
     
     [self.logoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.top.equalTo(_logoIcon.mas_bottom).offset(30);
-        make.left.equalTo(self.view.mas_left).offset(60);
-        make.right.equalTo(self.view.mas_right).offset(-60);
+        make.top.equalTo(_logoIcon.mas_bottom).offset(25);
+        make.left.equalTo(self.view.mas_left).offset(50);
+        make.right.equalTo(self.view.mas_right).offset(-50);
         make.height.mas_equalTo(48);
     }];
     
     [_calendarControls mas_makeConstraints:^(MASConstraintMaker *make) {
       
-        make.top.equalTo(_logoLabel.mas_bottom).offset(30);
-        make.left.right.bottom.equalTo(self.view);
+        make.top.equalTo(_logoLabel.mas_bottom).offset(25);
+        make.left.right.equalTo(self.view);
+        make.bottom.equalTo(self.view.mas_bottom).offset(10);
     }];
 }
 
@@ -86,7 +89,7 @@
         _logoLabel = [self setTitleWithString:@"XX's Sports Caledsar" font:SYSTEMFONT(23)];
         UIImageView *logoImage = [[UIImageView alloc] init];
         logoImage.image = IMAGE_NAMED(@"ac_calendar_tvbg.png");
-        logoImage.frame = CGRectMake(0, 0, KScreenWidth - 120, 50);
+        logoImage.frame = CGRectMake(0, 0, KScreenWidth - 100, 50);
         [_logoLabel insertSubview:logoImage atIndex:0];
         _logoLabel.textAlignment = NSTextAlignmentCenter;
     }
@@ -101,11 +104,18 @@
         _calendarControls = [[CalendarViewControls alloc] init];
         _calendarControls.today = [NSDate date];
         _calendarControls.date = _calendarControls.today;
-        _calendarControls.calendarBlock = ^(NSInteger day, NSInteger month, NSInteger year){
+        _calendarControls.dateArray = self.dateArray;
+
+        _calendarControls.calendarBlock = ^(NSInteger day, NSInteger month, NSInteger year, BOOL isHasSportData){
             
-          NSLog(@"%@-%@-%@",@(year),@(month),@(day));
-          TrainingDetailViewController *trainDetailVC = [[TrainingDetailViewController alloc] init];
-         [weakSelf.navigationController pushViewController:trainDetailVC animated:YES];
+            if (isHasSportData) {
+                NSLog(@"%@-%@-%@",@(year),@(month),@(day));
+                TrainingDetailViewController *trainDetailVC = [[TrainingDetailViewController alloc] init];
+                [weakSelf.navigationController pushViewController:trainDetailVC animated:YES];
+            }else
+            {
+                DDLog(@"no data");
+            }
         };
     }
     return _calendarControls;

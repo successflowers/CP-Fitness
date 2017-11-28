@@ -10,4 +10,6 @@
 
 @interface CalendarViewController : BaseViewController
 
+@property (nonatomic, strong) NSArray *dateArray;
+
 @end

@@ -26,7 +26,7 @@ static CGFloat BtnSize = 44.f;
 
 @property (nonatomic, retain) NSArray *weeksDayArray;
 
-@property (nonatomic, retain) UIImageView *maskView;  //遮罩层
+@property (nonatomic, retain) UIImageView *noDataMaskView;//no运动目标的遮罩层
 
 @property (nonatomic, retain) UICollectionView *mCollectionView;
 
@@ -69,90 +69,121 @@ static CGFloat BtnSize = 44.f;
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
+    DDLog(@"calendar dateArray = %@",self.dateArray);
     CalendarCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:identiferID forIndexPath:indexPath];
     cell.backgroundColor = KClearColor;
+    cell.backgroundView = [[UIImageView alloc] initWithImage:nil];
+    cell.litterBlueDot.hidden = YES;
+    self.noDataMaskView.hidden = YES;
+    
    
-    NSInteger daysInThisMonth = [NSData totaldaysInMonth:_date];
-    NSInteger firstWeekday = [NSData  firstWeekdayInThisMonth:_date];
+    NSInteger daysInThisMonth = [NSDate totaldaysInMonth:_date];
+    NSInteger firstWeekday = [NSDate firstWeekdayInThisMonth:_date];
     
     NSInteger day = 0;
     NSInteger i = indexPath.row;
     
+    //计算出当月的第一天在第一行的那一列
     if (i < firstWeekday) {
         [cell.dayLabel setText:@""];
+        
         
     }else if (i > firstWeekday + daysInThisMonth - 1){
         [cell.dayLabel setText:@""];
     }else{
         day = i - firstWeekday + 1;
         [cell.dayLabel setText:[NSString stringWithFormat:@"%li",(long)day]];
+    
+        NSInteger isThisMonth = [NSDate compareMonth:_date];
+        NSInteger isThisDay = [NSDate compareDay:_date];
         
-        //this month
-        if ([_today isEqualToDate:_date])
-        {
-            if (day == [NSData  day:_date])
-            {
-                self.maskView.frame = cell.bounds;
-                [cell insertSubview:self.maskView atIndex:0];
-                
-            }
-            else if (day > [NSData  day:_date])
-            {
-                cell.dayLabel.textColor = underLineColor;
-                
+        if (isThisMonth <= 0) {
+            for (id myDay in self.dateArray) {
+                if ([myDay integerValue] == day) {
+                    
+                    cell.backgroundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ac_calendar_data.png"]];
+                }
             }
         }
-        else if ([_today compare:_date] == NSOrderedAscending)
-        {
+        
+        switch (isThisDay) {
+            case -1:
+            {
+                cell.dayLabel.textColor = RGB(244, 244, 244);
+            }
+                
+                break;
+            case 0:
+            {
+                if (day == [NSDate day:_date])
+                {
+                    if ([self.dateArray containsObject:[NSNumber numberWithInteger:day]]){
+                        
+                        cell.backgroundView = [[UIImageView alloc] initWithImage:IMAGE_NAMED(@"ac_calendar_today.png")];
+                    }else
+                    {
+                        cell.backgroundView = [[UIImageView alloc] initWithImage:nil];
+                        cell.litterBlueDot.hidden = NO;
+                    }
+                    
+                    cell.dayLabel.textColor = KWhiteColor;
+                    
+                }else if (day < [NSDate day:_date])
+                {
+                    cell.dayLabel.textColor = RGB(244, 244, 244);
+                }else
+                {
+                    cell.dayLabel.textColor = KGrayColor;
+                }
+            }
+                break;
+            case 1:
+            {
+                cell.dayLabel.textColor = KGrayColor;
+            }
+                break;
+                
+            default:
+                break;
         }
     }
-    
     return cell;
 }
 
 - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.section == 0) {
-        NSInteger daysInThisMonth = [NSData totaldaysInMonth:_date];
-        NSInteger firstWeekday = [NSData firstWeekdayInThisMonth:_date];
-        
-        NSInteger day = 0;
-        NSInteger i = indexPath.row;
-        
-        if (i >= firstWeekday && i <= firstWeekday + daysInThisMonth - 1) {
-            day = i - firstWeekday + 1;
-            
-            //this month
-            if ([_today isEqualToDate:_date]) {
-                if (day <= [NSData day:_date]) {
-                    return YES;
-                }
-            } else if ([_today compare:_date] == NSOrderedDescending) {
-                return YES;
-            }
-        }
-    }
-    return NO;
+    return YES;
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     //点击选中的效果
     UICollectionViewCell *cell = [collectionView cellForItemAtIndexPath:indexPath];
-   
-    if (self.maskView.hidden)
-        self.maskView.hidden = NO;
+    self.noDataMaskView.hidden = YES;
+    BOOL isHasSportData = YES;
     
-    [cell insertSubview:self.maskView atIndex:0];
-
     NSDateComponents *comp = [[NSCalendar currentCalendar] components:(NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay) fromDate:self.date];
-    NSInteger firstWeekday = [NSData firstWeekdayInThisMonth:_date];
+    NSInteger firstWeekday = [NSDate firstWeekdayInThisMonth:_date];
     
     NSInteger day = 0;
     NSInteger i = indexPath.row;
     day = i - firstWeekday + 1;
+    
+    NSInteger isThisMonth = [NSDate compareMonth:_date];
+    NSInteger isThisDay = [NSDate day:[NSDate date]];
+    if (![self.dateArray containsObject:[NSNumber numberWithInteger:day]]){
+        
+        isHasSportData = NO;
+        if ((isThisMonth == 0) && (isThisDay == day) ) {
+            self.noDataMaskView.hidden = YES;
+        }else{
+             self.noDataMaskView.hidden = NO;
+            self.noDataMaskView.frame = cell.bounds;
+            [cell insertSubview:self.noDataMaskView atIndex:0];
+        }
+    }
     if (self.calendarBlock) {
-        self.calendarBlock(day, [comp month], [comp year]);
+        self.calendarBlock(day, [comp month], [comp year], isHasSportData);
     }
 }
 
@@ -192,29 +223,14 @@ static CGFloat BtnSize = 44.f;
 - (void)didClickedPreviousBtn:(id)sender
 {
     [UIView transitionWithView:self duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
-        self.date = [NSData lastMonth:self.date];
-        
-        if ([_today isEqualToDate:_date])
-        {
-            self.maskView.hidden = NO;
-        }else
-        {
-            self.maskView.hidden = YES;
-        }
+        self.date = [NSDate lastMonth:_date];
     } completion:nil];
 }
 
 - (void)didClickedNextBtn:(id)sender
 {
     [UIView transitionWithView:self duration:0.5 options:UIViewAnimationOptionTransitionCrossDissolve animations:^(void) {
-        self.date = [NSData nextMonth:self.date];
-        if ([_today isEqualToDate:_date])
-        {
-            self.maskView.hidden = NO;
-        }else
-        {
-            self.maskView.hidden = YES;
-        }
+       self.date = [NSDate nextMonth:_date];
     } completion:nil];
 }
 
@@ -222,10 +238,9 @@ static CGFloat BtnSize = 44.f;
 - (void)setDate:(NSDate *)date
 {
     _date = date;
-    [_monthLabel setText:[NSString stringWithFormat:@"%@  %li",[self stringOfMonthInEnglish:(long)[NSData month:date]],(long)[NSData year:date]]];
+    [_monthLabel setText:[NSString stringWithFormat:@"%@  %li",[self stringOfMonthInEnglish:(long)[NSDate month:date]],(long)[NSDate year:date]]];
     [_mCollectionView reloadData];
 }
-
 
 - (UIButton *)previousButton
 {
@@ -265,15 +280,15 @@ static CGFloat BtnSize = 44.f;
     return _monthLabel;
 }
 
-- (UIImageView *)maskView
+- (UIImageView *)noDataMaskView
 {
-    if (!_maskView) {
+    if (!_noDataMaskView) {
         
-        _maskView = [[UIImageView alloc] init];
-        _maskView.image = IMAGE_NAMED(@"ac_calendar_checked.png");
+        _noDataMaskView = [[UIImageView alloc] init];
+        _noDataMaskView.image = IMAGE_NAMED(@"ac_calendar_nodata.png");
         
     }
-    return _maskView;
+    return _noDataMaskView;
 }
 
 - (UICollectionView *)mCollectionView
@@ -283,12 +298,12 @@ static CGFloat BtnSize = 44.f;
         UICollectionViewFlowLayout *mLayout = [[UICollectionViewFlowLayout alloc] init];
         
         mLayout.sectionInset = UIEdgeInsetsMake(0, 10, 10, 10);
-        mLayout.itemSize = CGSizeMake(_itemWidth, _itemWidth);
+        mLayout.itemSize = CGSizeMake(_itemWidth -5, _itemWidth-5);
         mLayout.minimumLineSpacing = itemGap;
         mLayout.minimumInteritemSpacing = itemGap;
     
        
-        _mCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 100, KScreenWidth, 375) collectionViewLayout:mLayout];
+        _mCollectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 90, KScreenWidth, 355) collectionViewLayout:mLayout];
         _mCollectionView.backgroundColor  = KClearColor;
         _mCollectionView.dataSource = self;
         _mCollectionView.delegate = self;
@@ -314,7 +329,7 @@ static CGFloat BtnSize = 44.f;
             dayLab.textColor = calendarMonthColor;
             dayLab.font = SYSTEMFONT(18);
             dayLab.text = _weeksDayArray[i];
-            dayLab.frame = CGRectMake((itemGap+_itemWidth)*i, 0, _itemWidth,_itemWidth-10);
+            dayLab.frame = CGRectMake((itemGap+_itemWidth)*i, 3, _itemWidth,_itemWidth);
 
             [_headView addSubview:dayLab];
         }
@@ -342,9 +357,9 @@ static CGFloat BtnSize = 44.f;
     
     return Strings[month - 1];
 }
-- (BOOL)currentDataCompareWithDataByMonth:(NSData *)compareData{
-    NSInteger currentMonth = [NSData month:[NSData data]];
-    NSInteger compareMonth = [NSData month:compareData];
+- (BOOL)currentDataCompareWithDataByMonth:(NSDate *)compareData{
+    NSInteger currentMonth = [NSDate month:[NSDate date]];
+    NSInteger compareMonth = [NSDate month:compareData];
     
     if (currentMonth - compareMonth == 0 ) {
         return YES;

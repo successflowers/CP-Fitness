@@ -41,7 +41,7 @@
                                         if (errnoNumber == 0){
                                             _flag = YES;
                                             _result = responseObject;
-                                            DDLog(@"regist success");}
+                                            DDLog(@"success  %@",responseObject);}
                                     }else{
                                         _eMsg = @"数据异常";
                                         DDLog(@"%@",[responseObject objectForKey:@"errmsg"]);

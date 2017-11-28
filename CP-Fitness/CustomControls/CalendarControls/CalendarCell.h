@@ -11,5 +11,7 @@
 @interface CalendarCell : UICollectionViewCell
 
 @property (nonatomic, retain) UILabel *dayLabel;
+@property (nonatomic, retain) CAShapeLayer *litterBlueDot;
+
 
 @end

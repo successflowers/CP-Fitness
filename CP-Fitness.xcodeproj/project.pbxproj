@@ -47,13 +47,13 @@
 		6156EB961FA2001600661303 /* AppDelegate+AppService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EB951FA2001600661303 /* AppDelegate+AppService.m */; };
 		6156EBA91FA251E200661303 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6156EBA81FA251E200661303 /* RegisterViewController.m */; };
 		6157503F1FA751F100834247 /* CalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6157503E1FA751F100834247 /* CalendarCell.m */; };
-		615750421FA770E000834247 /* NSData+ZJNSData.m in Sources */ = {isa = PBXBuildFile; fileRef = 615750411FA770E000834247 /* NSData+ZJNSData.m */; };
 		6166AD1A1FBEAE280093E732 /* ZJNetWorkingHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6166AD191FBEAE280093E732 /* ZJNetWorkingHelper.m */; };
 		6166AD1E1FBF1ABA0093E732 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6166AD1D1FBF1ABA0093E732 /* UserModel.m */; };
 		6166AD251FBF255D0093E732 /* NSString+HmacUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 6166AD241FBF255D0093E732 /* NSString+HmacUtils.m */; };
 		6166AD281FBF267E0093E732 /* NSString+TimeConvert.m in Sources */ = {isa = PBXBuildFile; fileRef = 6166AD271FBF267E0093E732 /* NSString+TimeConvert.m */; };
 		6166AD2B1FBF285B0093E732 /* NSString+Signature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6166AD2A1FBF285B0093E732 /* NSString+Signature.m */; };
 		6166AD2E1FBF360E0093E732 /* ZJNetWorking.m in Sources */ = {isa = PBXBuildFile; fileRef = 6166AD2D1FBF360E0093E732 /* ZJNetWorking.m */; };
+		61FC72D71FCCD727008C0BF2 /* NSDate+ZJDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 61FC72D61FCCD727008C0BF2 /* NSDate+ZJDate.m */; };
 		68A9C698B9FEEC8B9350B8C4 /* libPods-CP-Fitness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 40BC7F9F833AE80B09576FBB /* libPods-CP-Fitness.a */; };
 /* End PBXBuildFile section */
 
@@ -166,8 +166,6 @@
 		6156EBA81FA251E200661303 /* RegisterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		6157503D1FA751F100834247 /* CalendarCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CalendarCell.h; sourceTree = "<group>"; };
 		6157503E1FA751F100834247 /* CalendarCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalendarCell.m; sourceTree = "<group>"; };
-		615750401FA770E000834247 /* NSData+ZJNSData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSData+ZJNSData.h"; sourceTree = "<group>"; };
-		615750411FA770E000834247 /* NSData+ZJNSData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSData+ZJNSData.m"; sourceTree = "<group>"; };
 		6166AD181FBEAE280093E732 /* ZJNetWorkingHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJNetWorkingHelper.h; sourceTree = "<group>"; };
 		6166AD191FBEAE280093E732 /* ZJNetWorkingHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJNetWorkingHelper.m; sourceTree = "<group>"; };
 		6166AD1C1FBF1ABA0093E732 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
@@ -180,6 +178,8 @@
 		6166AD2A1FBF285B0093E732 /* NSString+Signature.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Signature.m"; sourceTree = "<group>"; };
 		6166AD2C1FBF360E0093E732 /* ZJNetWorking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZJNetWorking.h; sourceTree = "<group>"; };
 		6166AD2D1FBF360E0093E732 /* ZJNetWorking.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZJNetWorking.m; sourceTree = "<group>"; };
+		61FC72D51FCCD727008C0BF2 /* NSDate+ZJDate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+ZJDate.h"; sourceTree = "<group>"; };
+		61FC72D61FCCD727008C0BF2 /* NSDate+ZJDate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+ZJDate.m"; sourceTree = "<group>"; };
 		B80E4E58E7016967CEE22358 /* Pods-CP-Fitness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.release.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.release.xcconfig"; sourceTree = "<group>"; };
 		E06580A369004A09E558F909 /* Pods-CP-Fitness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CP-Fitness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CP-Fitness/Pods-CP-Fitness.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -321,8 +321,8 @@
 				6157503E1FA751F100834247 /* CalendarCell.m */,
 				614F4D0D1FA6206600E0F9DC /* CalendarViewControls.h */,
 				614F4D0E1FA6206600E0F9DC /* CalendarViewControls.m */,
-				615750401FA770E000834247 /* NSData+ZJNSData.h */,
-				615750411FA770E000834247 /* NSData+ZJNSData.m */,
+				61FC72D51FCCD727008C0BF2 /* NSDate+ZJDate.h */,
+				61FC72D61FCCD727008C0BF2 /* NSDate+ZJDate.m */,
 			);
 			path = CalendarControls;
 			sourceTree = "<group>";
@@ -780,6 +780,7 @@
 				614F4D051FA6118600E0F9DC /* StateViewController.m in Sources */,
 				614F4CFB1FA5FA0000E0F9DC /* SettingViewController.m in Sources */,
 				614F4D0F1FA6206600E0F9DC /* CalendarViewControls.m in Sources */,
+				61FC72D71FCCD727008C0BF2 /* NSDate+ZJDate.m in Sources */,
 				6156EB961FA2001600661303 /* AppDelegate+AppService.m in Sources */,
 				6156EB661FA1F95E00661303 /* main.m in Sources */,
 				61495F991FA4C18800425BD8 /* InputFieldViewControls.m in Sources */,
@@ -796,7 +797,6 @@
 				6166AD1E1FBF1ABA0093E732 /* UserModel.m in Sources */,
 				6144F3F11FC012F200973D55 /* ZJNetWorking+Friend.m in Sources */,
 				6166AD1A1FBEAE280093E732 /* ZJNetWorkingHelper.m in Sources */,
-				615750421FA770E000834247 /* NSData+ZJNSData.m in Sources */,
 				611F32CB1FC1A441001F3820 /* RecentTainingDataControls.m in Sources */,
 				6166AD2B1FBF285B0093E732 /* NSString+Signature.m in Sources */,
 				61495F961FA4C07900425BD8 /* InputFieldModel.m in Sources */,
