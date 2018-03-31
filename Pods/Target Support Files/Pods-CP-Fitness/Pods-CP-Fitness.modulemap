@@ -1,0 +1,6 @@
+framework module Pods_CP_Fitness {
+  umbrella header "Pods-CP-Fitness-umbrella.h"
+
+  export *
+  module * { export * }
+}
